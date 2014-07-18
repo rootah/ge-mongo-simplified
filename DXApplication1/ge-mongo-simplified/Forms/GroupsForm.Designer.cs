@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.groupGeneralInfoUc1 = new ge_mongo_simplified.UserControls.GroupGeneralInfoUc();
             this.SuspendLayout();
+            // 
+            // groupGeneralInfoUc1
+            // 
+            this.groupGeneralInfoUc1.AutoSize = true;
+            this.groupGeneralInfoUc1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupGeneralInfoUc1.Location = new System.Drawing.Point(0, 0);
+            this.groupGeneralInfoUc1.Name = "groupGeneralInfoUc1";
+            this.groupGeneralInfoUc1.Size = new System.Drawing.Size(358, 388);
+            this.groupGeneralInfoUc1.TabIndex = 0;
             // 
             // GroupsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 253);
+            this.ClientSize = new System.Drawing.Size(358, 388);
+            this.ControlBox = false;
+            this.Controls.Add(this.groupGeneralInfoUc1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GroupsForm";
             this.Text = "Group [...]";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private UserControls.GroupGeneralInfoUc groupGeneralInfoUc1;
     }
 }

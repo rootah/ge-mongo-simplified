@@ -72,6 +72,12 @@
     <Compile Include="Forms\StudentsForm.Designer.cs">
       <DependentUpon>StudentsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\GroupGeneralInfoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupGeneralInfoUC.Designer.cs">
+      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\StudentGeneralInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GroupGeneralInfoUC.resx">
+      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StudentGeneralInfoUC.resx">
       <DependentUpon>StudentGeneralInfoUC.cs</DependentUpon>

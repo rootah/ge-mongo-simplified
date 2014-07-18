@@ -95,7 +95,7 @@
             // 
             // defaultLook
             // 
-            this.defaultLook.LookAndFeel.SkinName = "Office 2013 Dark Gray";
+            this.defaultLook.LookAndFeel.SkinName = "Office 2013 Light Gray";
             // 
             // ribbonControl
             // 
@@ -133,7 +133,8 @@
             this.ribbonControl.Size = new System.Drawing.Size(1128, 147);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
-            this.ribbonControl.SelectedPageChanged += new System.EventHandler(this.ribbonControl_SelectedPageChanged);// 
+            this.ribbonControl.SelectedPageChanged += new System.EventHandler(this.ribbonControl_SelectedPageChanged);
+            // 
             // backstageView
             // 
             this.backstageView.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Yellow;
