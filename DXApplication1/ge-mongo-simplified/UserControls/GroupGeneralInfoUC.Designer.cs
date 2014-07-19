@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cancelButt = new DevExpress.XtraEditors.SimpleButton();
+            this.okButt = new DevExpress.XtraEditors.SimpleButton();
+            this.customtimeCheck = new DevExpress.XtraEditors.CheckEdit();
             this.timeEdit7 = new DevExpress.XtraEditors.TimeEdit();
             this.timeEdit6 = new DevExpress.XtraEditors.TimeEdit();
             this.timeEdit5 = new DevExpress.XtraEditors.TimeEdit();
@@ -46,23 +50,24 @@
             this.friTime = new DevExpress.XtraLayout.LayoutControlItem();
             this.thuTime = new DevExpress.XtraLayout.LayoutControlItem();
             this.monTime = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.infoCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.daysCombo = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupnoField = new DevExpress.XtraLayout.LayoutControlItem();
             this.fixedTime = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.customtimeCheck = new DevExpress.XtraEditors.CheckEdit();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.okButt = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.okBtn = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cancelButt = new DevExpress.XtraEditors.SimpleButton();
             this.cancelBtn = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customtimeCheck.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit5.Properties)).BeginInit();
@@ -80,23 +85,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.friTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thuTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoCG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daysCombo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupnoField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fixedTime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customtimeCheck.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancelBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.comboBoxEdit1);
             this.layoutControl1.Controls.Add(this.cancelButt);
             this.layoutControl1.Controls.Add(this.okButt);
             this.layoutControl1.Controls.Add(this.customtimeCheck);
@@ -114,14 +121,54 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(570, 245, 411, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(378, 272);
+            this.layoutControl1.Size = new System.Drawing.Size(378, 350);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Location = new System.Drawing.Point(84, 84);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(98, 20);
+            this.comboBoxEdit1.StyleController = this.layoutControl1;
+            this.comboBoxEdit1.TabIndex = 16;
+            // 
+            // cancelButt
+            // 
+            this.cancelButt.Location = new System.Drawing.Point(278, 306);
+            this.cancelButt.Name = "cancelButt";
+            this.cancelButt.Size = new System.Drawing.Size(88, 22);
+            this.cancelButt.StyleController = this.layoutControl1;
+            this.cancelButt.TabIndex = 15;
+            this.cancelButt.Text = "cancel";
+            // 
+            // okButt
+            // 
+            this.okButt.Location = new System.Drawing.Point(176, 306);
+            this.okButt.Name = "okButt";
+            this.okButt.Size = new System.Drawing.Size(87, 22);
+            this.okButt.StyleController = this.layoutControl1;
+            this.okButt.TabIndex = 14;
+            this.okButt.Text = "ok";
+            // 
+            // customtimeCheck
+            // 
+            this.customtimeCheck.Location = new System.Drawing.Point(196, 60);
+            this.customtimeCheck.Name = "customtimeCheck";
+            this.customtimeCheck.Properties.AllowFocused = false;
+            this.customtimeCheck.Properties.Caption = "Custom time";
+            this.customtimeCheck.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.customtimeCheck.Size = new System.Drawing.Size(158, 19);
+            this.customtimeCheck.StyleController = this.layoutControl1;
+            this.customtimeCheck.TabIndex = 13;
+            this.customtimeCheck.CheckedChanged += new System.EventHandler(this.customtimeCheck_CheckedChanged);
             // 
             // timeEdit7
             // 
             this.timeEdit7.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeEdit7.Location = new System.Drawing.Point(256, 182);
+            this.timeEdit7.Location = new System.Drawing.Point(256, 199);
             this.timeEdit7.Name = "timeEdit7";
             this.timeEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -132,7 +179,7 @@
             // timeEdit6
             // 
             this.timeEdit6.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeEdit6.Location = new System.Drawing.Point(256, 158);
+            this.timeEdit6.Location = new System.Drawing.Point(256, 175);
             this.timeEdit6.Name = "timeEdit6";
             this.timeEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -143,7 +190,7 @@
             // timeEdit5
             // 
             this.timeEdit5.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeEdit5.Location = new System.Drawing.Point(256, 134);
+            this.timeEdit5.Location = new System.Drawing.Point(256, 151);
             this.timeEdit5.Name = "timeEdit5";
             this.timeEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -154,7 +201,7 @@
             // timeEdit4
             // 
             this.timeEdit4.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeEdit4.Location = new System.Drawing.Point(84, 182);
+            this.timeEdit4.Location = new System.Drawing.Point(84, 199);
             this.timeEdit4.Name = "timeEdit4";
             this.timeEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -165,7 +212,7 @@
             // timeEdit3
             // 
             this.timeEdit3.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeEdit3.Location = new System.Drawing.Point(84, 158);
+            this.timeEdit3.Location = new System.Drawing.Point(84, 175);
             this.timeEdit3.Name = "timeEdit3";
             this.timeEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -176,7 +223,7 @@
             // timeEdit2
             // 
             this.timeEdit2.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeEdit2.Location = new System.Drawing.Point(84, 134);
+            this.timeEdit2.Location = new System.Drawing.Point(84, 151);
             this.timeEdit2.Name = "timeEdit2";
             this.timeEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -187,7 +234,7 @@
             // timeEdit1
             // 
             this.timeEdit1.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeEdit1.Location = new System.Drawing.Point(256, 43);
+            this.timeEdit1.Location = new System.Drawing.Point(256, 36);
             this.timeEdit1.Name = "timeEdit1";
             this.timeEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -199,7 +246,7 @@
             // daysSelector
             // 
             this.daysSelector.EditValue = "";
-            this.daysSelector.Location = new System.Drawing.Point(84, 67);
+            this.daysSelector.Location = new System.Drawing.Point(84, 60);
             this.daysSelector.Name = "daysSelector";
             this.daysSelector.Properties.AllowMultiSelect = true;
             this.daysSelector.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -219,7 +266,7 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(84, 43);
+            this.textEdit1.Location = new System.Drawing.Point(84, 36);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(98, 20);
             this.textEdit1.StyleController = this.layoutControl1;
@@ -236,10 +283,12 @@
             this.okBtn,
             this.cancelBtn,
             this.emptySpaceItem2,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.emptySpaceItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(378, 272);
+            this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 3, 10);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(378, 350);
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -255,9 +304,9 @@
             this.monTime,
             this.emptySpaceItem3,
             this.emptySpaceItem5});
-            this.customtimeCG.Location = new System.Drawing.Point(0, 91);
+            this.customtimeCG.Location = new System.Drawing.Point(0, 115);
             this.customtimeCG.Name = "customtimeCG";
-            this.customtimeCG.Size = new System.Drawing.Size(358, 135);
+            this.customtimeCG.Size = new System.Drawing.Size(358, 186);
             this.customtimeCG.Text = "Custom time";
             this.customtimeCG.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
@@ -327,6 +376,29 @@
             this.monTime.TextSize = new System.Drawing.Size(57, 13);
             this.monTime.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
+            this.emptySpaceItem3.Location = new System.Drawing.Point(162, 0);
+            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(10, 0);
+            this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 10);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(10, 72);
+            this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem3.Text = "emptySpaceItem3";
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 72);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(334, 71);
+            this.emptySpaceItem5.Text = "emptySpaceItem5";
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // infoCG
             // 
             this.infoCG.CustomizationFormText = "Info";
@@ -335,10 +407,11 @@
             this.groupnoField,
             this.fixedTime,
             this.emptySpaceItem4,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem2});
             this.infoCG.Location = new System.Drawing.Point(0, 0);
             this.infoCG.Name = "infoCG";
-            this.infoCG.Size = new System.Drawing.Size(358, 91);
+            this.infoCG.Size = new System.Drawing.Size(358, 115);
             this.infoCG.Text = "Info";
             // 
             // daysCombo
@@ -371,32 +444,6 @@
             this.fixedTime.Text = "Time";
             this.fixedTime.TextSize = new System.Drawing.Size(57, 13);
             // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 226);
-            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(164, 0);
-            this.emptySpaceItem1.MinSize = new System.Drawing.Size(164, 10);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(164, 26);
-            this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(162, 0);
-            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(10, 0);
-            this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 10);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(10, 72);
-            this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem3.Text = "emptySpaceItem3";
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
@@ -405,22 +452,10 @@
             this.emptySpaceItem4.MaxSize = new System.Drawing.Size(10, 0);
             this.emptySpaceItem4.MinSize = new System.Drawing.Size(10, 10);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 48);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 72);
             this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // customtimeCheck
-            // 
-            this.customtimeCheck.Location = new System.Drawing.Point(196, 67);
-            this.customtimeCheck.Name = "customtimeCheck";
-            this.customtimeCheck.Properties.AllowFocused = false;
-            this.customtimeCheck.Properties.Caption = "Custom time";
-            this.customtimeCheck.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.customtimeCheck.Size = new System.Drawing.Size(158, 19);
-            this.customtimeCheck.StyleController = this.layoutControl1;
-            this.customtimeCheck.TabIndex = 13;
-            this.customtimeCheck.CheckedChanged += new System.EventHandler(this.customtimeCheck_CheckedChanged);
             // 
             // layoutControlItem1
             // 
@@ -428,26 +463,28 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(172, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(162, 48);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
             // 
-            // okButt
+            // layoutControlItem2
             // 
-            this.okButt.Location = new System.Drawing.Point(176, 238);
-            this.okButt.Name = "okButt";
-            this.okButt.Size = new System.Drawing.Size(87, 22);
-            this.okButt.StyleController = this.layoutControl1;
-            this.okButt.TabIndex = 14;
-            this.okButt.Text = "ok";
+            this.layoutControlItem2.Control = this.comboBoxEdit1;
+            this.layoutControlItem2.CustomizationFormText = "Status";
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(162, 24);
+            this.layoutControlItem2.Text = "Status";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(57, 13);
+            this.layoutControlItem2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // okBtn
             // 
             this.okBtn.Control = this.okButt;
             this.okBtn.CustomizationFormText = "okBtn";
-            this.okBtn.Location = new System.Drawing.Point(164, 226);
+            this.okBtn.Location = new System.Drawing.Point(164, 301);
             this.okBtn.Name = "okBtn";
             this.okBtn.Size = new System.Drawing.Size(91, 26);
             this.okBtn.Text = "okBtn";
@@ -455,20 +492,11 @@
             this.okBtn.TextToControlDistance = 0;
             this.okBtn.TextVisible = false;
             // 
-            // cancelButt
-            // 
-            this.cancelButt.Location = new System.Drawing.Point(278, 238);
-            this.cancelButt.Name = "cancelButt";
-            this.cancelButt.Size = new System.Drawing.Size(88, 22);
-            this.cancelButt.StyleController = this.layoutControl1;
-            this.cancelButt.TabIndex = 15;
-            this.cancelButt.Text = "cancel";
-            // 
             // cancelBtn
             // 
             this.cancelBtn.Control = this.cancelButt;
             this.cancelBtn.CustomizationFormText = "cancelBtn";
-            this.cancelBtn.Location = new System.Drawing.Point(266, 226);
+            this.cancelBtn.Location = new System.Drawing.Point(266, 301);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(92, 26);
             this.cancelBtn.Text = "cancelBtn";
@@ -480,21 +508,34 @@
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(255, 226);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(255, 301);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(11, 26);
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem5
+            // emptySpaceItem1
             // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 72);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(334, 20);
-            this.emptySpaceItem5.Text = "emptySpaceItem5";
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 301);
+            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(164, 0);
+            this.emptySpaceItem1.MinSize = new System.Drawing.Size(164, 10);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(164, 26);
+            this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem6
+            // 
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
+            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 327);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(358, 10);
+            this.emptySpaceItem6.Text = "emptySpaceItem6";
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // GroupGeneralInfoUc
             // 
@@ -503,9 +544,11 @@
             this.AutoSize = true;
             this.Controls.Add(this.layoutControl1);
             this.Name = "GroupGeneralInfoUc";
-            this.Size = new System.Drawing.Size(378, 272);
+            this.Size = new System.Drawing.Size(378, 350);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customtimeCheck.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit5.Properties)).EndInit();
@@ -523,19 +566,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.friTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thuTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoCG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.daysCombo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupnoField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fixedTime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customtimeCheck.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancelBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -575,5 +619,8 @@
         private DevExpress.XtraLayout.LayoutControlItem okBtn;
         private DevExpress.XtraLayout.LayoutControlItem cancelBtn;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
     }
 }

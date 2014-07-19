@@ -95,7 +95,7 @@
             // 
             // defaultLook
             // 
-            this.defaultLook.LookAndFeel.SkinName = "Office 2013 Light Gray";
+            this.defaultLook.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             // 
             // ribbonControl
             // 
@@ -130,7 +130,7 @@
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1128, 147);
+            this.ribbonControl.Size = new System.Drawing.Size(1116, 147);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.SelectedPageChanged += new System.EventHandler(this.ribbonControl_SelectedPageChanged);
@@ -144,25 +144,25 @@
             this.backstageView.Items.Add(this.backstageSettingsTab);
             this.backstageView.Items.Add(this.backstageViewItemSeparator1);
             this.backstageView.Items.Add(this.backstageExitButton);
-            this.backstageView.Location = new System.Drawing.Point(718, 57);
+            this.backstageView.Location = new System.Drawing.Point(654, 57);
             this.backstageView.Name = "backstageView";
             this.backstageView.Ribbon = this.ribbonControl;
             this.backstageView.SelectedTab = null;
-            this.backstageView.Size = new System.Drawing.Size(398, 77);
+            this.backstageView.Size = new System.Drawing.Size(462, 106);
             this.backstageView.TabIndex = 1;
             // 
             // backstageViewClientControl1
             // 
             this.backstageViewClientControl1.Location = new System.Drawing.Point(138, 63);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(259, 13);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(323, 42);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewClientControl2
             // 
             this.backstageViewClientControl2.Location = new System.Drawing.Point(138, 63);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(259, 13);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(323, 42);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // backstagePrintTab
@@ -377,10 +377,10 @@
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 482);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 486);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1128, 27);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1116, 23);
             // 
             // xtraTabControl
             // 
@@ -394,7 +394,7 @@
             this.xtraTabControl.Name = "xtraTabControl";
             this.xtraTabControl.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.xtraTabControl.SelectedTabPage = this.studentsTab;
-            this.xtraTabControl.Size = new System.Drawing.Size(1128, 335);
+            this.xtraTabControl.Size = new System.Drawing.Size(1116, 339);
             this.xtraTabControl.TabIndex = 3;
             this.xtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.studentsTab,
@@ -405,7 +405,7 @@
             // 
             this.studentsTab.Controls.Add(this.splitContainerControl1);
             this.studentsTab.Name = "studentsTab";
-            this.studentsTab.Size = new System.Drawing.Size(1128, 313);
+            this.studentsTab.Size = new System.Drawing.Size(1116, 317);
             this.studentsTab.Text = "students";
             // 
             // splitContainerControl1
@@ -417,7 +417,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1128, 313);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1116, 317);
             this.splitContainerControl1.SplitterPosition = 267;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -430,7 +430,7 @@
             this.groupsGridControl.MainView = this.groupsGridView;
             this.groupsGridControl.MenuManager = this.ribbonControl;
             this.groupsGridControl.Name = "groupsGridControl";
-            this.groupsGridControl.Size = new System.Drawing.Size(267, 313);
+            this.groupsGridControl.Size = new System.Drawing.Size(267, 317);
             this.groupsGridControl.TabIndex = 2;
             this.groupsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.groupsGridView});
@@ -458,7 +458,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.detailsGridControl);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(849, 313);
+            this.splitContainerControl2.Size = new System.Drawing.Size(837, 317);
             this.splitContainerControl2.SplitterPosition = 265;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -471,7 +471,7 @@
             this.studentsGridControl.MainView = this.studentsGridView;
             this.studentsGridControl.MenuManager = this.ribbonControl;
             this.studentsGridControl.Name = "studentsGridControl";
-            this.studentsGridControl.Size = new System.Drawing.Size(572, 313);
+            this.studentsGridControl.Size = new System.Drawing.Size(560, 317);
             this.studentsGridControl.TabIndex = 0;
             this.studentsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.studentsGridView});
@@ -497,7 +497,7 @@
             this.detailsGridControl.MainView = this.detailsGridView;
             this.detailsGridControl.MenuManager = this.ribbonControl;
             this.detailsGridControl.Name = "detailsGridControl";
-            this.detailsGridControl.Size = new System.Drawing.Size(265, 313);
+            this.detailsGridControl.Size = new System.Drawing.Size(265, 317);
             this.detailsGridControl.TabIndex = 1;
             this.detailsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.detailsGridView});
@@ -516,20 +516,20 @@
             // paymentsTab
             // 
             this.paymentsTab.Name = "paymentsTab";
-            this.paymentsTab.Size = new System.Drawing.Size(1128, 313);
+            this.paymentsTab.Size = new System.Drawing.Size(1116, 317);
             this.paymentsTab.Text = "payments";
             // 
             // scheduleTab
             // 
             this.scheduleTab.Name = "scheduleTab";
-            this.scheduleTab.Size = new System.Drawing.Size(1128, 313);
+            this.scheduleTab.Size = new System.Drawing.Size(1116, 317);
             this.scheduleTab.Text = "schedule";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 509);
+            this.ClientSize = new System.Drawing.Size(1116, 509);
             this.Controls.Add(this.backstageView);
             this.Controls.Add(this.xtraTabControl);
             this.Controls.Add(this.ribbonStatusBar1);
