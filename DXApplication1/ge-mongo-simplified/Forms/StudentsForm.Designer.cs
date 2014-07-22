@@ -36,7 +36,6 @@
             this.studentPaymentInfoUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             this.StudentGeneralInfoUCTile = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.StudentPaymentInfoUCTile = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.closeAppFlyout = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowsUIView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pageGroup1)).BeginInit();
@@ -44,7 +43,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentPaymentInfoUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGeneralInfoUCTile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentPaymentInfoUCTile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeAppFlyout)).BeginInit();
             this.SuspendLayout();
             // 
             // documentManager1
@@ -58,8 +56,7 @@
             // windowsUIView1
             // 
             this.windowsUIView1.ContentContainers.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.IContentContainer[] {
-            this.pageGroup1,
-            this.closeAppFlyout});
+            this.pageGroup1});
             this.windowsUIView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.studentGeneralInfoUCDocument,
             this.studentPaymentInfoUCDocument});
@@ -100,11 +97,6 @@
             this.StudentPaymentInfoUCTile.Document = this.studentPaymentInfoUCDocument;
             this.StudentPaymentInfoUCTile.Name = "StudentPaymentInfoUCTile";
             // 
-            // closeAppFlyout
-            // 
-            this.closeAppFlyout.Document = this.studentGeneralInfoUCDocument;
-            this.closeAppFlyout.Name = "closeAppFlyout";
-            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,7 +107,6 @@
             this.Name = "StudentsForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Student [...]";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentsForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowsUIView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pageGroup1)).EndInit();
@@ -123,7 +114,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentPaymentInfoUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGeneralInfoUCTile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentPaymentInfoUCTile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeAppFlyout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,7 +127,6 @@
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile StudentGeneralInfoUCTile;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile StudentPaymentInfoUCTile;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup pageGroup1;
-        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout closeAppFlyout;
 
 
     }

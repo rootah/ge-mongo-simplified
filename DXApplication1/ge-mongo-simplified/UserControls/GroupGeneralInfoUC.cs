@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using DevExpress.XtraLayout.Utils;
 
 namespace ge_mongo_simplified.UserControls
 {
-    public partial class GroupGeneralInfoUc : DevExpress.XtraEditors.XtraUserControl
+    public partial class GroupGeneralInfoUc : XtraUserControl
     {
         public GroupGeneralInfoUc()
         {
@@ -13,6 +13,7 @@ namespace ge_mongo_simplified.UserControls
 
         private void customtimeCheck_CheckedChanged(object sender, EventArgs e)
         {
-            customtimeCG.Visibility = customtimeCheck.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;}
+            customtimeCG.Visibility = customtimeCheck.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
+        }
     }
 }

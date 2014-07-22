@@ -119,8 +119,9 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(570, 245, 411, 350);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(461, 149, 575, 517);
             this.layoutControl1.Root = this.layoutControlGroup1;
+            this.layoutControl1.ShowTemplates = true;
             this.layoutControl1.Size = new System.Drawing.Size(378, 350);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
@@ -168,11 +169,11 @@
             // timeEdit7
             // 
             this.timeEdit7.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeEdit7.Location = new System.Drawing.Point(256, 199);
+            this.timeEdit7.Location = new System.Drawing.Point(246, 270);
             this.timeEdit7.Name = "timeEdit7";
             this.timeEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit7.Size = new System.Drawing.Size(98, 20);
+            this.timeEdit7.Size = new System.Drawing.Size(108, 20);
             this.timeEdit7.StyleController = this.layoutControl1;
             this.timeEdit7.TabIndex = 12;
             // 
@@ -201,7 +202,7 @@
             // timeEdit4
             // 
             this.timeEdit4.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeEdit4.Location = new System.Drawing.Point(84, 199);
+            this.timeEdit4.Location = new System.Drawing.Point(84, 270);
             this.timeEdit4.Name = "timeEdit4";
             this.timeEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -314,9 +315,9 @@
             // 
             this.satTime.Control = this.timeEdit7;
             this.satTime.CustomizationFormText = "Saturday";
-            this.satTime.Location = new System.Drawing.Point(172, 48);
+            this.satTime.Location = new System.Drawing.Point(162, 119);
             this.satTime.Name = "satTime";
-            this.satTime.Size = new System.Drawing.Size(162, 24);
+            this.satTime.Size = new System.Drawing.Size(172, 24);
             this.satTime.Text = "Saturday";
             this.satTime.TextSize = new System.Drawing.Size(57, 13);
             this.satTime.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -325,7 +326,7 @@
             // 
             this.wedTime.Control = this.timeEdit4;
             this.wedTime.CustomizationFormText = "Wednessday";
-            this.wedTime.Location = new System.Drawing.Point(0, 48);
+            this.wedTime.Location = new System.Drawing.Point(0, 119);
             this.wedTime.Name = "wedTime";
             this.wedTime.Size = new System.Drawing.Size(162, 24);
             this.wedTime.Text = "Wednesday";
@@ -384,7 +385,7 @@
             this.emptySpaceItem3.MaxSize = new System.Drawing.Size(10, 0);
             this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 10);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(10, 72);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(10, 48);
             this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -393,7 +394,7 @@
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 72);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 48);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
             this.emptySpaceItem5.Size = new System.Drawing.Size(334, 71);
             this.emptySpaceItem5.Text = "emptySpaceItem5";

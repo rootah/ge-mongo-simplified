@@ -117,11 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="defaultLook.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="backstagePrintTab.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="printBackTab.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAMdEVYdFRpdGxlAFByaW50O8g2MuoAAABnSURBVDhP
@@ -129,7 +126,7 @@
         ywJ/xbkX3MYL3JH4DxvwHBx6ibE87aahMS8IJRd04c1ZwXe0VA/NBo8bQGswAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="backstageSettingsTab.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="settingsBackTab.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAE9wdGlvbnM7Q3VzdG9taXo7QmFy
@@ -141,7 +138,7 @@
         597GvDwDol/HVlUBXUIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="backstageExitButton.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="exitBackButt.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAjdEVYdFRpdGxlAENhbmNlbDtTdG9wO0V4aXQ7QmFy
@@ -153,9 +150,9 @@
 </value>
   </data>
   <metadata name="newPopup.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>310, 17</value>
+    <value>244, 15</value>
   </metadata>
-  <data name="newDropButton.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="addDropButton.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAEFkZDtJdGVtO0FkZEl0ZW07QmFy
@@ -164,7 +161,7 @@
         NsATdd659S3QwxmvrTHz254jDLRZfIMREONvMAKiRbq/kNMFuTHOkziAmZ0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="newDropButton.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="addDropButton.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAEFkZDtJdGVtO0FkZEl0ZW07QmFy
@@ -225,7 +222,7 @@
 </value>
   </data>
   <metadata name="filterPopup.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>184, 17</value>
+    <value>141, 17</value>
   </metadata>
   <data name="filterDropButton.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -275,29 +272,35 @@
         KCvwDxdMuP/g54BLuPiAtd84NzUuwwOjsAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="defaultLook.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="backstageDM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>354, 15</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>49</value>
+    <value>47</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/wAAAP8AAAD/////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
-        /wH///8BAAAA/wAAAP8AAAD/AAAA/////wEAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/////AQAAAP8AAAD/AAAA/wAAAP////8BAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA/////wEAAAD/AAAA/wAAAP8AAAD/////Af///wH///8B////Af///wH///8BAAAABwAA
-        ADkAAABzAAAAqwAAAOMAAAAdAAAA/wAAAP////8B////Af///wH///8BAAAAHwAAAFcAAACPAAAAyQAA
-        APkAAAD/AAAA/wAAAP8AAAD/AAAAV////wH///8B////Af///wH///8BAAAAnwAAAP8AAAD/AAAA/wAA
-        AP8AAAD/AAAA1wAAAJ8AAACPAAAAzQAAAK3///8B////Af///wH///8B////AQAAAHkAAADvAAAAuQAA
-        AH8AAABHAAAAEQAAADcAAACvAAAA/wAAAP8AAAD7AAAAK////wH///8B////Af///wEAAAAJ////Af//
-        /wH///8BAAAARwAAAL8AAAD/AAAA/wAAAPcAAAChAAAAxwAAANEAAAAJ////Af///wH///8B////AQAA
-        AAMAAABXAAAAzwAAAP8AAAD/AAAA7wAAAIUAAABBAAAA1wAAAP8AAADzAAAAOf///wH///8B////Af//
-        /wEAAABvAAAA/wAAAP8AAADnAAAAdwAAAA8AAABZAAAA8wAAAP8AAADVAAAAKf///wH///8B////Af//
-        /wH///8BAAAAEQAAAM8AAABnAAAABwAAAAcAAACVAAAA/wAAAP8AAAClAAAAC////wH///8B////Af//
-        /wH///8B////Af///wH///8B////AQAAAB8AAADJAAAA/wAAAPkAAABp////Af///wH///8B////Af//
-        /wH///8B////Af///wH///8B////AQAAAEMAAADtAAAA/wAAAN8AAAA1////Af///wH///8B////Af//
-        /wH///8B////Af///wH///8B////Af///wEAAAAxAAAA9wAAALUAAAAT////Af///wH///8B////Af//
+        AAD///8BAAAAeQAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADxAAAAUwAAAA8AAAAJ////Af//
+        /wH///8B////AQAAAE8AAAD5AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAuwAAABUAAACHAAAAkwAA
+        ABv///8B////Af///wEAAAAjAAAA3QAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA8QAAAE////8BAAAARwAA
+        AMkAAACtAAAAG////wEAAAADAAAAEwAAAKMAAAD9AAAA/wAAAP8AAAD/AAAA/wAAAO8AAABVAAAAAwAA
+        AAMAAAApAAAAyQAAAJMAAAALAAAAOQAAAH0AAABjAAAA9wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA0wAA
+        AEcAAAAFAAAAAwAAAFEAAADTAAAAQwAAAKMAAACtAAAAGwAAANMAAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAADrAAAAXQAAAAcAAAAJAAAArQAAAKMAAADfAAAAbwAAAA8AAACnAAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA8QAAANsAAABX////AQAAAG8AAADfAAAA8wAAAGEAAACRAAAA7wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAALkAAACJAAAAtwAAAAsAAABPAAAA8wAAAPMAAABTAAAAPQAAAIEAAACfAAAA9wAA
+        AP8AAAD/AAAA/wAAAP8AAADvAAAAUQAAAEcAAAALAAAATwAAAPMAAADfAAAAbf///wEAAAAFAAAAEQAA
+        AIkAAADrAAAA+QAAAP0AAAD/AAAA/wAAAM8AAAAx////AQAAAG0AAADfAAAAowAAAK0AAAAJ////Af//
+        /wEAAAAJAAAASQAAAG8AAACxAAAA+wAAAP8AAAD1AAAAWwAAAAkAAACtAAAAowAAAEMAAADTAAAAUQAA
+        AAP///8B////Af///wEAAAADAAAAGQAAAIEAAADTAAAAywAAAC8AAABRAAAA0wAAAEMAAAALAAAAkwAA
+        AMkAAAApAAAAA////wH///8B////Af///wEAAAAHAAAAKwAAAEEAAAAtAAAAyQAAAJMAAAAL////AQAA
+        ABsAAACtAAAAyQAAAE8AAAAJ////Af///wH///8B////AQAAAAkAAABPAAAAyQAAAK0AAAAb////Af//
+        /wH///8BAAAAGwAAAJMAAADVAAAArQAAAG0AAABNAAAATQAAAG0AAACtAAAA1QAAAJMAAAAb////Af//
+        /wH///8B////Af///wEAAAALAAAARQAAAKMAAADfAAAA8wAAAPMAAADfAAAAowAAAEUAAAAL////Af//
         /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
         //8AAP//AAD//w==
 </value>
