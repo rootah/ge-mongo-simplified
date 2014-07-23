@@ -76,14 +76,7 @@ namespace ge_mongo_simplified.Forms
             }
         }
 
-        private void backstageSettingsUI_QueryControl(object sender,
-            DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
-        {
-            
-        }
-
-        private void backstageSettingsUI_QueryControl_1(object sender, DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
-        {
+        private void backstageSettingsUI_QueryControl_1(object sender, DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e){
             if (e.Document == dbSettingsUCDocument)
                 e.Control = new dbSettingsUC(this);
             if (e.Document == oddSettingsUCDocument)

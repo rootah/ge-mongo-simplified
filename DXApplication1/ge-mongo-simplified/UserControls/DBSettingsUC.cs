@@ -10,12 +10,19 @@ namespace ge_mongo_simplified.UserControls
         {
             InitializeComponent();
         }
-
-        private void simpleButton1_Click(object sender, System.EventArgs e)
+        private void stoprecButt_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (layoutControlItem2.Visibility == LayoutVisibility.Always)
-                layoutControlItem2.Visibility = LayoutVisibility.Never;
-            else layoutControlItem2.Visibility = LayoutVisibility.Always;
+            logrecBtn.Down = false;
+        }
+
+        private void checkEdit1_CheckedChanged(object sender, System.EventArgs e)
+        {
+            checkEdit1.Text = checkEdit1.Checked ? @"   master" : @"";
+        }
+
+        private void checkEdit2_CheckedChanged(object sender, System.EventArgs e)
+        {
+            checkEdit2.Text = checkEdit2.Checked ? @"   master" : @"";
         }
     }
 }

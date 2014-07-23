@@ -83,11 +83,9 @@
             this.defaultLook = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.backstageDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.backstageSettingsUI = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
-            this.dbsTG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup(this.components);
+            this.tabbedGroup1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup(this.components);
             this.dbSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             this.oddSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.OddSettingsUCTile = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.tileContainer1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.backstageView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newPopup)).BeginInit();
@@ -111,11 +109,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageDM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageSettingsUI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbsTG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbSettingsUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oddSettingsUCDocument)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OddSettingsUCTile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tileContainer1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -641,45 +637,30 @@
             // backstageSettingsUI
             // 
             this.backstageSettingsUI.ContentContainers.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.IContentContainer[] {
-            this.dbsTG,
-            this.tileContainer1});
+            this.tabbedGroup1});
             this.backstageSettingsUI.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.dbSettingsUCDocument,
             this.oddSettingsUCDocument});
-            this.backstageSettingsUI.TabbedGroupProperties.TileTextAlignment = DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileHeaderContentAlignment.TopCenter;
-            this.backstageSettingsUI.Tiles.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile[] {
-            this.OddSettingsUCTile});
             this.backstageSettingsUI.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.backstageSettingsUI_QueryControl_1);
             // 
-            // dbsTG
+            // tabbedGroup1
             // 
-            this.dbsTG.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document[] {
+            this.tabbedGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document[] {
             this.dbSettingsUCDocument,
             this.oddSettingsUCDocument});
-            this.dbsTG.Name = "dbsTG";
+            this.tabbedGroup1.Name = "tabbedGroup1";
             // 
             // dbSettingsUCDocument
             // 
-            this.dbSettingsUCDocument.Caption = "Mongo DB\'s";
+            this.dbSettingsUCDocument.Caption = "dbSettingsUC";
             this.dbSettingsUCDocument.ControlName = "dbSettingsUC";
             this.dbSettingsUCDocument.ControlTypeName = "ge_mongo_simplified.UserControls.dbSettingsUC";
             // 
             // oddSettingsUCDocument
             // 
-            this.oddSettingsUCDocument.Caption = "Another Settings";
+            this.oddSettingsUCDocument.Caption = "OddSettingsUC";
             this.oddSettingsUCDocument.ControlName = "OddSettingsUC";
             this.oddSettingsUCDocument.ControlTypeName = "ge_mongo_simplified.UserControls.OddSettingsUC";
-            // 
-            // OddSettingsUCTile
-            // 
-            this.OddSettingsUCTile.Document = this.oddSettingsUCDocument;
-            this.OddSettingsUCTile.Name = "OddSettingsUCTile";
-            // 
-            // tileContainer1
-            // 
-            this.tileContainer1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile[] {
-            this.OddSettingsUCTile});
-            this.tileContainer1.Name = "tileContainer1";
             // 
             // MainForm
             // 
@@ -719,11 +700,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageDM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageSettingsUI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbsTG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbSettingsUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oddSettingsUCDocument)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OddSettingsUCTile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tileContainer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -785,11 +764,9 @@
         private UserControls.dbSettingsUC settingsUC1;
         private DevExpress.XtraBars.Docking2010.DocumentManager backstageDM;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView backstageSettingsUI;
-        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup dbsTG;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup tabbedGroup1;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document dbSettingsUCDocument;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document oddSettingsUCDocument;
-        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer tileContainer1;
-        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile OddSettingsUCTile;
 
     }
 }
