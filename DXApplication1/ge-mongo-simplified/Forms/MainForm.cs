@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using DevExpress.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
 using ge_mongo_simplified.UserControls;
 
 namespace ge_mongo_simplified.Forms
@@ -53,12 +55,12 @@ namespace ge_mongo_simplified.Forms
             if (groupsCheckButton.Down)
             {
                 groupstudentsdetailsSplit.PanelVisibility = SplitPanelVisibility.Both;
-                //groupsCheckButton.Appearance.ForeColor = Color.White;
+                groupsCheckButton.Appearance.ForeColor = Color.White;
             }
             else
             {
                 groupstudentsdetailsSplit.PanelVisibility = SplitPanelVisibility.Panel2;
-                //groupsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
+                groupsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
             }
         }
 
@@ -67,12 +69,12 @@ namespace ge_mongo_simplified.Forms
             if (detailsCheckButton.Down)
             {
                 studentsdetailSplit.PanelVisibility = SplitPanelVisibility.Both;
-                //detailsCheckButton.Appearance.ForeColor = Color.White;
+                detailsCheckButton.Appearance.ForeColor = Color.White;
             }
             else
             {
                 studentsdetailSplit.PanelVisibility = SplitPanelVisibility.Panel1;
-                //detailsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
+                detailsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
             }
         }
 
@@ -81,6 +83,15 @@ namespace ge_mongo_simplified.Forms
                 e.Control = new dbSettingsUC(this);
             if (e.Document == oddSettingsUCDocument)
                 e.Control = new OddSettingsUC(this);
+        }
+
+        private void repositoryItemButtonEdit1_ButtonClick(object sender, ButtonPressedEventArgs e)
+        {
+            MessageBox.Show(@"btn clicked");
+        }
+
+        private void repositoryItemButtonEdit1_Enter_1(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using DevExpress.LookAndFeel;
+using DevExpress.Skins;
 using ge_mongo_simplified.Forms;
 
 namespace ge_mongo_simplified
@@ -17,7 +19,7 @@ namespace ge_mongo_simplified
 
             //BonusSkins.Register();
             //SkinManager.EnableFormSkins();
-            //UserLookAndFeel.Default.SetSkinStyle("SkinProject1"); 
+            //UserLookAndFeel.Default.SetSkinStyle("Visual Studio 2013 Light"); 
             Application.Run(new MainForm());
         }
     }
