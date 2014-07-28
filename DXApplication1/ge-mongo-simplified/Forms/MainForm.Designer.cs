@@ -76,13 +76,10 @@
             this.xtraTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.studentsTab = new DevExpress.XtraTab.XtraTabPage();
             this.groupstudentsdetailsSplit = new DevExpress.XtraEditors.SplitContainerControl();
-            this.groupsGridControl = new DevExpress.XtraGrid.GridControl();
-            this.groupsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupsGridUC2 = new ge_mongo_simplified.UserControls.GroupsGridUC();
             this.studentsdetailSplit = new DevExpress.XtraEditors.SplitContainerControl();
-            this.studentsGridControl = new DevExpress.XtraGrid.GridControl();
-            this.studentsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.detailsGridControl = new DevExpress.XtraGrid.GridControl();
-            this.detailsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.studetsGridUC1 = new ge_mongo_simplified.UserControls.StudetsGridUC();
+            this.detailsUC1 = new ge_mongo_simplified.UserControls.DetailsUC();
             this.paymentsTab = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupsGridUC1 = new ge_mongo_simplified.UserControls.GroupsGridUC();
@@ -114,14 +111,8 @@
             this.studentsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupstudentsdetailsSplit)).BeginInit();
             this.groupstudentsdetailsSplit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupsGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsdetailSplit)).BeginInit();
             this.studentsdetailSplit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detailsGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detailsGridView)).BeginInit();
             this.paymentsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -594,7 +585,7 @@
             this.groupstudentsdetailsSplit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupstudentsdetailsSplit.Location = new System.Drawing.Point(0, 0);
             this.groupstudentsdetailsSplit.Name = "groupstudentsdetailsSplit";
-            this.groupstudentsdetailsSplit.Panel1.Controls.Add(this.groupsGridControl);
+            this.groupstudentsdetailsSplit.Panel1.Controls.Add(this.groupsGridUC2);
             this.groupstudentsdetailsSplit.Panel1.Text = "Panel1";
             this.groupstudentsdetailsSplit.Panel2.Controls.Add(this.studentsdetailSplit);
             this.groupstudentsdetailsSplit.Panel2.Text = "detailsPanel";
@@ -603,29 +594,13 @@
             this.groupstudentsdetailsSplit.TabIndex = 0;
             this.groupstudentsdetailsSplit.Text = "splitContainerControl1";
             // 
-            // groupsGridControl
+            // groupsGridUC2
             // 
-            this.groupsGridControl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupsGridControl.Location = new System.Drawing.Point(0, 0);
-            this.groupsGridControl.MainView = this.groupsGridView;
-            this.groupsGridControl.MenuManager = this.ribbonControl;
-            this.groupsGridControl.Name = "groupsGridControl";
-            this.groupsGridControl.Size = new System.Drawing.Size(267, 266);
-            this.groupsGridControl.TabIndex = 2;
-            this.groupsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.groupsGridView});
-            // 
-            // groupsGridView
-            // 
-            this.groupsGridView.Appearance.GroupPanel.Options.UseForeColor = true;
-            this.groupsGridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.groupsGridView.GridControl = this.groupsGridControl;
-            this.groupsGridView.GroupPanelText = "Groups";
-            this.groupsGridView.Name = "groupsGridView";
-            this.groupsGridView.OptionsCustomization.AllowGroup = false;
-            this.groupsGridView.OptionsView.ShowColumnHeaders = false;
-            this.groupsGridView.OptionsView.ShowIndicator = false;
+            this.groupsGridUC2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupsGridUC2.Location = new System.Drawing.Point(0, 0);
+            this.groupsGridUC2.Name = "groupsGridUC2";
+            this.groupsGridUC2.Size = new System.Drawing.Size(267, 266);
+            this.groupsGridUC2.TabIndex = 0;
             // 
             // studentsdetailSplit
             // 
@@ -634,65 +609,31 @@
             this.studentsdetailSplit.Location = new System.Drawing.Point(0, 0);
             this.studentsdetailSplit.Name = "studentsdetailSplit";
             this.studentsdetailSplit.Panel1.CaptionLocation = DevExpress.Utils.Locations.Top;
-            this.studentsdetailSplit.Panel1.Controls.Add(this.studentsGridControl);
+            this.studentsdetailSplit.Panel1.Controls.Add(this.studetsGridUC1);
             this.studentsdetailSplit.Panel1.ShowCaption = true;
             this.studentsdetailSplit.Panel1.Text = "studentsPanel";
-            this.studentsdetailSplit.Panel2.Controls.Add(this.detailsGridControl);
+            this.studentsdetailSplit.Panel2.Controls.Add(this.detailsUC1);
             this.studentsdetailSplit.Panel2.Text = "Panel2";
             this.studentsdetailSplit.Size = new System.Drawing.Size(837, 266);
             this.studentsdetailSplit.SplitterPosition = 265;
             this.studentsdetailSplit.TabIndex = 0;
             this.studentsdetailSplit.Text = "splitContainerControl2";
             // 
-            // studentsGridControl
+            // studetsGridUC1
             // 
-            this.studentsGridControl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.studentsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.studentsGridControl.Location = new System.Drawing.Point(0, 0);
-            this.studentsGridControl.MainView = this.studentsGridView;
-            this.studentsGridControl.MenuManager = this.ribbonControl;
-            this.studentsGridControl.Name = "studentsGridControl";
-            this.studentsGridControl.Size = new System.Drawing.Size(560, 266);
-            this.studentsGridControl.TabIndex = 0;
-            this.studentsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.studentsGridView});
+            this.studetsGridUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studetsGridUC1.Location = new System.Drawing.Point(0, 0);
+            this.studetsGridUC1.Name = "studetsGridUC1";
+            this.studetsGridUC1.Size = new System.Drawing.Size(560, 266);
+            this.studetsGridUC1.TabIndex = 0;
             // 
-            // studentsGridView
+            // detailsUC1
             // 
-            this.studentsGridView.Appearance.GroupPanel.Options.UseForeColor = true;
-            this.studentsGridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.studentsGridView.GridControl = this.studentsGridControl;
-            this.studentsGridView.GroupPanelText = "Students";
-            this.studentsGridView.Name = "studentsGridView";
-            this.studentsGridView.OptionsCustomization.AllowGroup = false;
-            this.studentsGridView.OptionsView.ShowColumnHeaders = false;
-            this.studentsGridView.OptionsView.ShowGroupExpandCollapseButtons = false;
-            this.studentsGridView.OptionsView.ShowIndicator = false;
-            this.studentsGridView.ViewCaption = "Capt";
-            // 
-            // detailsGridControl
-            // 
-            this.detailsGridControl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.detailsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.detailsGridControl.Location = new System.Drawing.Point(0, 0);
-            this.detailsGridControl.MainView = this.detailsGridView;
-            this.detailsGridControl.MenuManager = this.ribbonControl;
-            this.detailsGridControl.Name = "detailsGridControl";
-            this.detailsGridControl.Size = new System.Drawing.Size(265, 266);
-            this.detailsGridControl.TabIndex = 1;
-            this.detailsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.detailsGridView});
-            // 
-            // detailsGridView
-            // 
-            this.detailsGridView.Appearance.GroupPanel.Options.UseForeColor = true;
-            this.detailsGridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.detailsGridView.GridControl = this.detailsGridControl;
-            this.detailsGridView.GroupPanelText = "Details";
-            this.detailsGridView.Name = "detailsGridView";
-            this.detailsGridView.OptionsCustomization.AllowGroup = false;
-            this.detailsGridView.OptionsView.ShowColumnHeaders = false;
-            this.detailsGridView.OptionsView.ShowIndicator = false;
+            this.detailsUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailsUC1.Location = new System.Drawing.Point(0, 0);
+            this.detailsUC1.Name = "detailsUC1";
+            this.detailsUC1.Size = new System.Drawing.Size(265, 266);
+            this.detailsUC1.TabIndex = 0;
             // 
             // paymentsTab
             // 
@@ -781,6 +722,7 @@
             this.spreadsheetControl1.Location = new System.Drawing.Point(0, 0);
             this.spreadsheetControl1.MenuManager = this.ribbonControl;
             this.spreadsheetControl1.Name = "spreadsheetControl1";
+            this.spreadsheetControl1.Options.Culture = new System.Globalization.CultureInfo("en-GB");
             this.spreadsheetControl1.Size = new System.Drawing.Size(894, 266);
             this.spreadsheetControl1.TabIndex = 0;
             this.spreadsheetControl1.Text = "spreadsheetControl1";
@@ -862,14 +804,8 @@
             this.studentsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupstudentsdetailsSplit)).EndInit();
             this.groupstudentsdetailsSplit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupsGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsdetailSplit)).EndInit();
             this.studentsdetailSplit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.studentsGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detailsGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detailsGridView)).EndInit();
             this.paymentsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
@@ -913,12 +849,6 @@
         private DevExpress.XtraBars.BarButtonItem detailsCheckButton;
         private DevExpress.XtraEditors.SplitContainerControl groupstudentsdetailsSplit;
         private DevExpress.XtraEditors.SplitContainerControl studentsdetailSplit;
-        private DevExpress.XtraGrid.GridControl studentsGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView studentsGridView;
-        private DevExpress.XtraGrid.GridControl detailsGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView detailsGridView;
-        private DevExpress.XtraGrid.GridControl groupsGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView groupsGridView;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.PopupMenu newPopup;
         private DevExpress.XtraBars.BarButtonItem newGroupButton;
@@ -960,6 +890,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private UserControls.GroupsGridUC groupsGridUC1;
+        private UserControls.GroupsGridUC groupsGridUC2;
+        private UserControls.StudetsGridUC studetsGridUC1;
+        private UserControls.DetailsUC detailsUC1;
 
     }
 }

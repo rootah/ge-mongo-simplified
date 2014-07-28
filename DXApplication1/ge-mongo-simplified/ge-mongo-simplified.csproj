@@ -45,6 +45,7 @@
     <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraSpreadsheet.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MongoDB.Bson">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MongoDB\CSharpDriver 1.9.2\MongoDB.Bson.dll</HintPath>
     </Reference>
@@ -79,6 +80,12 @@
     </Compile>
     <Compile Include="Forms\StudentsForm.Designer.cs">
       <DependentUpon>StudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DetailsUC.Designer.cs">
+      <DependentUpon>DetailsUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\GroupGeneralInfoUC.cs">
       <SubType>UserControl</SubType>
@@ -116,6 +123,12 @@
     <Compile Include="UserControls\StudentPaymentInfoUC.Designer.cs">
       <DependentUpon>StudentPaymentInfoUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\StudetsGridUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudetsGridUC.Designer.cs">
+      <DependentUpon>StudetsGridUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\GroupsForm.resx">
       <DependentUpon>GroupsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +149,9 @@
     <EmbeddedResource Include="Forms\StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DetailsUC.resx">
+      <DependentUpon>DetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GroupGeneralInfoUC.resx">
       <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StudentPaymentInfoUC.resx">
       <DependentUpon>StudentPaymentInfoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StudetsGridUC.resx">
+      <DependentUpon>StudetsGridUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
