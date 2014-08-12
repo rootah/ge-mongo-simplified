@@ -1,4 +1,4 @@
-﻿namespace ge_mongo_simplified
+﻿namespace ge_mongo_simplified.Forms
 {
     partial class GroupsForm
     {
@@ -37,18 +37,23 @@
             this.groupGeneralInfoUc1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupGeneralInfoUc1.Location = new System.Drawing.Point(0, 0);
             this.groupGeneralInfoUc1.Name = "groupGeneralInfoUc1";
-            this.groupGeneralInfoUc1.Size = new System.Drawing.Size(358, 379);
+            this.groupGeneralInfoUc1.Size = new System.Drawing.Size(400, 189);
             this.groupGeneralInfoUc1.TabIndex = 0;
             // 
             // GroupsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 379);
+            this.ClientSize = new System.Drawing.Size(400, 189);
+            this.ControlBox = false;
             this.Controls.Add(this.groupGeneralInfoUc1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Visual Studio 2013 Light";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GroupsForm";
             this.Text = "Group [...]";
+            this.Load += new System.EventHandler(this.GroupsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

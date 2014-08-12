@@ -14,12 +14,12 @@ namespace ge_mongo_simplified
         [STAThread]
         private static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(true);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(true);
 
             //BonusSkins.Register();
-            //SkinManager.EnableFormSkins();
-            //UserLookAndFeel.Default.SetSkinStyle("Visual Studio 2013 Light"); 
+            SkinManager.EnableFormSkins();
+            UserLookAndFeel.Default.SetSkinStyle("Visual Studio 2013 Light"); 
             Application.Run(new MainForm());
         }
     }

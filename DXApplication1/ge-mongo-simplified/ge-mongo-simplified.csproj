@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Group.cs" />
+    <Compile Include="Classes\Mongo.cs" />
     <Compile Include="Forms\GroupsForm.cs">
       <SubType>Form</SubType>
     </Compile>

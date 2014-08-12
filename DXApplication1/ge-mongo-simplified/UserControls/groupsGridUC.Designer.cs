@@ -48,7 +48,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.groupsLabel = new DevExpress.XtraLayout.SimpleLabelItem();
             this.groupsBarControl = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.searchControl = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupsLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupsBarControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(901, 208, 250, 350);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(738, 208, 413, 586);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(556, 407);
             this.layoutControl1.TabIndex = 0;
@@ -223,11 +223,12 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.groupsLabel,
             this.groupsBarControl,
-            this.layoutControlItem2,
+            this.gridControl,
             this.searchControl});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 5);
+            this.layoutControlGroup1.ShowTabPageCloseButton = true;
             this.layoutControlGroup1.Size = new System.Drawing.Size(556, 407);
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
@@ -266,24 +267,26 @@
             this.groupsBarControl.TextToControlDistance = 0;
             this.groupsBarControl.TextVisible = false;
             this.groupsBarControl.TrimClientAreaToControl = false;
+            this.groupsBarControl.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // layoutControlItem2
+            // gridControl
             // 
-            this.layoutControlItem2.Control = this.groupsGrid;
-            this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 34);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(556, 363);
-            this.layoutControlItem2.Text = "layoutControlItem2";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextToControlDistance = 0;
-            this.layoutControlItem2.TextVisible = false;
+            this.gridControl.Control = this.groupsGrid;
+            this.gridControl.CustomizationFormText = "gridControl";
+            this.gridControl.Location = new System.Drawing.Point(0, 34);
+            this.gridControl.Name = "gridControl";
+            this.gridControl.Size = new System.Drawing.Size(556, 363);
+            this.gridControl.Text = "gridControl";
+            this.gridControl.TextSize = new System.Drawing.Size(0, 0);
+            this.gridControl.TextToControlDistance = 0;
+            this.gridControl.TextVisible = false;
             // 
             // searchControl
             // 
             this.searchControl.Control = this.groupSearchControl;
             this.searchControl.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchControl.CustomizationFormText = "searchControl";
+            this.searchControl.FillControlToClientArea = false;
             this.searchControl.Location = new System.Drawing.Point(127, 0);
             this.searchControl.Name = "searchControl";
             this.searchControl.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 2, 2, 2);
@@ -317,7 +320,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupsLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupsBarControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl)).EndInit();
             this.ResumeLayout(false);
 
@@ -338,7 +341,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraGrid.GridControl groupsGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView groupsGridView;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem gridControl;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
         private DevExpress.XtraEditors.SearchControl groupSearchControl;

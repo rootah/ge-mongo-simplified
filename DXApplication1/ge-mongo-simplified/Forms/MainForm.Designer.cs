@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageView = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.printBackTabControl = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
@@ -201,9 +202,9 @@
             // 
             // printBackTabControl
             // 
-            this.printBackTabControl.Location = new System.Drawing.Point(138, 63);
+            this.printBackTabControl.Location = new System.Drawing.Point(133, 63);
             this.printBackTabControl.Name = "printBackTabControl";
-            this.printBackTabControl.Size = new System.Drawing.Size(536, -2);
+            this.printBackTabControl.Size = new System.Drawing.Size(541, -2);
             this.printBackTabControl.TabIndex = 1;
             // 
             // settingsBackTabControl
@@ -277,14 +278,18 @@
             // 
             this.newGroupButton.Caption = "Group";
             this.newGroupButton.Id = 12;
+            this.newGroupButton.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
             this.newGroupButton.Name = "newGroupButton";
+            this.newGroupButton.ShortcutKeyDisplayString = "... ctrl + G";
             this.newGroupButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.newGroupButton_ItemClick);
             // 
             // newStudentButton
             // 
             this.newStudentButton.Caption = "Student";
             this.newStudentButton.Id = 13;
+            this.newStudentButton.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.newStudentButton.Name = "newStudentButton";
+            this.newStudentButton.ShortcutKeyDisplayString = "... ctrl+S";
             this.newStudentButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.newStudentButton_ItemClick);
             // 
             // barEditItem1
@@ -294,6 +299,7 @@
             this.barEditItem1.Id = 9;
             this.barEditItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barEditItem1.LargeGlyph")));
             this.barEditItem1.Name = "barEditItem1";
+            this.barEditItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barEditItem1.Width = 120;
             // 
             // repositoryQGroupBE
@@ -321,6 +327,7 @@
             this.barEditItem2.Edit = this.repositoryQStudentBE;
             this.barEditItem2.Id = 10;
             this.barEditItem2.Name = "barEditItem2";
+            this.barEditItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barEditItem2.Width = 120;
             // 
             // repositoryQStudentBE
@@ -448,8 +455,8 @@
             // barEditItem4
             // 
             this.barEditItem4.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
+            this.barEditItem4.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barEditItem4.Edit = this.repositoryItemButtonEdit1;
-            this.barEditItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barEditItem4.Glyph")));
             this.barEditItem4.Id = 3;
             this.barEditItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barEditItem4.LargeGlyph")));
             this.barEditItem4.Name = "barEditItem4";
@@ -460,7 +467,7 @@
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", "tag", null, true)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             // 
             // barEditItem5

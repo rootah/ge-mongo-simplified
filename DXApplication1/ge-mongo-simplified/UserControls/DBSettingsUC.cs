@@ -19,7 +19,6 @@ namespace ge_mongo_simplified.UserControls
         {
             checkEdit1.Text = checkEdit1.Checked ? @"   master" : @"";
         }
-
         private void checkEdit2_CheckedChanged(object sender, System.EventArgs e)
         {
             checkEdit2.Text = checkEdit2.Checked ? @"   master" : @"";
