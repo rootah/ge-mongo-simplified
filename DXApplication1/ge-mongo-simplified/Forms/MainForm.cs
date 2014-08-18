@@ -1,11 +1,15 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using DevExpress.Data.PLinq.Helpers;
 using DevExpress.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using ge_mongo_simplified.Classes;
 using ge_mongo_simplified.UserControls;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -16,6 +20,12 @@ namespace ge_mongo_simplified.Forms
 {
     public partial class MainForm : RibbonForm
     {
+        public static string connectionString = "mongodb://localhost";
+        public static MongoClient client = new MongoClient(connectionString);
+        public static MongoServer server = client.GetServer();
+        public static MongoDatabase database = server.GetDatabase("devdb");
+        public static MongoCollection groupCollection = database.GetCollection("devgroups");
+
         public MainForm()
         {
             InitializeComponent();
@@ -89,13 +99,19 @@ namespace ge_mongo_simplified.Forms
                 e.Control = new OddSettingsUC(this);
         }
 
-        private void repositoryItemButtonEdit1_ButtonClick(object sender, ButtonPressedEventArgs e)
+        private void groupRefreshButton_ItemClick(object sender, ItemClickEventArgs e)
         {
-            MessageBox.Show(@"btn clicked");
-        }
+            //var cursor = groupCollection.FindAllAs<Group>();
+            //cursor.SetFields(Fields.Include("num"));
+            //var gridSource = cursor.ToList();
+            //groupsGridUC2.groupsGrid.DataSource = gridSource;
 
-        private void repositoryItemButtonEdit1_Enter_1(object sender, EventArgs e)
-        {
+            groupsGridUC2.groupsGrid.Visible = false;
+            groupsGridUC2.groupsGrid.DataSource = new BindingList<Group>(groupCollection.FindAllAs<Group>().ToList());
+            for (int i = 0; i <= groupsGridUC2.groupsGridView.Columns.Count - 1; i++)
+                groupsGridUC2.groupsGridView.Columns[i].Visible = false;
+            groupsGridUC2.groupsGridView.Columns["num"].Visible = true;
+            groupsGridUC2.groupsGrid.Visible = true;
         }
     }
 }

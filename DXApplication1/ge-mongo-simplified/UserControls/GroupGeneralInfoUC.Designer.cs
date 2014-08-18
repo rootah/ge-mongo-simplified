@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tagsButt = new DevExpress.XtraEditors.CheckButton();
             this.tokenEdit = new DevExpress.XtraEditors.TokenEdit();
@@ -56,6 +57,7 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tokenEdit.Properties)).BeginInit();
@@ -82,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -119,6 +122,7 @@
             // 
             // tokenEdit
             // 
+            this.tokenEdit.EnterMoveNextControl = true;
             this.tokenEdit.Location = new System.Drawing.Point(68, 132);
             this.tokenEdit.Name = "tokenEdit";
             this.tokenEdit.Properties.DropDownShowMode = DevExpress.XtraEditors.TokenEditDropDownShowMode.Regular;
@@ -128,11 +132,13 @@
             this.tokenEdit.Properties.ValidationRules = ((DevExpress.XtraEditors.TokenEditValidationRules)((DevExpress.XtraEditors.TokenEditValidationRules.ValidateOnLostFocus | DevExpress.XtraEditors.TokenEditValidationRules.ValidateOnSeparatorInput)));
             this.tokenEdit.Size = new System.Drawing.Size(316, 20);
             this.tokenEdit.StyleController = this.layoutControl1;
-            this.tokenEdit.TabIndex = 19;
+            this.tokenEdit.TabIndex = 107;
             // 
             // lvlComboBox
             // 
-            this.lvlComboBox.Location = new System.Drawing.Point(258, 36);
+            this.lvlComboBox.EditValue = "";
+            this.lvlComboBox.EnterMoveNextControl = true;
+            this.lvlComboBox.Location = new System.Drawing.Point(278, 36);
             this.lvlComboBox.Name = "lvlComboBox";
             this.lvlComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -143,13 +149,15 @@
             "Intermediate",
             "Upper-Intermediate",
             "Advanced"});
-            this.lvlComboBox.Size = new System.Drawing.Size(126, 20);
+            this.lvlComboBox.Size = new System.Drawing.Size(106, 20);
             this.lvlComboBox.StyleController = this.layoutControl1;
-            this.lvlComboBox.TabIndex = 18;
+            this.lvlComboBox.TabIndex = 102;
+            this.lvlComboBox.Enter += new System.EventHandler(this.lvlComboBox_Enter);
             // 
             // statusComboBox
             // 
-            this.statusComboBox.Location = new System.Drawing.Point(258, 84);
+            this.statusComboBox.EnterMoveNextControl = true;
+            this.statusComboBox.Location = new System.Drawing.Point(278, 84);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -158,9 +166,9 @@
             "Active",
             "Paused",
             "Finished"});
-            this.statusComboBox.Size = new System.Drawing.Size(126, 20);
+            this.statusComboBox.Size = new System.Drawing.Size(106, 20);
             this.statusComboBox.StyleController = this.layoutControl1;
-            this.statusComboBox.TabIndex = 16;
+            this.statusComboBox.TabIndex = 105;
             // 
             // cancelButt
             // 
@@ -168,7 +176,7 @@
             this.cancelButt.Name = "cancelButt";
             this.cancelButt.Size = new System.Drawing.Size(95, 22);
             this.cancelButt.StyleController = this.layoutControl1;
-            this.cancelButt.TabIndex = 15;
+            this.cancelButt.TabIndex = 109;
             this.cancelButt.Text = "Cancel";
             this.cancelButt.Click += new System.EventHandler(this.cancelButt_Click);
             // 
@@ -178,25 +186,27 @@
             this.okButt.Name = "okButt";
             this.okButt.Size = new System.Drawing.Size(94, 22);
             this.okButt.StyleController = this.layoutControl1;
-            this.okButt.TabIndex = 14;
+            this.okButt.TabIndex = 108;
             this.okButt.Text = "OK";
             this.okButt.Click += new System.EventHandler(this.okButt_Click);
             // 
             // timeTE
             // 
             this.timeTE.EditValue = new System.DateTime(2014, 7, 19, 0, 0, 0, 0);
-            this.timeTE.Location = new System.Drawing.Point(258, 60);
+            this.timeTE.EnterMoveNextControl = true;
+            this.timeTE.Location = new System.Drawing.Point(278, 60);
             this.timeTE.Name = "timeTE";
             this.timeTE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeTE.Properties.Mask.EditMask = "t";
-            this.timeTE.Size = new System.Drawing.Size(126, 20);
+            this.timeTE.Size = new System.Drawing.Size(106, 20);
             this.timeTE.StyleController = this.layoutControl1;
-            this.timeTE.TabIndex = 6;
+            this.timeTE.TabIndex = 104;
             // 
             // daysSelector
             // 
             this.daysSelector.EditValue = "";
+            this.daysSelector.EnterMoveNextControl = true;
             this.daysSelector.Location = new System.Drawing.Point(68, 108);
             this.daysSelector.Name = "daysSelector";
             this.daysSelector.Properties.AllowMultiSelect = true;
@@ -213,19 +223,27 @@
             this.daysSelector.Properties.SelectAllItemVisible = false;
             this.daysSelector.Size = new System.Drawing.Size(316, 20);
             this.daysSelector.StyleController = this.layoutControl1;
-            this.daysSelector.TabIndex = 5;
+            this.daysSelector.TabIndex = 106;
             // 
             // numTE
             // 
+            this.numTE.EnterMoveNextControl = true;
             this.numTE.Location = new System.Drawing.Point(68, 36);
             this.numTE.Name = "numTE";
-            this.numTE.Size = new System.Drawing.Size(125, 20);
+            this.numTE.Properties.Mask.EditMask = "\\d?\\d-\\d\\d";
+            this.numTE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.numTE.Properties.Mask.ShowPlaceHolders = false;
+            this.numTE.Properties.ValidateOnEnterKey = true;
+            this.numTE.Size = new System.Drawing.Size(145, 20);
             this.numTE.StyleController = this.layoutControl1;
-            this.numTE.TabIndex = 4;
+            this.numTE.TabIndex = 101;
+            this.numTE.Leave += new System.EventHandler(this.numTE_Leave);
+            this.numTE.Validating += new System.ComponentModel.CancelEventHandler(this.numTE_Validating);
             // 
             // durationTE
             // 
             this.durationTE.EditValue = "";
+            this.durationTE.EnterMoveNextControl = true;
             this.durationTE.Location = new System.Drawing.Point(68, 60);
             this.durationTE.Name = "durationTE";
             this.durationTE.Properties.AutoHeight = false;
@@ -236,9 +254,9 @@
             "1.5 hour (90 min.)",
             "2 hour (120 min.)"});
             this.durationTE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.durationTE.Size = new System.Drawing.Size(125, 20);
+            this.durationTE.Size = new System.Drawing.Size(145, 20);
             this.durationTE.StyleController = this.layoutControl1;
-            this.durationTE.TabIndex = 17;
+            this.durationTE.TabIndex = 103;
             // 
             // layoutControlGroup1
             // 
@@ -284,7 +302,7 @@
             this.groupnoField.CustomizationFormText = "Group no.";
             this.groupnoField.Location = new System.Drawing.Point(0, 0);
             this.groupnoField.Name = "groupnoField";
-            this.groupnoField.Size = new System.Drawing.Size(180, 24);
+            this.groupnoField.Size = new System.Drawing.Size(200, 24);
             this.groupnoField.Text = "Group no.";
             this.groupnoField.TextSize = new System.Drawing.Size(48, 13);
             // 
@@ -292,9 +310,9 @@
             // 
             this.fixedTime.Control = this.timeTE;
             this.fixedTime.CustomizationFormText = "Time";
-            this.fixedTime.Location = new System.Drawing.Point(190, 24);
+            this.fixedTime.Location = new System.Drawing.Point(210, 24);
             this.fixedTime.Name = "fixedTime";
-            this.fixedTime.Size = new System.Drawing.Size(181, 24);
+            this.fixedTime.Size = new System.Drawing.Size(161, 24);
             this.fixedTime.Text = "Time";
             this.fixedTime.TextSize = new System.Drawing.Size(48, 13);
             // 
@@ -302,7 +320,7 @@
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(180, 0);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(200, 0);
             this.emptySpaceItem4.MaxSize = new System.Drawing.Size(10, 0);
             this.emptySpaceItem4.MinSize = new System.Drawing.Size(10, 10);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
@@ -315,9 +333,9 @@
             // 
             this.layoutControlItem2.Control = this.statusComboBox;
             this.layoutControlItem2.CustomizationFormText = "Status";
-            this.layoutControlItem2.Location = new System.Drawing.Point(190, 48);
+            this.layoutControlItem2.Location = new System.Drawing.Point(210, 48);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(181, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(161, 24);
             this.layoutControlItem2.Text = "Status";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(48, 13);
             this.layoutControlItem2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -338,7 +356,7 @@
             this.layoutControlItem1.CustomizationFormText = "Duration";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(180, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(200, 24);
             this.layoutControlItem1.Text = "Duration";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(48, 13);
             // 
@@ -346,9 +364,9 @@
             // 
             this.layoutControlItem3.Control = this.lvlComboBox;
             this.layoutControlItem3.CustomizationFormText = "Level";
-            this.layoutControlItem3.Location = new System.Drawing.Point(190, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(210, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(181, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(161, 24);
             this.layoutControlItem3.Text = "Level";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(48, 13);
             // 
@@ -358,7 +376,7 @@
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
             this.emptySpaceItem5.Location = new System.Drawing.Point(0, 48);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(180, 24);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(200, 24);
             this.emptySpaceItem5.Text = "emptySpaceItem5";
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             this.emptySpaceItem5.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -453,6 +471,11 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextToControlDistance = 0;
             this.layoutControlItem6.TextVisible = false;
+            this.layoutControlItem6.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // dxErrorProvider1
+            // 
+            this.dxErrorProvider1.ContainerControl = this;
             // 
             // GroupGeneralInfoUc
             // 
@@ -488,6 +511,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -522,5 +546,6 @@
         private DevExpress.XtraLayout.LayoutControlItem tagsControl;
         private DevExpress.XtraEditors.CheckButton tagsButt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }

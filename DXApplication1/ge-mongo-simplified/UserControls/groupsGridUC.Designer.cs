@@ -82,14 +82,14 @@
             // groupSearchControl
             // 
             this.groupSearchControl.Client = this.groupsGrid;
-            this.groupSearchControl.Location = new System.Drawing.Point(137, 12);
+            this.groupSearchControl.Location = new System.Drawing.Point(142, 12);
             this.groupSearchControl.MenuManager = this.barManager1;
             this.groupSearchControl.Name = "groupSearchControl";
             this.groupSearchControl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton()});
             this.groupSearchControl.Properties.ShowDefaultButtonsMode = DevExpress.XtraEditors.Repository.ShowDefaultButtonsMode.AutoShowClear;
-            this.groupSearchControl.Size = new System.Drawing.Size(417, 20);
+            this.groupSearchControl.Size = new System.Drawing.Size(412, 20);
             this.groupSearchControl.StyleController = this.layoutControl1;
             this.groupSearchControl.TabIndex = 7;
             // 
@@ -107,11 +107,18 @@
             // 
             // groupsGridView
             // 
+            this.groupsGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.None;
             this.groupsGridView.GridControl = this.groupsGrid;
             this.groupsGridView.Name = "groupsGridView";
+            this.groupsGridView.OptionsBehavior.Editable = false;
+            this.groupsGridView.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.groupsGridView.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.True;
+            this.groupsGridView.OptionsSelection.UseIndicatorForSelection = false;
             this.groupsGridView.OptionsView.ShowColumnHeaders = false;
             this.groupsGridView.OptionsView.ShowGroupPanel = false;
+            this.groupsGridView.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
             this.groupsGridView.OptionsView.ShowIndicator = false;
+            this.groupsGridView.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
             // 
             // barManager1
             // 
@@ -163,7 +170,7 @@
             this.standaloneBarDockControl1.CausesValidation = false;
             this.standaloneBarDockControl1.Location = new System.Drawing.Point(69, 10);
             this.standaloneBarDockControl1.Name = "standaloneBarDockControl1";
-            this.standaloneBarDockControl1.Size = new System.Drawing.Size(56, 24);
+            this.standaloneBarDockControl1.Size = new System.Drawing.Size(61, 24);
             this.standaloneBarDockControl1.Text = "standaloneBarDockControl1";
             // 
             // barDockControlTop
@@ -240,8 +247,8 @@
             this.groupsLabel.AppearanceItemCaption.Options.UseFont = true;
             this.groupsLabel.CustomizationFormText = "Groups";
             this.groupsLabel.Location = new System.Drawing.Point(0, 0);
-            this.groupsLabel.MaxSize = new System.Drawing.Size(67, 30);
-            this.groupsLabel.MinSize = new System.Drawing.Size(67, 30);
+            this.groupsLabel.MaxSize = new System.Drawing.Size(67, 34);
+            this.groupsLabel.MinSize = new System.Drawing.Size(67, 34);
             this.groupsLabel.Name = "groupsLabel";
             this.groupsLabel.Size = new System.Drawing.Size(67, 34);
             this.groupsLabel.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -259,7 +266,7 @@
             this.groupsBarControl.MaxSize = new System.Drawing.Size(65, 34);
             this.groupsBarControl.MinSize = new System.Drawing.Size(60, 34);
             this.groupsBarControl.Name = "groupsBarControl";
-            this.groupsBarControl.Size = new System.Drawing.Size(60, 34);
+            this.groupsBarControl.Size = new System.Drawing.Size(65, 34);
             this.groupsBarControl.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.groupsBarControl.Text = "groupsBarControl";
             this.groupsBarControl.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -287,10 +294,10 @@
             this.searchControl.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchControl.CustomizationFormText = "searchControl";
             this.searchControl.FillControlToClientArea = false;
-            this.searchControl.Location = new System.Drawing.Point(127, 0);
+            this.searchControl.Location = new System.Drawing.Point(132, 0);
             this.searchControl.Name = "searchControl";
             this.searchControl.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 2, 2, 2);
-            this.searchControl.Size = new System.Drawing.Size(429, 34);
+            this.searchControl.Size = new System.Drawing.Size(424, 34);
             this.searchControl.Text = "searchControl";
             this.searchControl.TextSize = new System.Drawing.Size(0, 0);
             this.searchControl.TextToControlDistance = 0;
@@ -339,8 +346,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraGrid.GridControl groupsGrid;
-        private DevExpress.XtraGrid.Views.Grid.GridView groupsGridView;
         private DevExpress.XtraLayout.LayoutControlItem gridControl;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
@@ -348,5 +353,7 @@
         private DevExpress.XtraBars.BarCheckItem searchCheckBtn;
         private DevExpress.XtraLayout.LayoutControlItem searchControl;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        public DevExpress.XtraGrid.GridControl groupsGrid;
+        public DevExpress.XtraGrid.Views.Grid.GridView groupsGridView;
     }
 }

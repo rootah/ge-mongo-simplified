@@ -3,6 +3,12 @@ using MongoDB.Bson;
 
 namespace ge_mongo_simplified.Classes
 {
+    internal class GroupGrid
+    {
+// ReSharper disable once InconsistentNaming
+        public ObjectId _id { get; set; }
+        public string num { get; set; }
+    }
     internal class Group
     {
 // ReSharper disable once InconsistentNaming
