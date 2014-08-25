@@ -54,9 +54,7 @@ namespace ge_mongo_simplified.UserControls
         private void formCheck()
         {
             if (numTE.Text == string.Empty)
-            {
-
-                XtraMessageBox.Show(@"Check group number!" + Environment.NewLine + " ");
+            {XtraMessageBox.Show(@"Check group number!" + Environment.NewLine + " ");
                 numTE.Focus();
             }
             else writeResult();
@@ -64,6 +62,7 @@ namespace ge_mongo_simplified.UserControls
 
         private void okButt_Click(object sender, EventArgs e)
         {
+            lastActionWrite();
             formCheck();
         }
 
@@ -99,24 +98,56 @@ namespace ge_mongo_simplified.UserControls
             lvlComboBox.EditValue = lvlComboBox.Properties.Items[0].ToString();
         }
 
+        private void lastActionWrite()
+        {
+            var topLevelControl = (Form)TopLevelControl;
+
+            Properties.Settings.Default.lastAction = "Group [" + numTE.Text + " / " + lvlComboBox.Text + " / " +
+                                                     durationTE.Text + " / " + timeTE.Time.ToShortTimeString() + " / " +
+                                                     daysSelector.Text + "] added";
+
+            if (topLevelControl != null) topLevelControl.Text = @"Group [" + numTE.Text + @"]";
+        }
 
         private void numTE_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            var topLevelControl = (Form)TopLevelControl;
+
             if (numTE.Text == string.Empty)
+            {
                 groupnoField.AppearanceItemCaption.ForeColor = Color.Red;
-            else groupnoField.AppearanceItemCaption.ForeColor = SystemColors.ControlText;//    dxErrorProvider1.SetError(numTE, "Field cannot be empty", ErrorType.User1);
+                if (topLevelControl != null) topLevelControl.Text = @"Group [.. check group no.]";
+            }
+            else
+            {
+                groupnoField.AppearanceItemCaption.ForeColor = SystemColors.ControlText;
+                var boxText = numTE.Text;
+                if (boxText != null)
+                {
+                    var pos = boxText.IndexOf("-", System.StringComparison.Ordinal);
+                    if (pos == 1)
+                        numTE.Text = @"0" + numTE.Text;
+                    if (topLevelControl != null) topLevelControl.Text = @"Group [" + numTE.Text + @"]";
+                }
+            }
+            
+            //    dxErrorProvider1.SetError(numTE, "Field cannot be empty", ErrorType.User1);
             //else dxErrorProvider1.SetError(numTE, "");
         }
 
-        private void numTE_Leave(object sender, EventArgs e)
+        private void tokenEdit_ValidateToken(object sender, TokenEditValidateTokenEventArgs e)
         {
-            var boxText = numTE.Text;
-            if (boxText != null)
-            {
-                var pos = boxText.IndexOf("-", System.StringComparison.Ordinal);
-                if (pos == 1)
-                    numTE.Text = @"0" + numTE.Text;
-            }
+            e.IsValid = true;
+            
+            //tokenEdit.Validate();
+        }
+
+        private void tokenEdit_Validated(object sender, EventArgs e)
+        {
+            string mystring = tokenEdit.Text;
+            string output = mystring.Remove(mystring.Length - 1, 1);
+
+            tokenEdit.Text = output;
         }
     }
 }

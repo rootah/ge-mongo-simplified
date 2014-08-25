@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tagsButt = new DevExpress.XtraEditors.CheckButton();
             this.tokenEdit = new DevExpress.XtraEditors.TokenEdit();
@@ -57,7 +56,6 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tokenEdit.Properties)).BeginInit();
@@ -84,7 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -114,6 +111,7 @@
             this.tagsButt.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.tagsButt.Location = new System.Drawing.Point(5, 178);
             this.tagsButt.Name = "tagsButt";
+            this.tagsButt.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.tagsButt.Size = new System.Drawing.Size(113, 22);
             this.tagsButt.StyleController = this.layoutControl1;
             this.tagsButt.TabIndex = 21;
@@ -122,17 +120,27 @@
             // 
             // tokenEdit
             // 
+            this.tokenEdit.EditValue = "";
             this.tokenEdit.EnterMoveNextControl = true;
             this.tokenEdit.Location = new System.Drawing.Point(68, 132);
             this.tokenEdit.Name = "tokenEdit";
             this.tokenEdit.Properties.DropDownShowMode = DevExpress.XtraEditors.TokenEditDropDownShowMode.Regular;
             this.tokenEdit.Properties.EditMode = DevExpress.XtraEditors.TokenEditMode.Manual;
+            this.tokenEdit.Properties.EditValueType = DevExpress.XtraEditors.Repository.EditValueTypeCollection.List;
+            this.tokenEdit.Properties.ExportMode = DevExpress.XtraEditors.Repository.ExportMode.Value;
             this.tokenEdit.Properties.Separators.AddRange(new string[] {
-            ","});
+            ",",
+            ".",
+            ";",
+            "/"});
+            this.tokenEdit.Properties.ShowDropDown = false;
             this.tokenEdit.Properties.ValidationRules = ((DevExpress.XtraEditors.TokenEditValidationRules)((DevExpress.XtraEditors.TokenEditValidationRules.ValidateOnLostFocus | DevExpress.XtraEditors.TokenEditValidationRules.ValidateOnSeparatorInput)));
             this.tokenEdit.Size = new System.Drawing.Size(316, 20);
             this.tokenEdit.StyleController = this.layoutControl1;
             this.tokenEdit.TabIndex = 107;
+            this.tokenEdit.UseOptimizedRendering = true;
+            this.tokenEdit.ValidateToken += new DevExpress.XtraEditors.TokenEditValidateTokenEventHandler(this.tokenEdit_ValidateToken);
+            this.tokenEdit.Validated += new System.EventHandler(this.tokenEdit_Validated);
             // 
             // lvlComboBox
             // 
@@ -174,6 +182,7 @@
             // 
             this.cancelButt.Location = new System.Drawing.Point(301, 178);
             this.cancelButt.Name = "cancelButt";
+            this.cancelButt.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.cancelButt.Size = new System.Drawing.Size(95, 22);
             this.cancelButt.StyleController = this.layoutControl1;
             this.cancelButt.TabIndex = 109;
@@ -184,6 +193,7 @@
             // 
             this.okButt.Location = new System.Drawing.Point(192, 178);
             this.okButt.Name = "okButt";
+            this.okButt.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.okButt.Size = new System.Drawing.Size(94, 22);
             this.okButt.StyleController = this.layoutControl1;
             this.okButt.TabIndex = 108;
@@ -237,7 +247,6 @@
             this.numTE.Size = new System.Drawing.Size(145, 20);
             this.numTE.StyleController = this.layoutControl1;
             this.numTE.TabIndex = 101;
-            this.numTE.Leave += new System.EventHandler(this.numTE_Leave);
             this.numTE.Validating += new System.ComponentModel.CancelEventHandler(this.numTE_Validating);
             // 
             // durationTE
@@ -471,11 +480,6 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextToControlDistance = 0;
             this.layoutControlItem6.TextVisible = false;
-            this.layoutControlItem6.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // dxErrorProvider1
-            // 
-            this.dxErrorProvider1.ContainerControl = this;
             // 
             // GroupGeneralInfoUc
             // 
@@ -511,7 +515,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -546,6 +549,5 @@
         private DevExpress.XtraLayout.LayoutControlItem tagsControl;
         private DevExpress.XtraEditors.CheckButton tagsButt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }

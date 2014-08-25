@@ -112,17 +112,17 @@
     <Compile Include="UserControls\OddSettingsUC.Designer.cs">
       <DependentUpon>OddSettingsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\StdMainUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StdMainUC.designer.cs">
+      <DependentUpon>StdMainUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\StudentGeneralInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\StudentGeneralInfoUC.Designer.cs">
       <DependentUpon>StudentGeneralInfoUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\StudentPaymentInfoUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\StudentPaymentInfoUC.Designer.cs">
-      <DependentUpon>StudentPaymentInfoUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\StudetsGridUC.cs">
       <SubType>UserControl</SubType>
@@ -165,15 +165,16 @@
     <EmbeddedResource Include="UserControls\OddSettingsUC.resx">
       <DependentUpon>OddSettingsUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StdMainUC.resx">
+      <DependentUpon>StdMainUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StudentGeneralInfoUC.resx">
       <DependentUpon>StudentGeneralInfoUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StudentPaymentInfoUC.resx">
-      <DependentUpon>StudentPaymentInfoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StudetsGridUC.resx">
       <DependentUpon>StudetsGridUC.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -185,19 +186,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\errIcon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel-26.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\errIco.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\errIcoLeft.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

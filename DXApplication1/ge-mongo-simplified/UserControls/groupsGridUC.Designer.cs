@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupsGridUC));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupSearchControl = new DevExpress.XtraEditors.SearchControl();
             this.groupsGrid = new DevExpress.XtraGrid.GridControl();
             this.groupsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.searchCheckBtn = new DevExpress.XtraBars.BarCheckItem();
             this.standaloneBarDockControl1 = new DevExpress.XtraBars.StandaloneBarDockControl();

@@ -1,6 +1,5 @@
-﻿using DevExpress.XtraBars.Docking2010.Views;
+﻿using System.Drawing;
 using DevExpress.XtraEditors;
-using ge_mongo_simplified.UserControls;
 
 namespace ge_mongo_simplified.Forms
 {
@@ -8,18 +7,18 @@ namespace ge_mongo_simplified.Forms
     {
         public StudentsForm(MainForm mainForm)
         {
-            MainForm = mainForm;
+            //MainForm = mainForm;
             InitializeComponent();
         }
 
-        public MainForm MainForm { get; set; }
-
-        private void windowsUIView1_QueryControl(object sender, QueryControlEventArgs e)
+        private void StudentsForm_Load(object sender, System.EventArgs e)
         {
-            if (e.Document == studentGeneralInfoUCDocument)
-                e.Control = new StudentGeneralInfoUC(this);
-            if (e.Document == studentPaymentInfoUCDocument)
-                e.Control = new StudentPaymentInfoUC(this);
+            FormResize();
+        }
+
+        private void FormResize()
+        {
+            ClientSize = new Size(ClientSize.Width, stdMainUC1.layoutControl1.Root.MinSize.Height);
         }
     }
 }
