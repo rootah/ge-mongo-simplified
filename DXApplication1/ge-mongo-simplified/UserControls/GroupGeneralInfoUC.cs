@@ -1,16 +1,18 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
-using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.XtraLayout.Utils;
 using ge_mongo_simplified.Classes;
 using ge_mongo_simplified.Forms;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.Builders;
 
 namespace ge_mongo_simplified.UserControls
 {
@@ -21,22 +23,33 @@ namespace ge_mongo_simplified.UserControls
         public static MongoServer server = client.GetServer();
         public static MongoDatabase database = server.GetDatabase("devdb");
         public static MongoCollection collection = database.GetCollection("devgroups");
-        //public Image icon = Properties.Resources.errIcoLeft;
-
 
         public GroupGeneralInfoUc()
         {
             InitializeComponent();
-            //DXErrorProvider.GetErrorIcon += new GetErrorIconEventHandler(DXErrorProvider_GetErrorIcon);
         }
 
-        //void DXErrorProvider_GetErrorIcon(GetErrorIconEventArgs e)
-        //{
-        //    if (e.ErrorType == ErrorType.User1)
-        //    {
-        //        e.ErrorIcon = icon;
-        //    }
-        //}
+        public void groupEditFormFill()
+        {
+            var list = new BindingList<string>();
+            var q = Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.groupID));
+            var resdoc = collection.FindOneAs<Group>(q);
+            foreach (var res in resdoc.days)
+                list.Add(res.ToString());
+
+            numTE.Text = resdoc.num;
+            lvlComboBox.Text = resdoc.lvl;
+            timeTE.Text = resdoc.time;
+            durationTE.Text = resdoc.duration;
+
+            for (int count = 0; count < daysSelector.Properties.Items.Count; count++)
+            {
+                if (list.Contains(daysSelector.Properties.Items[count].ToString()))
+                {
+                    daysSelector.Properties.Items[count].CheckState = CheckState.Checked;
+                }
+            }
+        }
         private void cancelButt_Click(object sender, EventArgs e)
         {
             var topLevelControl = (Form)TopLevelControl;
@@ -103,9 +116,8 @@ namespace ge_mongo_simplified.UserControls
             var topLevelControl = (Form)TopLevelControl;
 
             Properties.Settings.Default.lastAction = "Group [" + numTE.Text + " / " + lvlComboBox.Text + " / " +
-                                                     durationTE.Text + " / " + timeTE.Time.ToShortTimeString() + " / " +
+                                                     durationTE.Text + " / " + timeTE.Text + " / " +
                                                      daysSelector.Text + "] added";
-
             if (topLevelControl != null) topLevelControl.Text = @"Group [" + numTE.Text + @"]";
         }
 
@@ -124,7 +136,7 @@ namespace ge_mongo_simplified.UserControls
                 var boxText = numTE.Text;
                 if (boxText != null)
                 {
-                    var pos = boxText.IndexOf("-", System.StringComparison.Ordinal);
+                    var pos = boxText.IndexOf("-", StringComparison.Ordinal);
                     if (pos == 1)
                         numTE.Text = @"0" + numTE.Text;
                     if (topLevelControl != null) topLevelControl.Text = @"Group [" + numTE.Text + @"]";
@@ -144,10 +156,10 @@ namespace ge_mongo_simplified.UserControls
 
         private void tokenEdit_Validated(object sender, EventArgs e)
         {
-            string mystring = tokenEdit.Text;
-            string output = mystring.Remove(mystring.Length - 1, 1);
+            //string mystring = tokenEdit.Text;
+            //string output = mystring.Remove(mystring.Length - 1, 1);
 
-            tokenEdit.Text = output;
+            //tokenEdit.Text = output;
         }
     }
 }

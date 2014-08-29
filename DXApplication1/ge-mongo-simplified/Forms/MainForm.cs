@@ -51,6 +51,8 @@ namespace ge_mongo_simplified.Forms
         private void newGroupButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             var newGroup = new GroupsForm(this) {StartPosition = FormStartPosition.CenterParent, Text = @"Group [new]"};
+            Properties.Settings.Default.formType = "new";
+            Properties.Settings.Default.Save();
             newGroup.ShowDialog();
         }
 
@@ -112,6 +114,31 @@ namespace ge_mongo_simplified.Forms
                 groupsGridUC2.groupsGridView.Columns[i].Visible = false;
             groupsGridUC2.groupsGridView.Columns["num"].Visible = true;
             groupsGridUC2.groupsGrid.Visible = true;
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var activecontrol = this.ActiveControl.Name;
+            Text = @"ge.base [ black hole sun ] + " + activecontrol.ToString();
+        }
+
+        private void editButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (ActiveControl == groupsGridUC2)
+            {
+                var newGroup = new GroupsForm(this) {StartPosition = FormStartPosition.CenterParent, Text = @"Group [edit]"};
+                Properties.Settings.Default.formType = "edit";
+                Properties.Settings.Default.groupID = groupsGridUC2.groupsGridView.GetRowCellValue(groupsGridUC2.groupsGridView.FocusedRowHandle, "_id").ToString();
+                Properties.Settings.Default.Save();
+                newGroup.ShowDialog();
+            }
+            else if (ActiveControl == studetsGridUC1)
+            {
+                var newStudent = new StudentsForm(this) {StartPosition = FormStartPosition.CenterParent, Text = @"Student [edit]"};
+                Properties.Settings.Default.formType = "edit";
+                Properties.Settings.Default.Save();
+                newStudent.ShowDialog();
+            }
         }
     }
 }

@@ -38,7 +38,7 @@
             this.groupGeneralInfoUc2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupGeneralInfoUc2.Location = new System.Drawing.Point(0, 0);
             this.groupGeneralInfoUc2.Name = "groupGeneralInfoUc2";
-            this.groupGeneralInfoUc2.Size = new System.Drawing.Size(394, 173);
+            this.groupGeneralInfoUc2.Size = new System.Drawing.Size(244, 182);
             this.groupGeneralInfoUc2.TabIndex = 1;
             // 
             // groupGeneralInfoUc1
@@ -54,17 +54,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 173);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(244, 182);
             this.Controls.Add(this.groupGeneralInfoUc2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(260, 207);
             this.Name = "GroupsForm";
             this.Text = "Group [...]";
             this.Load += new System.EventHandler(this.GroupsForm_Load);
+            this.Resize += new System.EventHandler(this.GroupsForm_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 

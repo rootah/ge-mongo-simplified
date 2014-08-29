@@ -41,5 +41,11 @@ namespace ge_mongo_simplified.UserControls
             var topLevelControl = (Form)TopLevelControl;
             if (topLevelControl != null)
                 topLevelControl.ClientSize = new Size(ClientSize.Width, layoutControl1.Root.MinSize.Height);}
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            var topLevelControl = (Form)TopLevelControl;
+            if (topLevelControl != null) topLevelControl.Close();
+        }
     }
 }

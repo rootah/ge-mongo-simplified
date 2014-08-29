@@ -50,6 +50,7 @@
             this.groupsCheckButton = new DevExpress.XtraBars.BarButtonItem();
             this.detailsCheckButton = new DevExpress.XtraBars.BarButtonItem();
             this.groupRefreshButton = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.studentsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.filePG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -124,10 +125,11 @@
             this.detailsCheckButton,
             this.newGroupButton,
             this.newStudentButton,
-            this.groupRefreshButton});
+            this.groupRefreshButton,
+            this.barButtonItem1});
             this.ribbonControl.ItemsVertAlign = DevExpress.Utils.VertAlignment.Top;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 8;
+            this.ribbonControl.MaxItemId = 9;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -263,10 +265,12 @@
             this.editButton.Name = "editButton";
             this.editButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.editButton.SmallWithTextWidth = 65;
+            this.editButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.editButton_ItemClick);
             // 
             // delButton
             // 
             this.delButton.Caption = "delete";
+            this.delButton.Enabled = false;
             this.delButton.Glyph = ((System.Drawing.Image)(resources.GetObject("delButton.Glyph")));
             this.delButton.Id = 3;
             this.delButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("delButton.LargeGlyph")));
@@ -339,6 +343,13 @@
             this.groupRefreshButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.groupRefreshButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.groupRefreshButton_ItemClick);
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "get control";
+            this.barButtonItem1.Id = 8;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.AutoStretchPageHeaders = true;
@@ -368,6 +379,7 @@
             this.viewPG.ItemLinks.Add(this.groupsCheckButton, true);
             this.viewPG.ItemLinks.Add(this.detailsCheckButton);
             this.viewPG.ItemLinks.Add(this.groupRefreshButton, true);
+            this.viewPG.ItemLinks.Add(this.barButtonItem1);
             this.viewPG.Name = "viewPG";
             this.viewPG.ShowCaptionButton = false;
             this.viewPG.Text = "view";
@@ -667,8 +679,6 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator backstageViewItemSeparator1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.BarButtonItem addDropButton;
-        private DevExpress.XtraBars.BarButtonItem editButton;
-        private DevExpress.XtraBars.BarButtonItem delButton;
         private DevExpress.XtraBars.Ribbon.RibbonPage paymentsRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPage scheduleRibbonPage;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl;
@@ -713,6 +723,9 @@
         private UserControls.StudetsGridUC studetsGridUC1;
         private UserControls.DetailsUC detailsUC1;
         private DevExpress.XtraBars.BarButtonItem groupRefreshButton;
+        public DevExpress.XtraBars.BarButtonItem editButton;
+        public DevExpress.XtraBars.BarButtonItem delButton;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
 
     }
 }
