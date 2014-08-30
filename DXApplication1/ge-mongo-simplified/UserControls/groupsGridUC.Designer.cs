@@ -119,6 +119,7 @@
             this.groupsGridView.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
             this.groupsGridView.OptionsView.ShowIndicator = false;
             this.groupsGridView.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
+            this.groupsGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.groupsGridView_FocusedRowChanged);
             this.groupsGridView.DoubleClick += new System.EventHandler(this.groupsGridView_DoubleClick);
             // 
             // barManager1

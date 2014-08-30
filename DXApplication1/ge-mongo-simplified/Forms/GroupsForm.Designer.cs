@@ -63,6 +63,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(260, 207);
             this.Name = "GroupsForm";
+            this.ShowIcon = false;
             this.Text = "Group [...]";
             this.Load += new System.EventHandler(this.GroupsForm_Load);
             this.Resize += new System.EventHandler(this.GroupsForm_Resize);

@@ -2,9 +2,9 @@
 
 namespace ge_mongo_simplified.UserControls
 {
-    public partial class StudetsGridUC : DevExpress.XtraEditors.XtraUserControl
+    public partial class StudentsGridUC : DevExpress.XtraEditors.XtraUserControl
     {
-        public StudetsGridUC()
+        public StudentsGridUC()
         {
             InitializeComponent();
         }

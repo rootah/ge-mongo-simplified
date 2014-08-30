@@ -1,6 +1,6 @@
 ﻿namespace ge_mongo_simplified.UserControls
 {
-    partial class StudetsGridUC
+    partial class StudentsGridUC
     {
         /// <summary> 
         /// Required designer variable.

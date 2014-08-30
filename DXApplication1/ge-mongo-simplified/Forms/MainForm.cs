@@ -3,18 +3,15 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.Data.PLinq.Helpers;
 using DevExpress.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Controls;
 using ge_mongo_simplified.Classes;
 using ge_mongo_simplified.UserControls;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
-using MongoDB.Driver.Linq;
 
 namespace ge_mongo_simplified.Forms
 {
@@ -31,11 +28,18 @@ namespace ge_mongo_simplified.Forms
             InitializeComponent();
         }
 
+        public string statusBarLabel
+        {
+            get { return statusLabel.Caption; }
+            set { statusLabel.Caption = value; }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             if (xtraTabControl != null) xtraTabControl.ShowTabHeader = DefaultBoolean.False;
             groupsCheckButton_DownChanged(null, null);
             detailsCheckButton_DownChanged(null, null);
+            groupGridFill();
         }
 
         private void newStudentButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -101,13 +105,8 @@ namespace ge_mongo_simplified.Forms
                 e.Control = new OddSettingsUC(this);
         }
 
-        private void groupRefreshButton_ItemClick(object sender, ItemClickEventArgs e)
+        private void groupGridFill()
         {
-            //var cursor = groupCollection.FindAllAs<Group>();
-            //cursor.SetFields(Fields.Include("num"));
-            //var gridSource = cursor.ToList();
-            //groupsGridUC2.groupsGrid.DataSource = gridSource;
-
             groupsGridUC2.groupsGrid.Visible = false;
             groupsGridUC2.groupsGrid.DataSource = new BindingList<Group>(groupCollection.FindAllAs<Group>().ToList());
             for (int i = 0; i <= groupsGridUC2.groupsGridView.Columns.Count - 1; i++)
@@ -115,30 +114,65 @@ namespace ge_mongo_simplified.Forms
             groupsGridUC2.groupsGridView.Columns["num"].Visible = true;
             groupsGridUC2.groupsGrid.Visible = true;
         }
-
-        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        public void groupEdit()
         {
-            var activecontrol = this.ActiveControl.Name;
-            Text = @"ge.base [ black hole sun ] + " + activecontrol.ToString();
+            var newGroup = new GroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [edit]" };
+            Properties.Settings.Default.formType = "edit";
+            Properties.Settings.Default.groupID = groupsGridUC2.groupsGridView.GetRowCellValue(groupsGridUC2.groupsGridView.FocusedRowHandle, "_id").ToString();
+            Properties.Settings.Default.Save();
+            newGroup.ShowDialog();
         }
 
-        private void editButton_ItemClick(object sender, ItemClickEventArgs e)
+        public void studentEdit()
+        {
+            var newStudent = new StudentsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Student [edit]" };
+            Properties.Settings.Default.formType = "edit";
+            Properties.Settings.Default.Save();
+            newStudent.ShowDialog();
+        }
+
+        public void editButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (ActiveControl == groupsGridUC2)
             {
-                var newGroup = new GroupsForm(this) {StartPosition = FormStartPosition.CenterParent, Text = @"Group [edit]"};
-                Properties.Settings.Default.formType = "edit";
-                Properties.Settings.Default.groupID = groupsGridUC2.groupsGridView.GetRowCellValue(groupsGridUC2.groupsGridView.FocusedRowHandle, "_id").ToString();
-                Properties.Settings.Default.Save();
-                newGroup.ShowDialog();
+                groupEdit();
             }
             else if (ActiveControl == studetsGridUC1)
             {
-                var newStudent = new StudentsForm(this) {StartPosition = FormStartPosition.CenterParent, Text = @"Student [edit]"};
-                Properties.Settings.Default.formType = "edit";
-                Properties.Settings.Default.Save();
-                newStudent.ShowDialog();
+                studentEdit();
             }
+        }
+
+        private void groupstudentsdetailsSplit_Panel1_Enter(object sender, EventArgs e)
+        {
+            detailsUC1.detailsTC.SelectedTabPageIndex = 0;
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            groupDetailShow();
+        }
+
+        public void groupDetailShow()
+        {
+            //var list = new BindingList<string>();
+            var q = Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.groupID));
+            var resdoc = groupCollection.FindOneAs<Group>(q);
+
+            //var data = new BindingList<Group>(groupCollection.FindAs<Group>(q).ToList());
+            //foreach (var res in resdoc.days)
+            //    list.Add(res.ToString());
+            //detailsUC1.groupDetailGridControl.DataSource = data;
+
+            detailsUC1.groupDetailsUC2.groupnoCI.Control.Text = resdoc.num;
+            detailsUC1.groupDetailsUC2.levelCI.Control.Text = resdoc.lvl;
+            detailsUC1.groupDetailsUC2.daysCI.Control.Text = resdoc.days.ToString().Replace(@"[", "").Replace(@"]", "");
+            detailsUC1.groupDetailsUC2.timeCI.Control.Text = resdoc.time;
+            detailsUC1.groupDetailsUC2.durationCI.Control.Text = resdoc.duration;
+            detailsUC1.groupDetailsUC2.idCI.Control.Text = resdoc._id.ToString();
+        }
+        private void studentsdetailSplit_Panel1_Enter(object sender, EventArgs e)
+        {detailsUC1.detailsTC.SelectedTabPageIndex = 1;
         }
     }
 }

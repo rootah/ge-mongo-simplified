@@ -1,8 +1,5 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
+﻿using DevExpress.XtraBars;
 using DevExpress.XtraLayout.Utils;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using ge_mongo_simplified.Forms;
 
 namespace ge_mongo_simplified.UserControls
@@ -11,24 +8,28 @@ namespace ge_mongo_simplified.UserControls
     {
         public GroupsGridUC()
         {
-            InitializeComponent();
-        }
+            InitializeComponent();}
 
-        private void searchCheckBtn_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void searchCheckBtn_CheckedChanged(object sender, ItemClickEventArgs e)
         {
             searchControl.Visibility = searchCheckBtn.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
         }
 
         private void groupsGridView_DoubleClick(object sender, System.EventArgs e)
         {
-            var newGroup = new GroupsForm(new MainForm()) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [edit]" };
-            var view = (GridView)sender;
-            var hitInfo = view.CalcHitInfo(view.GridControl.PointToClient(MousePosition));
-            if (hitInfo.HitTest == GridHitTest.RowCell)
-                Properties.Settings.Default.groupID = view.GetRowCellValue(hitInfo.RowHandle, "_id").ToString();
-            Properties.Settings.Default.formType = "edit";
+            var mainForm = (MainForm)ParentForm;
+            if (mainForm != null) mainForm.groupEdit();
+        }
+
+        private void groupsGridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            Properties.Settings.Default.groupID =
+                groupsGridView.GetRowCellValue(groupsGridView.FocusedRowHandle, "_id").ToString();
             Properties.Settings.Default.Save();
-            newGroup.ShowDialog();
+
+            var mainForm = (MainForm)ParentForm;
+            //if (mainForm != null) mainForm.statusBarLabel = Properties.Settings.Default.groupID;
+            if (mainForm != null) mainForm.groupDetailShow();
         }
     }
 }

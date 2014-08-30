@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageView = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
@@ -39,7 +38,7 @@
             this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
             this.exitBackButt = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
             this.addDropButton = new DevExpress.XtraBars.BarButtonItem();
-            this.newPopup = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.newPopup = new DevExpress.XtraBars.PopupMenu();
             this.newGroupButton = new DevExpress.XtraBars.BarButtonItem();
             this.newStudentButton = new DevExpress.XtraBars.BarButtonItem();
             this.editButton = new DevExpress.XtraBars.BarButtonItem();
@@ -49,23 +48,24 @@
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.groupsCheckButton = new DevExpress.XtraBars.BarButtonItem();
             this.detailsCheckButton = new DevExpress.XtraBars.BarButtonItem();
-            this.groupRefreshButton = new DevExpress.XtraBars.BarButtonItem();
+            this.statusLabel = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.studentsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.filePG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.viewPG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.paymentsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.scheduleRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.journalRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.filterPopup = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.filterPopup = new DevExpress.XtraBars.PopupMenu();
             this.xtraTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.studentsTab = new DevExpress.XtraTab.XtraTabPage();
             this.groupstudentsdetailsSplit = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupsGridUC2 = new ge_mongo_simplified.UserControls.GroupsGridUC();
             this.studentsdetailSplit = new DevExpress.XtraEditors.SplitContainerControl();
-            this.studetsGridUC1 = new ge_mongo_simplified.UserControls.StudetsGridUC();
+            this.studetsGridUC1 = new ge_mongo_simplified.UserControls.StudentsGridUC();
             this.detailsUC1 = new ge_mongo_simplified.UserControls.DetailsUC();
             this.paymentsTab = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -76,12 +76,12 @@
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
-            this.defaultLook = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.backstageDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.backstageSettingsUI = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
-            this.tabbedGroup1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup(this.components);
-            this.dbSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.oddSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
+            this.defaultLook = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.backstageDM = new DevExpress.XtraBars.Docking2010.DocumentManager();
+            this.backstageSettingsUI = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView();
+            this.tabbedGroup1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup();
+            this.dbSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.oddSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
             this.actionPG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.backstageView.SuspendLayout();
@@ -125,11 +125,11 @@
             this.detailsCheckButton,
             this.newGroupButton,
             this.newStudentButton,
-            this.groupRefreshButton,
+            this.statusLabel,
             this.barButtonItem1});
             this.ribbonControl.ItemsVertAlign = DevExpress.Utils.VertAlignment.Top;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 9;
+            this.ribbonControl.MaxItemId = 14;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -333,20 +333,17 @@
             this.detailsCheckButton.SmallWithTextWidth = 65;
             this.detailsCheckButton.DownChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.detailsCheckButton_DownChanged);
             // 
-            // groupRefreshButton
+            // statusLabel
             // 
-            this.groupRefreshButton.Caption = "group Refresh";
-            this.groupRefreshButton.Glyph = ((System.Drawing.Image)(resources.GetObject("groupRefreshButton.Glyph")));
-            this.groupRefreshButton.Id = 7;
-            this.groupRefreshButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("groupRefreshButton.LargeGlyph")));
-            this.groupRefreshButton.Name = "groupRefreshButton";
-            this.groupRefreshButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
-            this.groupRefreshButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.groupRefreshButton_ItemClick);
+            this.statusLabel.Caption = "...";
+            this.statusLabel.Id = 12;
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "get control";
-            this.barButtonItem1.Id = 8;
+            this.barButtonItem1.Caption = "group details";
+            this.barButtonItem1.Id = 13;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
@@ -361,7 +358,8 @@
             // 
             this.studentsRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.filePG,
-            this.viewPG});
+            this.viewPG,
+            this.ribbonPageGroup1});
             this.studentsRibbonPage.Name = "studentsRibbonPage";
             this.studentsRibbonPage.Text = "Students";
             // 
@@ -378,11 +376,15 @@
             // 
             this.viewPG.ItemLinks.Add(this.groupsCheckButton, true);
             this.viewPG.ItemLinks.Add(this.detailsCheckButton);
-            this.viewPG.ItemLinks.Add(this.groupRefreshButton, true);
-            this.viewPG.ItemLinks.Add(this.barButtonItem1);
             this.viewPG.Name = "viewPG";
             this.viewPG.ShowCaptionButton = false;
             this.viewPG.Text = "view";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "act";
             // 
             // paymentsRibbonPage
             // 
@@ -401,6 +403,7 @@
             // 
             // ribbonStatusBar1
             // 
+            this.ribbonStatusBar1.ItemLinks.Add(this.statusLabel);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 435);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
@@ -448,6 +451,7 @@
             this.groupstudentsdetailsSplit.Name = "groupstudentsdetailsSplit";
             this.groupstudentsdetailsSplit.Panel1.Controls.Add(this.groupsGridUC2);
             this.groupstudentsdetailsSplit.Panel1.Text = "Panel1";
+            this.groupstudentsdetailsSplit.Panel1.Enter += new System.EventHandler(this.groupstudentsdetailsSplit_Panel1_Enter);
             this.groupstudentsdetailsSplit.Panel2.Controls.Add(this.studentsdetailSplit);
             this.groupstudentsdetailsSplit.Panel2.Text = "detailsPanel";
             this.groupstudentsdetailsSplit.Size = new System.Drawing.Size(1116, 266);
@@ -473,6 +477,7 @@
             this.studentsdetailSplit.Panel1.Controls.Add(this.studetsGridUC1);
             this.studentsdetailSplit.Panel1.ShowCaption = true;
             this.studentsdetailSplit.Panel1.Text = "studentsPanel";
+            this.studentsdetailSplit.Panel1.Enter += new System.EventHandler(this.studentsdetailSplit_Panel1_Enter);
             this.studentsdetailSplit.Panel2.Controls.Add(this.detailsUC1);
             this.studentsdetailSplit.Panel2.Text = "Panel2";
             this.studentsdetailSplit.Size = new System.Drawing.Size(837, 266);
@@ -711,7 +716,6 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraSpreadsheet.SpreadsheetControl spreadsheetControl1;
-        private UserControls.dbSettingsUC settingsUC1;
         private DevExpress.XtraBars.Docking2010.DocumentManager backstageDM;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView backstageSettingsUI;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup tabbedGroup1;
@@ -719,14 +723,15 @@
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document oddSettingsUCDocument;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup actionPG;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private UserControls.GroupsGridUC groupsGridUC2;
-        private UserControls.StudetsGridUC studetsGridUC1;
+        private UserControls.StudentsGridUC studetsGridUC1;
         private UserControls.DetailsUC detailsUC1;
-        private DevExpress.XtraBars.BarButtonItem groupRefreshButton;
         public DevExpress.XtraBars.BarButtonItem editButton;
         public DevExpress.XtraBars.BarButtonItem delButton;
+        public DevExpress.XtraBars.BarStaticItem barLabel;
+        public DevExpress.XtraBars.BarStaticItem statusLabel;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        public UserControls.GroupsGridUC groupsGridUC2;
     }
 }
 

@@ -89,6 +89,12 @@
     <Compile Include="UserControls\DetailsUC.Designer.cs">
       <DependentUpon>DetailsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\GroupDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupDetailsUC.Designer.cs">
+      <DependentUpon>GroupDetailsUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\GroupGeneralInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,11 +131,11 @@
     <Compile Include="UserControls\StudentGeneralInfoUC.Designer.cs">
       <DependentUpon>StudentGeneralInfoUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StudetsGridUC.cs">
+    <Compile Include="UserControls\StudentsGridUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\StudetsGridUC.Designer.cs">
-      <DependentUpon>StudetsGridUC.cs</DependentUpon>
+    <Compile Include="UserControls\StudentsGridUC.Designer.cs">
+      <DependentUpon>StudentsGridUC.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\GroupsForm.resx">
       <DependentUpon>GroupsForm.cs</DependentUpon>
@@ -154,6 +160,9 @@
     <EmbeddedResource Include="UserControls\DetailsUC.resx">
       <DependentUpon>DetailsUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GroupDetailsUC.resx">
+      <DependentUpon>GroupDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GroupGeneralInfoUC.resx">
       <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,8 +181,8 @@
     <EmbeddedResource Include="UserControls\StudentGeneralInfoUC.resx">
       <DependentUpon>StudentGeneralInfoUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StudetsGridUC.resx">
-      <DependentUpon>StudetsGridUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\StudentsGridUC.resx">
+      <DependentUpon>StudentsGridUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

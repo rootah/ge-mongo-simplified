@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.detailsTC = new DevExpress.XtraTab.XtraTabControl();
             this.groupTab = new DevExpress.XtraTab.XtraTabPage();
+            this.groupDetailsUC2 = new ge_mongo_simplified.UserControls.GroupDetailsUC();
             this.studentTab = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.detailsLabel = new DevExpress.XtraLayout.SimpleLabelItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.detailsTC)).BeginInit();
+            this.detailsTC.SuspendLayout();
+            this.groupTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -46,7 +48,7 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.xtraTabControl1);
+            this.layoutControl1.Controls.Add(this.detailsTC);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -56,28 +58,38 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // xtraTabControl1
+            // detailsTC
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(2, 41);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.groupTab;
-            this.xtraTabControl1.Size = new System.Drawing.Size(489, 304);
-            this.xtraTabControl1.TabIndex = 4;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.detailsTC.Location = new System.Drawing.Point(2, 41);
+            this.detailsTC.Name = "detailsTC";
+            this.detailsTC.SelectedTabPage = this.groupTab;
+            this.detailsTC.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
+            this.detailsTC.Size = new System.Drawing.Size(489, 304);
+            this.detailsTC.TabIndex = 4;
+            this.detailsTC.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.groupTab,
             this.studentTab});
-            this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
+            this.detailsTC.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
             // 
             // groupTab
             // 
+            this.groupTab.Controls.Add(this.groupDetailsUC2);
             this.groupTab.Name = "groupTab";
-            this.groupTab.Size = new System.Drawing.Size(487, 277);
+            this.groupTab.Size = new System.Drawing.Size(487, 302);
             this.groupTab.Text = "grp";
+            // 
+            // groupDetailsUC2
+            // 
+            this.groupDetailsUC2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupDetailsUC2.Location = new System.Drawing.Point(0, 0);
+            this.groupDetailsUC2.Name = "groupDetailsUC2";
+            this.groupDetailsUC2.Size = new System.Drawing.Size(487, 302);
+            this.groupDetailsUC2.TabIndex = 0;
             // 
             // studentTab
             // 
             this.studentTab.Name = "studentTab";
-            this.studentTab.Size = new System.Drawing.Size(487, 277);
+            this.studentTab.Size = new System.Drawing.Size(487, 302);
             this.studentTab.Text = "std";
             // 
             // layoutControlGroup1
@@ -115,7 +127,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.xtraTabControl1;
+            this.layoutControlItem1.Control = this.detailsTC;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 34);
             this.layoutControlItem1.Name = "layoutControlItem1";
@@ -134,8 +146,9 @@
             this.Size = new System.Drawing.Size(493, 352);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.detailsTC)).EndInit();
+            this.detailsTC.ResumeLayout(false);
+            this.groupTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -148,9 +161,10 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.SimpleLabelItem detailsLabel;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage groupTab;
         private DevExpress.XtraTab.XtraTabPage studentTab;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        public DevExpress.XtraTab.XtraTabControl detailsTC;
+        public GroupDetailsUC groupDetailsUC2;
     }
 }
