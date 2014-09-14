@@ -63,7 +63,6 @@
             this.detailsTC.Location = new System.Drawing.Point(2, 41);
             this.detailsTC.Name = "detailsTC";
             this.detailsTC.SelectedTabPage = this.groupTab;
-            this.detailsTC.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             this.detailsTC.Size = new System.Drawing.Size(489, 304);
             this.detailsTC.TabIndex = 4;
             this.detailsTC.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
@@ -89,7 +88,7 @@
             // studentTab
             // 
             this.studentTab.Name = "studentTab";
-            this.studentTab.Size = new System.Drawing.Size(487, 302);
+            this.studentTab.Size = new System.Drawing.Size(487, 277);
             this.studentTab.Text = "std";
             // 
             // layoutControlGroup1

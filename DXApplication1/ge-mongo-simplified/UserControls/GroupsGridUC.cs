@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraLayout.Utils;
 using ge_mongo_simplified.Forms;
 
@@ -25,6 +27,7 @@ namespace ge_mongo_simplified.UserControls
         {
             Properties.Settings.Default.groupID =
                 groupsGridView.GetRowCellValue(groupsGridView.FocusedRowHandle, "_id").ToString();
+            //Properties.Settings.Default.groupNo = groupsGridView.GetRowCellValue(groupsGridView.FocusedRowHandle, "num").ToString();
             Properties.Settings.Default.Save();
 
             var mainForm = (MainForm)ParentForm;

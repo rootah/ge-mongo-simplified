@@ -95,11 +95,11 @@
     <Compile Include="UserControls\GroupDetailsUC.Designer.cs">
       <DependentUpon>GroupDetailsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupGeneralInfoUC.cs">
+    <Compile Include="UserControls\GroupMainUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupGeneralInfoUC.Designer.cs">
-      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
+    <Compile Include="UserControls\GroupMainUC.Designer.cs">
+      <DependentUpon>GroupMainUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DBSettingsUC.cs">
       <SubType>UserControl</SubType>
@@ -124,12 +124,6 @@
     </Compile>
     <Compile Include="UserControls\StdMainUC.designer.cs">
       <DependentUpon>StdMainUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\StudentGeneralInfoUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\StudentGeneralInfoUC.Designer.cs">
-      <DependentUpon>StudentGeneralInfoUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\StudentsGridUC.cs">
       <SubType>UserControl</SubType>
@@ -163,8 +157,8 @@
     <EmbeddedResource Include="UserControls\GroupDetailsUC.resx">
       <DependentUpon>GroupDetailsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupGeneralInfoUC.resx">
-      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\GroupMainUC.resx">
+      <DependentUpon>GroupMainUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DBSettingsUC.resx">
       <DependentUpon>DBSettingsUC.cs</DependentUpon>
@@ -177,9 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StdMainUC.resx">
       <DependentUpon>StdMainUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StudentGeneralInfoUC.resx">
-      <DependentUpon>StudentGeneralInfoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StudentsGridUC.resx">
       <DependentUpon>StudentsGridUC.cs</DependentUpon>

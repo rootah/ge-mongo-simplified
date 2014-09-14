@@ -7,6 +7,7 @@ using DevExpress.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using ge_mongo_simplified.Classes;
 using ge_mongo_simplified.UserControls;
 using MongoDB.Bson;
@@ -22,6 +23,7 @@ namespace ge_mongo_simplified.Forms
         public static MongoServer server = client.GetServer();
         public static MongoDatabase database = server.GetDatabase("devdb");
         public static MongoCollection groupCollection = database.GetCollection("devgroups");
+        public static MongoCollection stdCollection = database.GetCollection("devstds");
 
         public MainForm()
         {
@@ -105,7 +107,13 @@ namespace ge_mongo_simplified.Forms
                 e.Control = new OddSettingsUC(this);
         }
 
-        private void groupGridFill()
+        public void stdGridFill()
+        {
+            studentsGridUC1.studentsGrid.Visible = false;
+            // datasource add here <<<
+        }
+
+        public void groupGridFill()
         {
             groupsGridUC2.groupsGrid.Visible = false;
             groupsGridUC2.groupsGrid.DataSource = new BindingList<Group>(groupCollection.FindAllAs<Group>().ToList());
@@ -116,10 +124,11 @@ namespace ge_mongo_simplified.Forms
         }
         public void groupEdit()
         {
-            var newGroup = new GroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [edit]" };
             Properties.Settings.Default.formType = "edit";
+            Properties.Settings.Default.groupNo = groupsGridUC2.groupsGridView.GetRowCellValue(groupsGridUC2.groupsGridView.FocusedRowHandle, "num").ToString();
             Properties.Settings.Default.groupID = groupsGridUC2.groupsGridView.GetRowCellValue(groupsGridUC2.groupsGridView.FocusedRowHandle, "_id").ToString();
             Properties.Settings.Default.Save();
+            var newGroup = new GroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [" + Properties.Settings.Default.groupNo + @"]" };
             newGroup.ShowDialog();
         }
 
@@ -145,7 +154,7 @@ namespace ge_mongo_simplified.Forms
 
         private void groupstudentsdetailsSplit_Panel1_Enter(object sender, EventArgs e)
         {
-            detailsUC1.detailsTC.SelectedTabPageIndex = 0;
+            detailsUC2.detailsTC.SelectedTabPageIndex = 0;
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -155,7 +164,6 @@ namespace ge_mongo_simplified.Forms
 
         public void groupDetailShow()
         {
-            //var list = new BindingList<string>();
             var q = Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.groupID));
             var resdoc = groupCollection.FindOneAs<Group>(q);
 
@@ -164,15 +172,54 @@ namespace ge_mongo_simplified.Forms
             //    list.Add(res.ToString());
             //detailsUC1.groupDetailGridControl.DataSource = data;
 
-            detailsUC1.groupDetailsUC2.groupnoCI.Control.Text = resdoc.num;
-            detailsUC1.groupDetailsUC2.levelCI.Control.Text = resdoc.lvl;
-            detailsUC1.groupDetailsUC2.daysCI.Control.Text = resdoc.days.ToString().Replace(@"[", "").Replace(@"]", "");
-            detailsUC1.groupDetailsUC2.timeCI.Control.Text = resdoc.time;
-            detailsUC1.groupDetailsUC2.durationCI.Control.Text = resdoc.duration;
-            detailsUC1.groupDetailsUC2.idCI.Control.Text = resdoc._id.ToString();
+            if (resdoc != null)
+            {
+                detailsUC2.groupDetailsUC2.groupnoCI.Control.Text = resdoc.num;
+                detailsUC2.groupDetailsUC2.levelCI.Control.Text = resdoc.lvl;
+                detailsUC2.groupDetailsUC2.daysCI.Control.Text = resdoc.days.ToString().Replace(@"[", "").Replace(@"]", "");
+                detailsUC2.groupDetailsUC2.timeCI.Control.Text = resdoc.time;
+                detailsUC2.groupDetailsUC2.durationCI.Control.Text = resdoc.duration;
+                detailsUC2.groupDetailsUC2.idCI.Control.Text = resdoc._id.ToString();
+            }
         }
         private void studentsdetailSplit_Panel1_Enter(object sender, EventArgs e)
-        {detailsUC1.detailsTC.SelectedTabPageIndex = 1;
+        {
+            detailsUC2.detailsTC.SelectedTabPageIndex = 1;
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            groupGridFill();
+        }
+
+        public void focusBack(string num)
+        {
+            var rowHandle = groupsGridUC2.groupsGridView.LocateByValue("num", num);
+            if (rowHandle != GridControl.InvalidRowHandle)
+                groupsGridUC2.groupsGridView.FocusedRowHandle = rowHandle;
+        }
+
+        private void delButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (ActiveControl == groupsGridUC2)
+            {
+                groupDel();
+            }
+            else if (ActiveControl == studetsGridUC1)
+            {
+                studentEdit();
+            }
+        }
+
+        private void groupDel()
+        {
+            var groupNo = groupsGridUC2.groupsGridView.GetRowCellValue(groupsGridUC2.groupsGridView.FocusedRowHandle, "num").ToString();
+            DialogResult myResult = XtraMessageBox.Show(@"Group " + groupNo + @" will be deleted. Is it OK?", @"Delete Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (myResult == DialogResult.OK){var query = Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.groupID));
+                groupCollection.Remove(query);
+                groupsGridUC2.groupsGridView.FocusedRowHandle = 0; 
+                groupGridFill();
+            }
         }
     }
 }

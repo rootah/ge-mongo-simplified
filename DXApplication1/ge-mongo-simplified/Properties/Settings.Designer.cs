@@ -70,5 +70,17 @@ namespace ge_mongo_simplified.Properties {
                 this["stdID"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string groupNo {
+            get {
+                return ((string)(this["groupNo"]));
+            }
+            set {
+                this["groupNo"] = value;
+            }
+        }
     }
 }

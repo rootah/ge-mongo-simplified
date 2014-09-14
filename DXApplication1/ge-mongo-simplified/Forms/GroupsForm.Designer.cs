@@ -65,8 +65,8 @@
             this.Name = "GroupsForm";
             this.ShowIcon = false;
             this.Text = "Group [...]";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GroupsForm_FormClosed);
             this.Load += new System.EventHandler(this.GroupsForm_Load);
-            this.Resize += new System.EventHandler(this.GroupsForm_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 

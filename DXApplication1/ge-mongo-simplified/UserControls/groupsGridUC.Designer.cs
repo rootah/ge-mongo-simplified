@@ -111,6 +111,7 @@
             this.groupsGridView.GridControl = this.groupsGrid;
             this.groupsGridView.Name = "groupsGridView";
             this.groupsGridView.OptionsBehavior.Editable = false;
+            this.groupsGridView.OptionsNavigation.AutoMoveRowFocus = false;
             this.groupsGridView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.groupsGridView.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.True;
             this.groupsGridView.OptionsSelection.UseIndicatorForSelection = false;

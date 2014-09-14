@@ -8,6 +8,7 @@ using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraLayout.Utils;
+using DevExpress.XtraNavBar;
 using ge_mongo_simplified.Classes;
 using ge_mongo_simplified.Forms;
 using MongoDB.Bson;
@@ -52,6 +53,8 @@ namespace ge_mongo_simplified.UserControls
         }
         private void cancelButt_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.groupNo = numTE.Text;
+            Properties.Settings.Default.Save();
             var topLevelControl = (Form)TopLevelControl;
             if (topLevelControl != null) topLevelControl.Close();
         }
@@ -67,16 +70,55 @@ namespace ge_mongo_simplified.UserControls
         private void formCheck()
         {
             if (numTE.Text == string.Empty)
-            {XtraMessageBox.Show(@"Check group number!" + Environment.NewLine + " ");
+            {
+                XtraMessageBox.Show(@"Check group number!" + Environment.NewLine + " ");
                 numTE.Focus();
             }
+            else formCheckStageTwo();
+        }
+
+        private void formCheckStageTwo()
+        {
+            Properties.Settings.Default.groupNo = numTE.Text;
+            Properties.Settings.Default.Save();
+            if (Properties.Settings.Default.formType == "edit")
+                groupUpdate();
             else writeResult();
         }
 
         private void okButt_Click(object sender, EventArgs e)
         {
-            lastActionWrite();
             formCheck();
+        }
+
+        private void groupUpdate()
+        {
+            var topLevelControl = (Form)TopLevelControl;
+            
+            var list = new BsonArray();
+            
+            foreach (CheckedListBoxItem item in daysSelector.Properties.Items)
+            {
+                if (item.CheckState == CheckState.Checked)
+                {
+                    list.Add(item.ToString());
+                }
+            }
+
+            database.GetCollection<Group>("devgroups").Update(
+                Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.groupID)),
+                MongoDB.Driver.Builders.Update
+                    .Set("num", numTE.Text)
+                    .Set("lvl", lvlComboBox.Text)
+                    .Set("duration", durationTE.Text)
+                    .Set("time", timeTE.Text)
+                    .Set("status", statusComboBox.Text)
+                    .Set("days", new BsonArray(list)
+                    ));
+
+            Properties.Settings.Default.groupNo = numTE.Text;
+            Properties.Settings.Default.Save();
+            if (topLevelControl != null) topLevelControl.Close();
         }
 
         private void writeResult()
@@ -103,6 +145,11 @@ namespace ge_mongo_simplified.UserControls
             };
 
             collection.Insert(newgroup);
+            // MainForm Details renew
+            Properties.Settings.Default.groupID = newgroup._id.ToString();
+            Properties.Settings.Default.groupNo = newgroup.num;
+            Properties.Settings.Default.Save();
+            lastActionWrite();
             if (topLevelControl != null) topLevelControl.Close();
         }
         private void lvlComboBox_Enter(object sender, EventArgs e)
@@ -118,6 +165,7 @@ namespace ge_mongo_simplified.UserControls
             Properties.Settings.Default.lastAction = "Group [" + numTE.Text + " / " + lvlComboBox.Text + " / " +
                                                      durationTE.Text + " / " + timeTE.Text + " / " +
                                                      daysSelector.Text + "] added";
+
             if (topLevelControl != null) topLevelControl.Text = @"Group [" + numTE.Text + @"]";
         }
 

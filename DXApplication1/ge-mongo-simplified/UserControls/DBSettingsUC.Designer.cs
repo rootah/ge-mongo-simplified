@@ -63,6 +63,7 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
             this.logsLayout = new DevExpress.XtraLayout.LayoutControl();
             this.logMemo = new DevExpress.XtraEditors.MemoEdit();
             this.logControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -90,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logsLayout)).BeginInit();
             this.logsLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logMemo.Properties)).BeginInit();
@@ -134,9 +136,9 @@
             // standaloneBarDockControl2
             // 
             this.standaloneBarDockControl2.CausesValidation = false;
-            this.standaloneBarDockControl2.Location = new System.Drawing.Point(123, 8);
+            this.standaloneBarDockControl2.Location = new System.Drawing.Point(137, 8);
             this.standaloneBarDockControl2.Name = "standaloneBarDockControl2";
-            this.standaloneBarDockControl2.Size = new System.Drawing.Size(334, 30);
+            this.standaloneBarDockControl2.Size = new System.Drawing.Size(320, 30);
             this.standaloneBarDockControl2.Text = "standaloneBarDockControl2";
             // 
             // checkEdit2
@@ -346,19 +348,19 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(70, 66);
+            this.textEdit2.Location = new System.Drawing.Point(81, 66);
             this.textEdit2.MenuManager = this.barManager1;
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(307, 20);
+            this.textEdit2.Size = new System.Drawing.Size(296, 20);
             this.textEdit2.StyleController = this.serversControl;
             this.textEdit2.TabIndex = 5;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(70, 42);
+            this.textEdit1.Location = new System.Drawing.Point(81, 42);
             this.textEdit1.MenuManager = this.barManager1;
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(307, 20);
+            this.textEdit1.Size = new System.Drawing.Size(296, 20);
             this.textEdit1.StyleController = this.serversControl;
             this.textEdit1.TabIndex = 4;
             // 
@@ -377,7 +379,8 @@
             this.simpleLabelItem2,
             this.layoutControlItem5,
             this.simpleSeparator1,
-            this.simpleSeparator3});
+            this.simpleSeparator3,
+            this.simpleSeparator4});
             this.serversLayoutControlGroup.Location = new System.Drawing.Point(0, 0);
             this.serversLayoutControlGroup.Name = "Root";
             this.serversLayoutControlGroup.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 6, 10);
@@ -392,11 +395,11 @@
             this.dbServersLabel.AppearanceItemCaption.Options.UseFont = true;
             this.dbServersLabel.ControlAlignment = System.Drawing.ContentAlignment.BottomLeft;
             this.dbServersLabel.CustomizationFormText = "DB\'s servers";
-            this.dbServersLabel.Location = new System.Drawing.Point(0, 0);
+            this.dbServersLabel.Location = new System.Drawing.Point(11, 0);
             this.dbServersLabel.MaxSize = new System.Drawing.Size(0, 34);
             this.dbServersLabel.MinSize = new System.Drawing.Size(110, 34);
             this.dbServersLabel.Name = "dbServersLabel";
-            this.dbServersLabel.Size = new System.Drawing.Size(110, 34);
+            this.dbServersLabel.Size = new System.Drawing.Size(113, 34);
             this.dbServersLabel.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.dbServersLabel.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 5);
             this.dbServersLabel.Text = "DB\'s servers";
@@ -406,10 +409,10 @@
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 132);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(11, 132);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(459, 259);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(448, 259);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -418,9 +421,9 @@
             // 
             this.layoutControlItem1.Control = this.textEdit1;
             this.layoutControlItem1.CustomizationFormText = "db server #1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 34);
+            this.layoutControlItem1.Location = new System.Drawing.Point(11, 34);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(379, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(368, 24);
             this.layoutControlItem1.Text = "db server #1";
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(63, 13);
@@ -430,9 +433,9 @@
             // 
             this.layoutControlItem2.Control = this.textEdit2;
             this.layoutControlItem2.CustomizationFormText = "db server #2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 58);
+            this.layoutControlItem2.Location = new System.Drawing.Point(11, 58);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(379, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(368, 24);
             this.layoutControlItem2.Text = "db server #2";
             this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(63, 13);
@@ -475,11 +478,11 @@
             this.simpleLabelItem2.AppearanceItemCaption.Options.UseFont = true;
             this.simpleLabelItem2.ControlAlignment = System.Drawing.ContentAlignment.BottomLeft;
             this.simpleLabelItem2.CustomizationFormText = "Replica state";
-            this.simpleLabelItem2.Location = new System.Drawing.Point(0, 98);
+            this.simpleLabelItem2.Location = new System.Drawing.Point(11, 98);
             this.simpleLabelItem2.MaxSize = new System.Drawing.Size(0, 34);
             this.simpleLabelItem2.MinSize = new System.Drawing.Size(144, 34);
             this.simpleLabelItem2.Name = "simpleLabelItem2";
-            this.simpleLabelItem2.Size = new System.Drawing.Size(459, 34);
+            this.simpleLabelItem2.Size = new System.Drawing.Size(448, 34);
             this.simpleLabelItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleLabelItem2.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 5);
             this.simpleLabelItem2.Text = "Replica state";
@@ -491,10 +494,10 @@
             this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
             this.layoutControlItem5.FillControlToClientArea = false;
-            this.layoutControlItem5.Location = new System.Drawing.Point(121, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(135, 0);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(5, 34);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(338, 34);
+            this.layoutControlItem5.Size = new System.Drawing.Size(324, 34);
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.Text = "layoutControlItem5";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
@@ -505,7 +508,7 @@
             // 
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
-            this.simpleSeparator1.Location = new System.Drawing.Point(110, 0);
+            this.simpleSeparator1.Location = new System.Drawing.Point(124, 0);
             this.simpleSeparator1.Name = "simpleSeparator1";
             this.simpleSeparator1.Size = new System.Drawing.Size(11, 34);
             this.simpleSeparator1.Spacing = new DevExpress.XtraLayout.Utils.Padding(5, 5, 6, 6);
@@ -515,11 +518,21 @@
             // 
             this.simpleSeparator3.AllowHotTrack = false;
             this.simpleSeparator3.CustomizationFormText = "simpleSeparator3";
-            this.simpleSeparator3.Location = new System.Drawing.Point(0, 82);
+            this.simpleSeparator3.Location = new System.Drawing.Point(11, 82);
             this.simpleSeparator3.Name = "simpleSeparator3";
-            this.simpleSeparator3.Size = new System.Drawing.Size(459, 16);
+            this.simpleSeparator3.Size = new System.Drawing.Size(448, 16);
             this.simpleSeparator3.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 5);
             this.simpleSeparator3.Text = "simpleSeparator3";
+            // 
+            // simpleSeparator4
+            // 
+            this.simpleSeparator4.AllowHotTrack = false;
+            this.simpleSeparator4.CustomizationFormText = "simpleSeparator4";
+            this.simpleSeparator4.Location = new System.Drawing.Point(0, 0);
+            this.simpleSeparator4.Name = "simpleSeparator4";
+            this.simpleSeparator4.Size = new System.Drawing.Size(11, 391);
+            this.simpleSeparator4.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 10, 0, 0);
+            this.simpleSeparator4.Text = "simpleSeparator4";
             // 
             // logsLayout
             // 
@@ -546,6 +559,7 @@
             this.logMemo.Size = new System.Drawing.Size(367, 357);
             this.logMemo.StyleController = this.logsLayout;
             this.logMemo.TabIndex = 4;
+            this.logMemo.UseOptimizedRendering = true;
             // 
             // logControlGroup
             // 
@@ -649,6 +663,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logsLayout)).EndInit();
             this.logsLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logMemo.Properties)).EndInit();
@@ -703,6 +718,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator3;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator4;
 
 
     }

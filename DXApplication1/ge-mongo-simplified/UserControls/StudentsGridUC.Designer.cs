@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.studentsGrid = new DevExpress.XtraGrid.GridControl();
             this.studentsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.searchCheckBtn = new DevExpress.XtraBars.BarCheckItem();
             this.standaloneBarDockControl1 = new DevExpress.XtraBars.StandaloneBarDockControl();
@@ -261,7 +262,7 @@
             this.layoutControlItem3.TextToControlDistance = 0;
             this.layoutControlItem3.TextVisible = false;
             // 
-            // StudetsGridUC
+            // StudentsGridUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -270,7 +271,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "StudetsGridUC";
+            this.Name = "StudentsGridUC";
             this.Size = new System.Drawing.Size(485, 377);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -303,8 +304,8 @@
         private DevExpress.XtraBars.BarCheckItem searchCheckBtn;
         private DevExpress.XtraEditors.SearchControl studentSearchControl;
         private DevExpress.XtraLayout.LayoutControlItem searchControl;
-        private DevExpress.XtraGrid.GridControl studentsGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView studentsGridView;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        public DevExpress.XtraGrid.GridControl studentsGrid;
     }
 }

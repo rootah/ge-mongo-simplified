@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cancelButton = new DevExpress.XtraEditors.SimpleButton();
             this.discountCE = new DevExpress.XtraEditors.CheckEdit();
             this.pendDE = new DevExpress.XtraEditors.DateEdit();
             this.pstartDE = new DevExpress.XtraEditors.DateEdit();
@@ -86,7 +87,6 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.sourceControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
-            this.cancelButton = new DevExpress.XtraEditors.SimpleButton();
             this.cancelButtonControl = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -191,6 +191,16 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(214, 428);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(73, 22);
+            this.cancelButton.StyleController = this.layoutControl1;
+            this.cancelButton.TabIndex = 29;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
             // discountCE
             // 
             this.discountCE.AutoSizeInLayoutControl = true;
@@ -234,12 +244,12 @@
             // individualCE
             // 
             this.individualCE.EnterMoveNextControl = true;
-            this.individualCE.Location = new System.Drawing.Point(199, 292);
+            this.individualCE.Location = new System.Drawing.Point(193, 292);
             this.individualCE.Name = "individualCE";
             this.individualCE.Properties.AllowFocused = false;
             this.individualCE.Properties.Caption = "Is individual";
             this.individualCE.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.individualCE.Size = new System.Drawing.Size(78, 19);
+            this.individualCE.Size = new System.Drawing.Size(84, 19);
             this.individualCE.StyleController = this.layoutControl1;
             this.individualCE.TabIndex = 25;
             // 
@@ -258,9 +268,9 @@
             // 
             this.discountTE.Enabled = false;
             this.discountTE.EnterMoveNextControl = true;
-            this.discountTE.Location = new System.Drawing.Point(95, 223);
+            this.discountTE.Location = new System.Drawing.Point(96, 223);
             this.discountTE.Name = "discountTE";
-            this.discountTE.Size = new System.Drawing.Size(182, 20);
+            this.discountTE.Size = new System.Drawing.Size(181, 20);
             this.discountTE.StyleController = this.layoutControl1;
             this.discountTE.TabIndex = 22;
             // 
@@ -276,11 +286,15 @@
             // sourceCB
             // 
             this.sourceCB.EnterMoveNextControl = true;
-            this.sourceCB.Location = new System.Drawing.Point(85, 119);
+            this.sourceCB.Location = new System.Drawing.Point(94, 119);
             this.sourceCB.Name = "sourceCB";
             this.sourceCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.sourceCB.Size = new System.Drawing.Size(202, 20);
+            this.sourceCB.Properties.Items.AddRange(new object[] {
+            "Outdoor",
+            "Ads",
+            "Recommendation"});
+            this.sourceCB.Size = new System.Drawing.Size(193, 20);
             this.sourceCB.StyleController = this.layoutControl1;
             this.sourceCB.TabIndex = 20;
             // 
@@ -365,9 +379,9 @@
             // pnameTE
             // 
             this.pnameTE.EnterMoveNextControl = true;
-            this.pnameTE.Location = new System.Drawing.Point(87, 74);
+            this.pnameTE.Location = new System.Drawing.Point(96, 74);
             this.pnameTE.Name = "pnameTE";
-            this.pnameTE.Size = new System.Drawing.Size(200, 20);
+            this.pnameTE.Size = new System.Drawing.Size(191, 20);
             this.pnameTE.StyleController = this.layoutControl1;
             this.pnameTE.TabIndex = 8;
             // 
@@ -387,18 +401,18 @@
             // lnameTE
             // 
             this.lnameTE.EnterMoveNextControl = true;
-            this.lnameTE.Location = new System.Drawing.Point(87, 26);
+            this.lnameTE.Location = new System.Drawing.Point(96, 26);
             this.lnameTE.Name = "lnameTE";
-            this.lnameTE.Size = new System.Drawing.Size(200, 20);
+            this.lnameTE.Size = new System.Drawing.Size(191, 20);
             this.lnameTE.StyleController = this.layoutControl1;
             this.lnameTE.TabIndex = 6;
             // 
             // fnameTE
             // 
             this.fnameTE.EnterMoveNextControl = true;
-            this.fnameTE.Location = new System.Drawing.Point(87, 2);
+            this.fnameTE.Location = new System.Drawing.Point(96, 2);
             this.fnameTE.Name = "fnameTE";
-            this.fnameTE.Size = new System.Drawing.Size(200, 20);
+            this.fnameTE.Size = new System.Drawing.Size(191, 20);
             this.fnameTE.StyleController = this.layoutControl1;
             this.fnameTE.TabIndex = 5;
             // 
@@ -467,8 +481,8 @@
             this.infoCG.CustomizationFormText = "infoCG";
             this.infoCG.Location = new System.Drawing.Point(0, 162);
             this.infoCG.Name = "infoCG";
-            this.infoCG.SelectedTabPage = this.contactsCG;
-            this.infoCG.SelectedTabPageIndex = 0;
+            this.infoCG.SelectedTabPage = this.paymentsCG;
+            this.infoCG.SelectedTabPageIndex = 2;
             this.infoCG.Size = new System.Drawing.Size(289, 254);
             this.infoCG.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.infoCG.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -512,11 +526,11 @@
             // 
             this.discountControl.Control = this.discountTE;
             this.discountControl.CustomizationFormText = "Discount";
-            this.discountControl.Location = new System.Drawing.Point(23, 24);
+            this.discountControl.Location = new System.Drawing.Point(25, 24);
             this.discountControl.Name = "discountControl";
-            this.discountControl.Size = new System.Drawing.Size(246, 24);
+            this.discountControl.Size = new System.Drawing.Size(244, 24);
             this.discountControl.Text = "Discount";
-            this.discountControl.TextSize = new System.Drawing.Size(57, 20);
+            this.discountControl.TextSize = new System.Drawing.Size(56, 20);
             // 
             // simpleSeparator4
             // 
@@ -542,9 +556,9 @@
             // 
             this.individualControl.Control = this.individualCE;
             this.individualControl.CustomizationFormText = "individualControl";
-            this.individualControl.Location = new System.Drawing.Point(187, 93);
+            this.individualControl.Location = new System.Drawing.Point(181, 93);
             this.individualControl.Name = "individualControl";
-            this.individualControl.Size = new System.Drawing.Size(82, 23);
+            this.individualControl.Size = new System.Drawing.Size(88, 23);
             this.individualControl.Text = "individualControl";
             this.individualControl.TextSize = new System.Drawing.Size(0, 0);
             this.individualControl.TextToControlDistance = 0;
@@ -556,7 +570,7 @@
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 93);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(187, 23);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(181, 23);
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -608,7 +622,7 @@
             this.discountCBControl.CustomizationFormText = "discountCBControl";
             this.discountCBControl.Location = new System.Drawing.Point(0, 24);
             this.discountCBControl.Name = "discountCBControl";
-            this.discountCBControl.Size = new System.Drawing.Size(23, 24);
+            this.discountCBControl.Size = new System.Drawing.Size(25, 24);
             this.discountCBControl.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.discountCBControl.Text = "discountCBControl";
             this.discountCBControl.TextSize = new System.Drawing.Size(0, 0);
@@ -766,7 +780,7 @@
             this.fnameControl.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.fnameControl.Text = "First name";
             this.fnameControl.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.fnameControl.TextSize = new System.Drawing.Size(80, 13);
+            this.fnameControl.TextSize = new System.Drawing.Size(89, 13);
             this.fnameControl.TextToControlDistance = 5;
             // 
             // pnameControl
@@ -779,7 +793,7 @@
             this.pnameControl.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.pnameControl.Text = "Parent name";
             this.pnameControl.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.pnameControl.TextSize = new System.Drawing.Size(80, 13);
+            this.pnameControl.TextSize = new System.Drawing.Size(89, 13);
             this.pnameControl.TextToControlDistance = 5;
             this.pnameControl.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
@@ -793,7 +807,7 @@
             this.lnameControl.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.lnameControl.Text = "Last name";
             this.lnameControl.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.lnameControl.TextSize = new System.Drawing.Size(80, 13);
+            this.lnameControl.TextSize = new System.Drawing.Size(89, 13);
             this.lnameControl.TextToControlDistance = 5;
             // 
             // layoutControlItem4
@@ -859,7 +873,7 @@
             this.sourceControl.Name = "sourceControl";
             this.sourceControl.Size = new System.Drawing.Size(289, 24);
             this.sourceControl.Text = "[ ! ] Source";
-            this.sourceControl.TextSize = new System.Drawing.Size(80, 20);
+            this.sourceControl.TextSize = new System.Drawing.Size(89, 20);
             // 
             // simpleSeparator3
             // 
@@ -870,16 +884,6 @@
             this.simpleSeparator3.Size = new System.Drawing.Size(289, 21);
             this.simpleSeparator3.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
             this.simpleSeparator3.Text = "simpleSeparator3";
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Location = new System.Drawing.Point(214, 428);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(73, 22);
-            this.cancelButton.StyleController = this.layoutControl1;
-            this.cancelButton.TabIndex = 29;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // cancelButtonControl
             // 
