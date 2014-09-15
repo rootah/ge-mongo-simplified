@@ -45,6 +45,7 @@
     <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraSpreadsheet.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MongoDB.Bson">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MongoDB\CSharpDriver 1.9.2\MongoDB.Bson.dll</HintPath>
@@ -94,6 +95,12 @@
     </Compile>
     <Compile Include="UserControls\GroupDetailsUC.Designer.cs">
       <DependentUpon>GroupDetailsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupGrid2UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupGrid2UC.Designer.cs">
+      <DependentUpon>GroupGrid2UC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\GroupMainUC.cs">
       <SubType>UserControl</SubType>
@@ -156,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GroupDetailsUC.resx">
       <DependentUpon>GroupDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GroupGrid2UC.resx">
+      <DependentUpon>GroupGrid2UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GroupMainUC.resx">
       <DependentUpon>GroupMainUC.cs</DependentUpon>

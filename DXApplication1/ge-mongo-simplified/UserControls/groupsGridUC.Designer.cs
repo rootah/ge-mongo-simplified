@@ -250,8 +250,7 @@
             this.groupsLabel.AppearanceItemCaption.Options.UseFont = true;
             this.groupsLabel.CustomizationFormText = "Groups";
             this.groupsLabel.Location = new System.Drawing.Point(0, 0);
-            this.groupsLabel.MaxSize = new System.Drawing.Size(67, 34);
-            this.groupsLabel.MinSize = new System.Drawing.Size(67, 34);
+            this.groupsLabel.MinSize = new System.Drawing.Size(57, 30);
             this.groupsLabel.Name = "groupsLabel";
             this.groupsLabel.Size = new System.Drawing.Size(67, 34);
             this.groupsLabel.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;

@@ -8,6 +8,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
+using DevExpress.XtraTreeList.Nodes;
 using ge_mongo_simplified.Classes;
 using ge_mongo_simplified.UserControls;
 using MongoDB.Bson;
@@ -42,6 +43,7 @@ namespace ge_mongo_simplified.Forms
             groupsCheckButton_DownChanged(null, null);
             detailsCheckButton_DownChanged(null, null);
             groupGridFill();
+            stdGridFill();
         }
 
         private void newStudentButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -110,7 +112,24 @@ namespace ge_mongo_simplified.Forms
         public void stdGridFill()
         {
             studentsGridUC1.studentsGrid.Visible = false;
-            // datasource add here <<<
+            studentsGridUC1.studentsGrid.DataSource =
+                new BindingList<Student>(stdCollection.FindAllAs<Student>().ToList());
+            for (int i = 0; i <= studentsGridUC1.studentsGridView.Columns.Count - 1; i++)
+                studentsGridUC1.studentsGridView.Columns[i].Visible = false;
+            studentsGridUC1.studentsGridView.Columns["addphone"].Visible = true;
+            studentsGridUC1.studentsGridView.Columns["mphone"].Visible = true;
+            studentsGridUC1.studentsGridView.Columns["fullname"].Visible = true;
+            studentsGridUC1.studentsGridView.Columns["fullname"].VisibleIndex = 1;
+
+            studentsGridUC1.studentLabel.Width = studentsGridUC1.studentsGridView.Columns["fullname"].VisibleWidth + 2;
+            studentsGridUC1.mainLabel.Width = studentsGridUC1.studentsGridView.Columns["mphone"].VisibleWidth - 11;
+            studentsGridUC1.studentsGrid.Visible = true;
+        }
+
+        public void stdGridColumnAjust()
+        {
+            studentsGridUC1.studentLabel.Width = studentsGridUC1.studentsGridView.Columns["fullname"].VisibleWidth + 2;
+            studentsGridUC1.mainLabel.Width = studentsGridUC1.studentsGridView.Columns["mphone"].VisibleWidth - 11;
         }
 
         public void groupGridFill()
@@ -146,7 +165,7 @@ namespace ge_mongo_simplified.Forms
             {
                 groupEdit();
             }
-            else if (ActiveControl == studetsGridUC1)
+            else if (ActiveControl == studentsGridUC1)
             {
                 studentEdit();
             }
@@ -166,11 +185,6 @@ namespace ge_mongo_simplified.Forms
         {
             var q = Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.groupID));
             var resdoc = groupCollection.FindOneAs<Group>(q);
-
-            //var data = new BindingList<Group>(groupCollection.FindAs<Group>(q).ToList());
-            //foreach (var res in resdoc.days)
-            //    list.Add(res.ToString());
-            //detailsUC1.groupDetailGridControl.DataSource = data;
 
             if (resdoc != null)
             {
@@ -205,7 +219,7 @@ namespace ge_mongo_simplified.Forms
             {
                 groupDel();
             }
-            else if (ActiveControl == studetsGridUC1)
+            else if (ActiveControl == studentsGridUC1)
             {
                 studentEdit();
             }
@@ -219,6 +233,42 @@ namespace ge_mongo_simplified.Forms
                 groupCollection.Remove(query);
                 groupsGridUC2.groupsGridView.FocusedRowHandle = 0; 
                 groupGridFill();
+            }
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var groupList = new BindingList<Group>(groupCollection.FindAllAs<Group>().ToList());
+            groupGrid2UC1.groupTL.BeginUnboundLoad();
+            TreeListNode rootNode = groupGrid2UC1.groupTL.AppendNode(
+                new object[] { "All [ " + groupList.Count + @" ] groups" }, null);
+            for (int i = 0; i <= groupList.Count - 1; i++)
+            {
+                groupGrid2UC1.groupTL.AppendNode(new object[] { groupList[i].num + @" [ " + i + @" ]" }, rootNode);
+            }
+            groupGrid2UC1.groupTL.EndUnboundLoad();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            groupGrid2UC1.groupTL.BeginUnboundLoad();
+            groupGrid2UC1.groupTL.Nodes.RemoveAt(1);
+            groupGrid2UC1.groupTL.EndUnboundLoad();
+        }
+
+        public void groupDetailShow2(string groupno)
+        {
+            var q = Query.EQ("num", groupno);
+            var resdoc = groupCollection.FindOneAs<Group>(q);
+
+            if (resdoc != null)
+            {
+                detailsUC1.groupDetailsUC2.groupnoCI.Control.Text = resdoc.num;
+                detailsUC1.groupDetailsUC2.levelCI.Control.Text = resdoc.lvl;
+                detailsUC1.groupDetailsUC2.daysCI.Control.Text = resdoc.days.ToString().Replace(@"[", "").Replace(@"]", "");
+                detailsUC1.groupDetailsUC2.timeCI.Control.Text = resdoc.time;
+                detailsUC1.groupDetailsUC2.durationCI.Control.Text = resdoc.duration;
+                detailsUC1.groupDetailsUC2.idCI.Control.Text = resdoc._id.ToString();
             }
         }
     }

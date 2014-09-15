@@ -1,6 +1,4 @@
-﻿using DevExpress.XtraLayout.Utils;
-
-namespace ge_mongo_simplified.UserControls
+﻿namespace ge_mongo_simplified.UserControls
 {
     public partial class StudentsGridUC : DevExpress.XtraEditors.XtraUserControl
     {
@@ -9,9 +7,12 @@ namespace ge_mongo_simplified.UserControls
             InitializeComponent();
         }
 
-        private void searchCheckBtn_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void StudentsGridUC_Resize(object sender, System.EventArgs e)
         {
-            searchControl.Visibility = searchCheckBtn.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
+            if (studentsGridView.VisibleColumns.Count > 0){
+                studentLabel.Width = studentsGridView.Columns["fullname"].VisibleWidth + 2;
+                mainLabel.Width = studentsGridView.Columns["mphone"].VisibleWidth - 11;
+            }
         }
     }
 }

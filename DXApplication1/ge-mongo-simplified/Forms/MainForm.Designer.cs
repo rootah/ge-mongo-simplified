@@ -52,12 +52,15 @@
             this.statusLabel = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.studentsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.filePG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.viewPG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.paymentsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.scheduleRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.journalRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.certRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -68,9 +71,11 @@
             this.groupstudentsdetailsSplit = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupsGridUC2 = new ge_mongo_simplified.UserControls.GroupsGridUC();
             this.studentsdetailSplit = new DevExpress.XtraEditors.SplitContainerControl();
+            this.studentsGridUC1 = new ge_mongo_simplified.UserControls.StudentsGridUC();
             this.detailsUC2 = new ge_mongo_simplified.UserControls.DetailsUC();
             this.paymentsTab = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.groupGrid2UC1 = new ge_mongo_simplified.UserControls.GroupGrid2UC();
             this.scheduleTab = new DevExpress.XtraTab.XtraTabPage();
             this.journalTab = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -85,7 +90,7 @@
             this.dbSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             this.oddSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             this.actionPG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.studentsGridUC1 = new ge_mongo_simplified.UserControls.StudentsGridUC();
+            this.detailsUC1 = new ge_mongo_simplified.UserControls.DetailsUC();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.backstageView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newPopup)).BeginInit();
@@ -130,10 +135,12 @@
             this.newStudentButton,
             this.statusLabel,
             this.barButtonItem1,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonItem4});
             this.ribbonControl.ItemsVertAlign = DevExpress.Utils.VertAlignment.Top;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 15;
+            this.ribbonControl.MaxItemId = 17;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -220,7 +227,6 @@
             this.exitBackButt.AppearancePressed.Options.UseForeColor = true;
             this.exitBackButt.Caption = "Exit";
             this.exitBackButt.CaptionHorizontalAlignment = DevExpress.Utils.Drawing.ItemHorizontalAlignment.Right;
-            this.exitBackButt.Glyph = ((System.Drawing.Image)(resources.GetObject("exitBackButt.Glyph")));
             this.exitBackButt.Name = "exitBackButt";
             this.exitBackButt.ItemClick += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageExitButton_ItemClick);
             // 
@@ -362,6 +368,20 @@
             this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 15;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 16;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.AutoStretchPageHeaders = true;
@@ -404,9 +424,17 @@
             // 
             // paymentsRibbonPage
             // 
+            this.paymentsRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
             this.paymentsRibbonPage.Name = "paymentsRibbonPage";
             this.paymentsRibbonPage.Text = "Payments";
-            this.paymentsRibbonPage.Visible = false;
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
             // scheduleRibbonPage
             // 
@@ -480,7 +508,7 @@
             this.groupstudentsdetailsSplit.Panel2.Controls.Add(this.studentsdetailSplit);
             this.groupstudentsdetailsSplit.Panel2.Text = "detailsPanel";
             this.groupstudentsdetailsSplit.Size = new System.Drawing.Size(1116, 266);
-            this.groupstudentsdetailsSplit.SplitterPosition = 153;
+            this.groupstudentsdetailsSplit.SplitterPosition = 154;
             this.groupstudentsdetailsSplit.TabIndex = 0;
             this.groupstudentsdetailsSplit.Text = "splitContainerControl1";
             // 
@@ -489,7 +517,7 @@
             this.groupsGridUC2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupsGridUC2.Location = new System.Drawing.Point(0, 0);
             this.groupsGridUC2.Name = "groupsGridUC2";
-            this.groupsGridUC2.Size = new System.Drawing.Size(153, 266);
+            this.groupsGridUC2.Size = new System.Drawing.Size(154, 266);
             this.groupsGridUC2.TabIndex = 0;
             // 
             // studentsdetailSplit
@@ -505,10 +533,18 @@
             this.studentsdetailSplit.Panel1.Enter += new System.EventHandler(this.studentsdetailSplit_Panel1_Enter);
             this.studentsdetailSplit.Panel2.Controls.Add(this.detailsUC2);
             this.studentsdetailSplit.Panel2.Text = "Panel2";
-            this.studentsdetailSplit.Size = new System.Drawing.Size(951, 266);
+            this.studentsdetailSplit.Size = new System.Drawing.Size(950, 266);
             this.studentsdetailSplit.SplitterPosition = 265;
             this.studentsdetailSplit.TabIndex = 0;
             this.studentsdetailSplit.Text = "splitContainerControl2";
+            // 
+            // studentsGridUC1
+            // 
+            this.studentsGridUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentsGridUC1.Location = new System.Drawing.Point(0, 0);
+            this.studentsGridUC1.Name = "studentsGridUC1";
+            this.studentsGridUC1.Size = new System.Drawing.Size(673, 266);
+            this.studentsGridUC1.TabIndex = 0;
             // 
             // detailsUC2
             // 
@@ -530,12 +566,22 @@
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.groupGrid2UC1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.detailsUC1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(1116, 266);
-            this.splitContainerControl1.SplitterPosition = 320;
+            this.splitContainerControl1.SplitterPosition = 137;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
+            // 
+            // groupGrid2UC1
+            // 
+            this.groupGrid2UC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupGrid2UC1.Location = new System.Drawing.Point(0, 0);
+            this.groupGrid2UC1.Name = "groupGrid2UC1";
+            this.groupGrid2UC1.Size = new System.Drawing.Size(137, 266);
+            this.groupGrid2UC1.TabIndex = 0;
             // 
             // scheduleTab
             // 
@@ -649,13 +695,13 @@
             this.actionPG.Text = "action";
             this.actionPG.Visible = false;
             // 
-            // studentsGridUC1
+            // detailsUC1
             // 
-            this.studentsGridUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.studentsGridUC1.Location = new System.Drawing.Point(0, 0);
-            this.studentsGridUC1.Name = "studentsGridUC1";
-            this.studentsGridUC1.Size = new System.Drawing.Size(674, 266);
-            this.studentsGridUC1.TabIndex = 0;
+            this.detailsUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailsUC1.Location = new System.Drawing.Point(0, 0);
+            this.detailsUC1.Name = "detailsUC1";
+            this.detailsUC1.Size = new System.Drawing.Size(967, 266);
+            this.detailsUC1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -759,6 +805,11 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private UserControls.DetailsUC detailsUC2;
         private UserControls.StudentsGridUC studentsGridUC1;
+        private UserControls.GroupGrid2UC groupGrid2UC1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private UserControls.DetailsUC detailsUC1;
     }
 }
 
