@@ -1,16 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
-using System.Globalization;
-using System.Linq;
 using System.Windows.Forms;
-using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraLayout.Utils;
-using DevExpress.XtraNavBar;
 using ge_mongo_simplified.Classes;
-using ge_mongo_simplified.Forms;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
@@ -169,7 +164,7 @@ namespace ge_mongo_simplified.UserControls
             if (topLevelControl != null) topLevelControl.Text = @"Group [" + numTE.Text + @"]";
         }
 
-        private void numTE_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private void numTE_Validating(object sender, CancelEventArgs e)
         {
             var topLevelControl = (Form)TopLevelControl;
 

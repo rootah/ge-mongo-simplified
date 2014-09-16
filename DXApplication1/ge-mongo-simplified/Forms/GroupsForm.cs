@@ -1,19 +1,16 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using ge_mongo_simplified.Classes;
-using ge_mongo_simplified.UserControls;
-using MongoDB.Driver;
 
 namespace ge_mongo_simplified.Forms
 {
     public partial class GroupsForm : XtraForm
     {
-        private MainForm main;
+        private readonly MainForm _main;
         public GroupsForm(MainForm mainForm)
         {
             InitializeComponent();
-            main = mainForm;
+            _main = mainForm;
         }
 
         private void GroupsForm_Load(object sender, System.EventArgs e)
@@ -23,11 +20,10 @@ namespace ge_mongo_simplified.Forms
                 groupGeneralInfoUc2.groupEditFormFill();
         }
 
-        private void GroupsForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        private void GroupsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            main.groupGridFill();
-            main.focusBack(Properties.Settings.Default.groupNo);
-            main.groupDetailShow();
+            _main.groupGridFill();
+            _main.focusBack(Properties.Settings.Default.groupID);
         }
     }
 }

@@ -11,17 +11,32 @@ namespace ge_mongo_simplified.UserControls
 
         private void groupTL_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
         {
-            var parent = (MainForm) ParentForm;
+            var parent = (MainForm)ParentForm;
             var nodeVal = groupTL.FocusedNode.GetValue(colNum).ToString();
             if (nodeVal.Contains("All ["))
             {
-                if (parent != null) parent.statusBarLabel = "Root node";
+                if (parent != null) parent.actButtosDisable();
             }
             else if (parent != null)
             {
-                parent.groupDetailShow2(nodeVal.Substring(0, 5));
-                parent.statusBarLabel = nodeVal.Substring(0, 5);}
+                Properties.Settings.Default.groupNo =
+                    groupTL.FocusedNode.GetValue(groupTL.Columns.ColumnByName("colNum")).ToString();
+                Properties.Settings.Default.groupID =
+                    groupTL.FocusedNode.GetValue(groupTL.Columns.ColumnByName("colID")).ToString();
+                Properties.Settings.Default.Save();
+                parent.actButtonsEnable();
+                parent.groupDetailShow();
+                parent.statusBarLabel = Properties.Settings.Default.groupNo + @" : " +
+                                        Properties.Settings.Default.groupID;
+            }
+        }
 
+        private void groupTL_DoubleClick(object sender, System.EventArgs e)
+        {
+            var parent = (MainForm)ParentForm;
+            var nodeVal = groupTL.FocusedNode.GetValue(colNum).ToString();
+            if (!nodeVal.Contains("All ["))
+                if (parent != null) parent.groupEdit();
         }
     }
 }

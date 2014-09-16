@@ -31,6 +31,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupTL = new DevExpress.XtraTreeList.TreeList();
             this.colNum = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colID = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -56,9 +57,9 @@
             // 
             // groupTL
             // 
-            this.groupTL.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupTL.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.colNum});
+            this.colNum,
+            this.colID});
             this.groupTL.Location = new System.Drawing.Point(2, 39);
             this.groupTL.Name = "groupTL";
             this.groupTL.OptionsBehavior.Editable = false;
@@ -72,6 +73,7 @@
             this.groupTL.Size = new System.Drawing.Size(231, 281);
             this.groupTL.TabIndex = 4;
             this.groupTL.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.groupTL_FocusedNodeChanged);
+            this.groupTL.DoubleClick += new System.EventHandler(this.groupTL_DoubleClick);
             // 
             // colNum
             // 
@@ -79,8 +81,16 @@
             this.colNum.FieldName = "colNumField";
             this.colNum.MinWidth = 52;
             this.colNum.Name = "colNum";
+            this.colNum.UnboundType = DevExpress.XtraTreeList.Data.UnboundColumnType.String;
             this.colNum.Visible = true;
             this.colNum.VisibleIndex = 0;
+            // 
+            // colID
+            // 
+            this.colID.Caption = "colID";
+            this.colID.FieldName = "colIDField";
+            this.colID.Name = "colID";
+            this.colID.UnboundType = DevExpress.XtraTreeList.Data.UnboundColumnType.String;
             // 
             // layoutControlGroup1
             // 
@@ -146,8 +156,9 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colNum;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         public DevExpress.XtraTreeList.TreeList groupTL;
+        public DevExpress.XtraTreeList.Columns.TreeListColumn colID;
+        public DevExpress.XtraTreeList.Columns.TreeListColumn colNum;
     }
 }
