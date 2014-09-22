@@ -64,6 +64,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.AllowCustomizationMenu = false;
             this.layoutControl1.Controls.Add(this.studentsGrid);
             this.layoutControl1.Controls.Add(this.standaloneBarDockControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -103,6 +104,7 @@
             this.studentsGridView.OptionsView.ShowGroupPanel = false;
             this.studentsGridView.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
             this.studentsGridView.OptionsView.ShowIndicator = false;
+            this.studentsGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.studentsGridView_FocusedRowChanged);
             // 
             // barManager1
             // 
@@ -211,7 +213,7 @@
             // studentLabel
             // 
             this.studentLabel.AllowHotTrack = false;
-            this.studentLabel.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semilight", 12.25F);
+            this.studentLabel.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.studentLabel.AppearanceItemCaption.Options.UseFont = true;
             this.studentLabel.CustomizationFormText = "Students";
             this.studentLabel.Location = new System.Drawing.Point(0, 0);
@@ -238,7 +240,9 @@
             // 
             this.mainLabel.AllowHotTrack = false;
             this.mainLabel.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.mainLabel.AppearanceItemCaption.ForeColor = System.Drawing.SystemColors.GrayText;
             this.mainLabel.AppearanceItemCaption.Options.UseFont = true;
+            this.mainLabel.AppearanceItemCaption.Options.UseForeColor = true;
             this.mainLabel.CustomizationFormText = "main phone";
             this.mainLabel.Location = new System.Drawing.Point(96, 0);
             this.mainLabel.Name = "mainLabel";
@@ -251,7 +255,9 @@
             // 
             this.simpleLabelItem3.AllowHotTrack = false;
             this.simpleLabelItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.simpleLabelItem3.AppearanceItemCaption.ForeColor = System.Drawing.SystemColors.GrayText;
             this.simpleLabelItem3.AppearanceItemCaption.Options.UseFont = true;
+            this.simpleLabelItem3.AppearanceItemCaption.Options.UseForeColor = true;
             this.simpleLabelItem3.CustomizationFormText = "additional phone";
             this.simpleLabelItem3.Location = new System.Drawing.Point(257, 0);
             this.simpleLabelItem3.Name = "simpleLabelItem3";

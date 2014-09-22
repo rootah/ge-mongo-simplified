@@ -23,7 +23,7 @@ namespace ge_mongo_simplified.Forms
         private void GroupsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _main.groupGridFill();
-            _main.focusBack(Properties.Settings.Default.groupID);
+            _main.groupFocusBack(Properties.Settings.Default.groupID);
         }
     }
 }

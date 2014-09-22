@@ -130,7 +130,6 @@
             this.tokenEdit.Size = new System.Drawing.Size(188, 20);
             this.tokenEdit.StyleController = this.layoutControl1;
             this.tokenEdit.TabIndex = 107;
-            this.tokenEdit.UseOptimizedRendering = true;
             this.tokenEdit.ValidateToken += new DevExpress.XtraEditors.TokenEditValidateTokenEventHandler(this.tokenEdit_ValidateToken);
             this.tokenEdit.Validated += new System.EventHandler(this.tokenEdit_Validated);
             // 

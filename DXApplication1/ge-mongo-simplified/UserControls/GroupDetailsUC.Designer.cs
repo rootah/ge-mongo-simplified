@@ -68,7 +68,7 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(537, 150, 452, 351);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(606, 155, 452, 351);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(372, 327);
             this.layoutControl1.TabIndex = 0;
@@ -170,6 +170,7 @@
             this.groupnoCI.Size = new System.Drawing.Size(352, 17);
             this.groupnoCI.Text = "Group #";
             this.groupnoCI.TextSize = new System.Drawing.Size(43, 13);
+            this.groupnoCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // levelCI
             // 

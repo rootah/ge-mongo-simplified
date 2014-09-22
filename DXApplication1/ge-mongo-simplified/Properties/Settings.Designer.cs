@@ -82,5 +82,17 @@ namespace ge_mongo_simplified.Properties {
                 this["groupNo"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string stdFullname {
+            get {
+                return ((string)(this["stdFullname"]));
+            }
+            set {
+                this["stdFullname"] = value;
+            }
+        }
     }
 }

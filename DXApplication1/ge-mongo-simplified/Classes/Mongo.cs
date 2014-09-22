@@ -1,27 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.Builders;
 
 namespace ge_mongo_simplified.Classes
 {
     class Mongo
     {
-        private static string _connectionString;
-        private static MongoClient _client;
-        private static MongoServer _server;
-        private static MongoDatabase _gebase;
-        private static MongoCollection<Group> _groupcollection;
+        public static string connectionString = "mongodb://localhost";
+        public static MongoClient client = new MongoClient(connectionString);
+        public static MongoServer server = client.GetServer();
+        public static MongoDatabase database = server.GetDatabase("devdb");
+        public static MongoCollection groupCollection = database.GetCollection("devgroups");
+        public static MongoCollection stdCollection = database.GetCollection("devstds");
 
-        public static void MongoInit()
+        public static BindingList<Group> groupList()
         {
-            _connectionString = "mongodb://localhost";
-            _client = new MongoClient(_connectionString);
-            _server = _client.GetServer();
-            _gebase = _server.GetDatabase("devdb");
-            _groupcollection = _gebase.GetCollection<Group>("devgroups");
+            var groupList = new BindingList<Group>(groupCollection.FindAllAs<Group>().ToList());
+            return groupList;
+        }
+
+        public static Student getStudentInfo()
+        {
+            var q = Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.stdID));
+            var std = stdCollection.FindOneAs<Student>(q);
+            return std;
         }
     }
 }

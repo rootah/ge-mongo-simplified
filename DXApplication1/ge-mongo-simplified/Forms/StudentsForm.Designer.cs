@@ -36,19 +36,20 @@
             this.stdMainUC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stdMainUC1.Location = new System.Drawing.Point(0, 0);
             this.stdMainUC1.Name = "stdMainUC1";
-            this.stdMainUC1.Size = new System.Drawing.Size(274, 429);
+            this.stdMainUC1.Size = new System.Drawing.Size(289, 320);
             this.stdMainUC1.TabIndex = 0;
             // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 429);
+            this.ClientSize = new System.Drawing.Size(289, 320);
             this.Controls.Add(this.stdMainUC1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StudentsForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Student [...]";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentsForm_FormClosed);
             this.Load += new System.EventHandler(this.StudentsForm_Load);
             this.ResumeLayout(false);
 

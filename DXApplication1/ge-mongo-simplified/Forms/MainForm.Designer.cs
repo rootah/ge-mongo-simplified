@@ -44,14 +44,10 @@
             this.newStudentButton = new DevExpress.XtraBars.BarButtonItem();
             this.editButton = new DevExpress.XtraBars.BarButtonItem();
             this.delButton = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.groupsCheckButton = new DevExpress.XtraBars.BarButtonItem();
             this.detailsCheckButton = new DevExpress.XtraBars.BarButtonItem();
             this.statusLabel = new DevExpress.XtraBars.BarStaticItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.testbutton = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.studentsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.filePG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -121,16 +117,12 @@
             this.addDropButton,
             this.editButton,
             this.delButton,
-            this.barButtonItem5,
-            this.barButtonItem6,
-            this.barButtonItem7,
             this.groupsCheckButton,
             this.detailsCheckButton,
             this.newGroupButton,
             this.newStudentButton,
             this.statusLabel,
-            this.barButtonItem1,
-            this.barButtonItem2});
+            this.testbutton});
             this.ribbonControl.ItemsVertAlign = DevExpress.Utils.VertAlignment.Top;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.MaxItemId = 17;
@@ -284,30 +276,6 @@
             this.delButton.SmallWithTextWidth = 65;
             this.delButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.delButton_ItemClick);
             // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barButtonItem5.Caption = "one";
-            this.barButtonItem5.GroupIndex = 1;
-            this.barButtonItem5.Id = 7;
-            this.barButtonItem5.Name = "barButtonItem5";
-            // 
-            // barButtonItem6
-            // 
-            this.barButtonItem6.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barButtonItem6.Caption = "two";
-            this.barButtonItem6.GroupIndex = 1;
-            this.barButtonItem6.Id = 8;
-            this.barButtonItem6.Name = "barButtonItem6";
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barButtonItem7.Caption = "three";
-            this.barButtonItem7.GroupIndex = 1;
-            this.barButtonItem7.Id = 9;
-            this.barButtonItem7.Name = "barButtonItem7";
-            // 
             // groupsCheckButton
             // 
             this.groupsCheckButton.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
@@ -346,22 +314,11 @@
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // barButtonItem1
+            // testbutton
             // 
-            this.barButtonItem1.Caption = "group details";
-            this.barButtonItem1.Id = 13;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "refresh";
-            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
-            this.barButtonItem2.Id = 14;
-            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            this.testbutton.Caption = "test.button";
+            this.testbutton.Id = 13;
+            this.testbutton.Name = "testbutton";
             // 
             // ribbonPageCategory1
             // 
@@ -398,7 +355,7 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.testbutton);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "act";
             // 
@@ -435,9 +392,6 @@
             // 
             // filterPopup
             // 
-            this.filterPopup.ItemLinks.Add(this.barButtonItem5);
-            this.filterPopup.ItemLinks.Add(this.barButtonItem6);
-            this.filterPopup.ItemLinks.Add(this.barButtonItem7);
             this.filterPopup.Name = "filterPopup";
             this.filterPopup.Ribbon = this.ribbonControl;
             // 
@@ -716,9 +670,6 @@
         private DevExpress.XtraTab.XtraTabPage scheduleTab;
         private DevExpress.XtraBars.PopupMenu filterPopup;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup viewPG;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem groupsCheckButton;
         private DevExpress.XtraBars.BarButtonItem detailsCheckButton;
         private DevExpress.XtraEditors.SplitContainerControl groupstudentsdetailsSplit;
@@ -751,10 +702,9 @@
         public DevExpress.XtraBars.BarButtonItem delButton;
         public DevExpress.XtraBars.BarStaticItem barLabel;
         public DevExpress.XtraBars.BarStaticItem statusLabel;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem testbutton;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPage certRibbonPage;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private UserControls.DetailsUC detailsUC2;
         private UserControls.StudentsGridUC studentsGridUC1;
         private UserControls.GroupGrid2UC groupGrid2UC2;

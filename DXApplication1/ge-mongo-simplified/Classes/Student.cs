@@ -21,10 +21,14 @@ namespace ge_mongo_simplified.Classes
         public string vk { get; set; }
         public string watsapp { get; set; }
         public string cost { get; set; }
-        public string discount { get; set; }
+        public Boolean discountcheck { get; set; }
+        public string discountval { get; set; }
         public string groupno { get; set; }
         public Boolean isindividual { get; set; }
         public Boolean synced { get; set; }
+        public String start { get; set; }
+        public String end { get; set; }
+        public String endreason { get; set; }
 
     }
 }
