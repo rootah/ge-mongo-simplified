@@ -29,464 +29,317 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.idLabel = new DevExpress.XtraEditors.LabelControl();
+            this.wappLabel = new DevExpress.XtraEditors.LabelControl();
+            this.vkLabel = new DevExpress.XtraEditors.LabelControl();
+            this.skypeLabel = new DevExpress.XtraEditors.LabelControl();
+            this.emailLabel = new DevExpress.XtraEditors.LabelControl();
+            this.addphonelabel = new DevExpress.XtraEditors.LabelControl();
+            this.hphoneLabel = new DevExpress.XtraEditors.LabelControl();
+            this.mphoneLabel = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.studentDetailsTCG = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.contactsCG = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.idCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.wappCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.vkCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.skypeCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emailCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleSeparator5 = new DevExpress.XtraLayout.SimpleSeparator();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.addphoneCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.hphoneCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.mphoneCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDetailsTCG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactsCG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wappCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vkCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skypeCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addphoneCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hphoneCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mphoneCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.labelControl15);
-            this.layoutControl1.Controls.Add(this.labelControl14);
-            this.layoutControl1.Controls.Add(this.labelControl13);
-            this.layoutControl1.Controls.Add(this.labelControl11);
-            this.layoutControl1.Controls.Add(this.labelControl10);
-            this.layoutControl1.Controls.Add(this.labelControl8);
-            this.layoutControl1.Controls.Add(this.labelControl7);
-            this.layoutControl1.Controls.Add(this.labelControl6);
-            this.layoutControl1.Controls.Add(this.labelControl5);
-            this.layoutControl1.Controls.Add(this.labelControl4);
-            this.layoutControl1.Controls.Add(this.labelControl3);
-            this.layoutControl1.Controls.Add(this.labelControl2);
-            this.layoutControl1.Controls.Add(this.labelControl1);
+            this.layoutControl1.Controls.Add(this.idLabel);
+            this.layoutControl1.Controls.Add(this.wappLabel);
+            this.layoutControl1.Controls.Add(this.vkLabel);
+            this.layoutControl1.Controls.Add(this.skypeLabel);
+            this.layoutControl1.Controls.Add(this.emailLabel);
+            this.layoutControl1.Controls.Add(this.addphonelabel);
+            this.layoutControl1.Controls.Add(this.hphoneLabel);
+            this.layoutControl1.Controls.Add(this.mphoneLabel);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(353, 142, 250, 350);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(472, 141, 608, 493);
             this.layoutControl1.OptionsFocus.AllowFocusTabbedGroups = false;
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(283, 276);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // idLabel
+            // 
+            this.idLabel.Location = new System.Drawing.Point(88, 249);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(12, 13);
+            this.idLabel.StyleController = this.layoutControl1;
+            this.idLabel.TabIndex = 11;
+            this.idLabel.Text = "...";
+            // 
+            // wappLabel
+            // 
+            this.wappLabel.Location = new System.Drawing.Point(88, 152);
+            this.wappLabel.Name = "wappLabel";
+            this.wappLabel.Size = new System.Drawing.Size(12, 13);
+            this.wappLabel.StyleController = this.layoutControl1;
+            this.wappLabel.TabIndex = 10;
+            this.wappLabel.Text = "...";
+            // 
+            // vkLabel
+            // 
+            this.vkLabel.Location = new System.Drawing.Point(88, 135);
+            this.vkLabel.Name = "vkLabel";
+            this.vkLabel.Size = new System.Drawing.Size(12, 13);
+            this.vkLabel.StyleController = this.layoutControl1;
+            this.vkLabel.TabIndex = 9;
+            this.vkLabel.Text = "...";
+            // 
+            // skypeLabel
+            // 
+            this.skypeLabel.Location = new System.Drawing.Point(88, 118);
+            this.skypeLabel.Name = "skypeLabel";
+            this.skypeLabel.Size = new System.Drawing.Size(12, 13);
+            this.skypeLabel.StyleController = this.layoutControl1;
+            this.skypeLabel.TabIndex = 8;
+            this.skypeLabel.Text = "...";
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.Location = new System.Drawing.Point(88, 101);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(12, 13);
+            this.emailLabel.StyleController = this.layoutControl1;
+            this.emailLabel.TabIndex = 7;
+            this.emailLabel.Text = "...";
+            // 
+            // addphonelabel
+            // 
+            this.addphonelabel.Location = new System.Drawing.Point(88, 73);
+            this.addphonelabel.Name = "addphonelabel";
+            this.addphonelabel.Size = new System.Drawing.Size(12, 13);
+            this.addphonelabel.StyleController = this.layoutControl1;
+            this.addphonelabel.TabIndex = 6;
+            this.addphonelabel.Text = "...";
+            // 
+            // hphoneLabel
+            // 
+            this.hphoneLabel.Location = new System.Drawing.Point(88, 56);
+            this.hphoneLabel.Name = "hphoneLabel";
+            this.hphoneLabel.Size = new System.Drawing.Size(12, 13);
+            this.hphoneLabel.StyleController = this.layoutControl1;
+            this.hphoneLabel.TabIndex = 5;
+            this.hphoneLabel.Text = "...";
+            // 
+            // mphoneLabel
+            // 
+            this.mphoneLabel.Location = new System.Drawing.Point(88, 39);
+            this.mphoneLabel.Name = "mphoneLabel";
+            this.mphoneLabel.Size = new System.Drawing.Size(12, 13);
+            this.mphoneLabel.StyleController = this.layoutControl1;
+            this.mphoneLabel.TabIndex = 4;
+            this.mphoneLabel.Text = "...";
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.AppearanceItemCaption.ForeColor = System.Drawing.SystemColors.GrayText;
             this.layoutControlGroup1.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlGroup1.CustomizationFormText = "Root";
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.False;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.tabbedControlGroup1});
+            this.studentDetailsTCG});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(283, 276);
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // labelControl1
+            // studentDetailsTCG
             // 
-            this.labelControl1.Location = new System.Drawing.Point(118, 49);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(141, 20);
-            this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 4;
-            this.labelControl1.Text = "...";
+            this.studentDetailsTCG.CustomizationFormText = "studentDetailsTCG";
+            this.studentDetailsTCG.Location = new System.Drawing.Point(0, 0);
+            this.studentDetailsTCG.Name = "studentDetailsTCG";
+            this.studentDetailsTCG.SelectedTabPage = this.contactsCG;
+            this.studentDetailsTCG.SelectedTabPageIndex = 0;
+            this.studentDetailsTCG.Size = new System.Drawing.Size(283, 276);
+            this.studentDetailsTCG.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.contactsCG});
+            this.studentDetailsTCG.Text = "studentDetailsTCG";
             // 
-            // labelControl2
+            // contactsCG
             // 
-            this.labelControl2.Location = new System.Drawing.Point(118, 73);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(141, 20);
-            this.labelControl2.StyleController = this.layoutControl1;
-            this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "...";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(118, 97);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(141, 20);
-            this.labelControl3.StyleController = this.layoutControl1;
-            this.labelControl3.TabIndex = 6;
-            this.labelControl3.Text = "...";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(118, 73);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(12, 20);
-            this.labelControl4.StyleController = this.layoutControl1;
-            this.labelControl4.TabIndex = 7;
-            this.labelControl4.Text = "...";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(118, 132);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(141, 20);
-            this.labelControl5.StyleController = this.layoutControl1;
-            this.labelControl5.TabIndex = 8;
-            this.labelControl5.Text = "...";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(118, 156);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(141, 20);
-            this.labelControl6.StyleController = this.layoutControl1;
-            this.labelControl6.TabIndex = 9;
-            this.labelControl6.Text = "...";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(118, 180);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(141, 20);
-            this.labelControl7.StyleController = this.layoutControl1;
-            this.labelControl7.TabIndex = 10;
-            this.labelControl7.Text = "...";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(118, 204);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(141, 20);
-            this.labelControl8.StyleController = this.layoutControl1;
-            this.labelControl8.TabIndex = 11;
-            this.labelControl8.Text = "...";
-            // 
-            // tabbedControlGroup1
-            // 
-            this.tabbedControlGroup1.CustomizationFormText = "tabbedControlGroup1";
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup4;
-            this.tabbedControlGroup1.SelectedTabPageIndex = 2;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(263, 256);
-            this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup2,
-            this.layoutControlGroup3,
-            this.layoutControlGroup4});
-            this.tabbedControlGroup1.Text = "tabbedControlGroup1";
-            // 
-            // layoutControlGroup2
-            // 
-            this.layoutControlGroup2.CustomizationFormText = "Contacts";
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
+            this.contactsCG.CustomizationFormText = "Contacts";
+            this.contactsCG.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.idCI,
+            this.simpleSeparator2,
+            this.wappCI,
+            this.vkCI,
+            this.skypeCI,
+            this.emailCI,
             this.simpleSeparator1,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
-            this.layoutControlItem7,
-            this.layoutControlItem8});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(239, 207);
-            this.layoutControlGroup2.Text = "Contacts";
+            this.addphoneCI,
+            this.hphoneCI,
+            this.mphoneCI,
+            this.emptySpaceItem1});
+            this.contactsCG.Location = new System.Drawing.Point(0, 0);
+            this.contactsCG.Name = "contactsCG";
+            this.contactsCG.Size = new System.Drawing.Size(259, 227);
+            this.contactsCG.Text = "Contacts";
             // 
-            // layoutControlItem1
+            // idCI
             // 
-            this.layoutControlItem1.Control = this.labelControl4;
-            this.layoutControlItem1.CustomizationFormText = "Parent name";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(239, 183);
-            this.layoutControlItem1.Text = "Parent name";
-            this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(89, 20);
-            this.layoutControlItem1.TextToControlDistance = 5;
+            this.idCI.Control = this.idLabel;
+            this.idCI.CustomizationFormText = "Student ID";
+            this.idCI.Location = new System.Drawing.Point(0, 210);
+            this.idCI.Name = "idCI";
+            this.idCI.Size = new System.Drawing.Size(259, 17);
+            this.idCI.Text = "Student ID";
+            this.idCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.idCI.TextSize = new System.Drawing.Size(65, 13);
+            this.idCI.TextToControlDistance = 9;
             // 
-            // layoutControlItem2
+            // simpleSeparator2
             // 
-            this.layoutControlItem2.Control = this.labelControl1;
-            this.layoutControlItem2.CustomizationFormText = "Main phone no.";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(239, 24);
-            this.layoutControlItem2.Text = "Main phone no.";
-            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(89, 20);
-            this.layoutControlItem2.TextToControlDistance = 5;
+            this.simpleSeparator2.AllowHotTrack = false;
+            this.simpleSeparator2.CustomizationFormText = "simpleSeparator2";
+            this.simpleSeparator2.Location = new System.Drawing.Point(0, 199);
+            this.simpleSeparator2.Name = "simpleSeparator2";
+            this.simpleSeparator2.Size = new System.Drawing.Size(259, 11);
+            this.simpleSeparator2.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 5);
+            this.simpleSeparator2.Text = "simpleSeparator2";
             // 
-            // layoutControlItem3
+            // wappCI
             // 
-            this.layoutControlItem3.Control = this.labelControl2;
-            this.layoutControlItem3.CustomizationFormText = "Add. phone no.";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(239, 24);
-            this.layoutControlItem3.Text = "Add. phone no.";
-            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(89, 20);
-            this.layoutControlItem3.TextToControlDistance = 5;
+            this.wappCI.Control = this.wappLabel;
+            this.wappCI.CustomizationFormText = "Whatsapp";
+            this.wappCI.Location = new System.Drawing.Point(0, 113);
+            this.wappCI.Name = "wappCI";
+            this.wappCI.Size = new System.Drawing.Size(259, 17);
+            this.wappCI.Text = "Whatsapp";
+            this.wappCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.wappCI.TextSize = new System.Drawing.Size(65, 13);
+            this.wappCI.TextToControlDistance = 9;
+            this.wappCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // layoutControlItem4
+            // vkCI
             // 
-            this.layoutControlItem4.Control = this.labelControl3;
-            this.layoutControlItem4.CustomizationFormText = "Home phone no.";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(239, 24);
-            this.layoutControlItem4.Text = "Home phone no.";
-            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(89, 20);
-            this.layoutControlItem4.TextToControlDistance = 5;
+            this.vkCI.Control = this.vkLabel;
+            this.vkCI.CustomizationFormText = "VK";
+            this.vkCI.Location = new System.Drawing.Point(0, 96);
+            this.vkCI.Name = "vkCI";
+            this.vkCI.Size = new System.Drawing.Size(259, 17);
+            this.vkCI.Text = "VK";
+            this.vkCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.vkCI.TextSize = new System.Drawing.Size(65, 13);
+            this.vkCI.TextToControlDistance = 9;
+            this.vkCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // skypeCI
+            // 
+            this.skypeCI.Control = this.skypeLabel;
+            this.skypeCI.CustomizationFormText = "Skype";
+            this.skypeCI.Location = new System.Drawing.Point(0, 79);
+            this.skypeCI.Name = "skypeCI";
+            this.skypeCI.Size = new System.Drawing.Size(259, 17);
+            this.skypeCI.Text = "Skype";
+            this.skypeCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.skypeCI.TextSize = new System.Drawing.Size(65, 13);
+            this.skypeCI.TextToControlDistance = 9;
+            this.skypeCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // emailCI
+            // 
+            this.emailCI.Control = this.emailLabel;
+            this.emailCI.CustomizationFormText = "Email";
+            this.emailCI.Location = new System.Drawing.Point(0, 62);
+            this.emailCI.Name = "emailCI";
+            this.emailCI.Size = new System.Drawing.Size(259, 17);
+            this.emailCI.Text = "Email";
+            this.emailCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.emailCI.TextSize = new System.Drawing.Size(65, 13);
+            this.emailCI.TextToControlDistance = 9;
+            this.emailCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
-            this.simpleSeparator1.Location = new System.Drawing.Point(0, 72);
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 51);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(239, 11);
+            this.simpleSeparator1.Size = new System.Drawing.Size(259, 11);
             this.simpleSeparator1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 5);
             this.simpleSeparator1.Text = "simpleSeparator1";
             // 
-            // layoutControlItem5
+            // addphoneCI
             // 
-            this.layoutControlItem5.Control = this.labelControl5;
-            this.layoutControlItem5.CustomizationFormText = "Email";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 83);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(239, 24);
-            this.layoutControlItem5.Text = "Email";
-            this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(89, 20);
-            this.layoutControlItem5.TextToControlDistance = 5;
+            this.addphoneCI.Control = this.addphonelabel;
+            this.addphoneCI.CustomizationFormText = "Additional phone no.";
+            this.addphoneCI.Location = new System.Drawing.Point(0, 34);
+            this.addphoneCI.Name = "addphoneCI";
+            this.addphoneCI.Size = new System.Drawing.Size(259, 17);
+            this.addphoneCI.Text = "Add. phone";
+            this.addphoneCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.addphoneCI.TextSize = new System.Drawing.Size(65, 13);
+            this.addphoneCI.TextToControlDistance = 9;
+            this.addphoneCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // layoutControlItem6
+            // hphoneCI
             // 
-            this.layoutControlItem6.Control = this.labelControl6;
-            this.layoutControlItem6.CustomizationFormText = "Skype";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 107);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(239, 24);
-            this.layoutControlItem6.Text = "Skype";
-            this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(89, 20);
-            this.layoutControlItem6.TextToControlDistance = 5;
+            this.hphoneCI.Control = this.hphoneLabel;
+            this.hphoneCI.CustomizationFormText = "Home phone no.";
+            this.hphoneCI.Location = new System.Drawing.Point(0, 17);
+            this.hphoneCI.Name = "hphoneCI";
+            this.hphoneCI.Size = new System.Drawing.Size(259, 17);
+            this.hphoneCI.Text = "Home phone";
+            this.hphoneCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.hphoneCI.TextSize = new System.Drawing.Size(65, 13);
+            this.hphoneCI.TextToControlDistance = 9;
+            this.hphoneCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // layoutControlItem7
+            // mphoneCI
             // 
-            this.layoutControlItem7.Control = this.labelControl7;
-            this.layoutControlItem7.CustomizationFormText = "VK";
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 131);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(239, 24);
-            this.layoutControlItem7.Text = "VK";
-            this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(89, 20);
-            this.layoutControlItem7.TextToControlDistance = 5;
+            this.mphoneCI.Control = this.mphoneLabel;
+            this.mphoneCI.CustomizationFormText = "Main phone no.";
+            this.mphoneCI.Location = new System.Drawing.Point(0, 0);
+            this.mphoneCI.Name = "mphoneCI";
+            this.mphoneCI.Size = new System.Drawing.Size(259, 17);
+            this.mphoneCI.Text = "Main phone";
+            this.mphoneCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.mphoneCI.TextSize = new System.Drawing.Size(65, 13);
+            this.mphoneCI.TextToControlDistance = 9;
+            this.mphoneCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // layoutControlItem8
+            // emptySpaceItem1
             // 
-            this.layoutControlItem8.Control = this.labelControl8;
-            this.layoutControlItem8.CustomizationFormText = "Whatsapp";
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 155);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(239, 52);
-            this.layoutControlItem8.Text = "Whatsapp";
-            this.layoutControlItem8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(89, 20);
-            this.layoutControlItem8.TextToControlDistance = 5;
-            // 
-            // layoutControlGroup3
-            // 
-            this.layoutControlGroup3.CustomizationFormText = "Payments";
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem11,
-            this.layoutControlItem13,
-            this.simpleSeparator4,
-            this.layoutControlItem14,
-            this.simpleSeparator5,
-            this.layoutControlItem15});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(239, 207);
-            this.layoutControlGroup3.Text = "Payments";
-            // 
-            // layoutControlGroup4
-            // 
-            this.layoutControlGroup4.CustomizationFormText = "Misc. info";
-            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem10});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(239, 207);
-            this.layoutControlGroup4.Text = "Misc. info";
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(118, 49);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(12, 20);
-            this.labelControl10.StyleController = this.layoutControl1;
-            this.labelControl10.TabIndex = 13;
-            this.labelControl10.Text = "...";
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.labelControl10;
-            this.layoutControlItem10.CustomizationFormText = "Source";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(239, 24);
-            this.layoutControlItem10.Text = "Source";
-            this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(89, 20);
-            this.layoutControlItem10.TextToControlDistance = 5;
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Location = new System.Drawing.Point(118, 49);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(141, 13);
-            this.labelControl11.StyleController = this.layoutControl1;
-            this.labelControl11.TabIndex = 16;
-            this.labelControl11.Text = "...";
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.labelControl11;
-            this.layoutControlItem11.CustomizationFormText = "Tuition cost";
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(239, 17);
-            this.layoutControlItem11.Text = "Tuition cost";
-            this.layoutControlItem11.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(89, 13);
-            this.layoutControlItem11.TextToControlDistance = 5;
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Location = new System.Drawing.Point(118, 66);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(141, 13);
-            this.labelControl13.StyleController = this.layoutControl1;
-            this.labelControl13.TabIndex = 17;
-            this.labelControl13.Text = "...";
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.labelControl13;
-            this.layoutControlItem13.CustomizationFormText = "Discount, %";
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 17);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(239, 17);
-            this.layoutControlItem13.Text = "Discount, %";
-            this.layoutControlItem13.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(89, 13);
-            this.layoutControlItem13.TextToControlDistance = 5;
-            // 
-            // simpleSeparator4
-            // 
-            this.simpleSeparator4.AllowHotTrack = false;
-            this.simpleSeparator4.CustomizationFormText = "simpleSeparator4";
-            this.simpleSeparator4.Location = new System.Drawing.Point(0, 34);
-            this.simpleSeparator4.Name = "simpleSeparator4";
-            this.simpleSeparator4.Size = new System.Drawing.Size(239, 21);
-            this.simpleSeparator4.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
-            this.simpleSeparator4.Text = "simpleSeparator4";
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Location = new System.Drawing.Point(118, 104);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(141, 13);
-            this.labelControl14.StyleController = this.layoutControl1;
-            this.labelControl14.TabIndex = 18;
-            this.labelControl14.Text = "...";
-            // 
-            // layoutControlItem14
-            // 
-            this.layoutControlItem14.Control = this.labelControl14;
-            this.layoutControlItem14.CustomizationFormText = "Total Cost";
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 55);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(239, 17);
-            this.layoutControlItem14.Text = "Total Cost";
-            this.layoutControlItem14.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(89, 13);
-            this.layoutControlItem14.TextToControlDistance = 5;
-            // 
-            // simpleSeparator5
-            // 
-            this.simpleSeparator5.AllowHotTrack = false;
-            this.simpleSeparator5.CustomizationFormText = "simpleSeparator5";
-            this.simpleSeparator5.Location = new System.Drawing.Point(0, 72);
-            this.simpleSeparator5.Name = "simpleSeparator5";
-            this.simpleSeparator5.Size = new System.Drawing.Size(239, 21);
-            this.simpleSeparator5.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
-            this.simpleSeparator5.Text = "simpleSeparator5";
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Location = new System.Drawing.Point(118, 142);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(141, 13);
-            this.labelControl15.StyleController = this.layoutControl1;
-            this.labelControl15.TabIndex = 19;
-            this.labelControl15.Text = "...";
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.labelControl15;
-            this.layoutControlItem15.CustomizationFormText = "Nearest payment";
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 93);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(239, 114);
-            this.layoutControlItem15.Text = "Nearest payment";
-            this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(89, 13);
-            this.layoutControlItem15.TextToControlDistance = 5;
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 130);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(259, 69);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // StudentDetailUC
             // 
@@ -498,26 +351,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDetailsTCG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactsCG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wappCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vkCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skypeCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addphoneCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hphoneCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mphoneCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,38 +372,26 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
-        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
-        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.LabelControl wappLabel;
+        private DevExpress.XtraEditors.LabelControl vkLabel;
+        private DevExpress.XtraEditors.LabelControl skypeLabel;
+        private DevExpress.XtraEditors.LabelControl emailLabel;
+        private DevExpress.XtraEditors.LabelControl addphonelabel;
+        private DevExpress.XtraEditors.LabelControl hphoneLabel;
+        private DevExpress.XtraEditors.LabelControl mphoneLabel;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.LabelControl idLabel;
+        private DevExpress.XtraLayout.LayoutControlGroup contactsCG;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
+        public DevExpress.XtraLayout.TabbedControlGroup studentDetailsTCG;
+        public DevExpress.XtraLayout.LayoutControlItem idCI;
+        public DevExpress.XtraLayout.LayoutControlItem wappCI;
+        public DevExpress.XtraLayout.LayoutControlItem vkCI;
+        public DevExpress.XtraLayout.LayoutControlItem skypeCI;
+        public DevExpress.XtraLayout.LayoutControlItem emailCI;
+        public DevExpress.XtraLayout.LayoutControlItem addphoneCI;
+        public DevExpress.XtraLayout.LayoutControlItem hphoneCI;
+        public DevExpress.XtraLayout.LayoutControlItem mphoneCI;
+        public DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
     }
 }

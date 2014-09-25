@@ -598,8 +598,8 @@
             this.infoCG.CustomizationFormText = "infoCG";
             this.infoCG.Location = new System.Drawing.Point(0, 117);
             this.infoCG.Name = "infoCG";
-            this.infoCG.SelectedTabPage = this.additionalCG;
-            this.infoCG.SelectedTabPageIndex = 1;
+            this.infoCG.SelectedTabPage = this.contactsCG;
+            this.infoCG.SelectedTabPageIndex = 0;
             this.infoCG.Size = new System.Drawing.Size(290, 275);
             this.infoCG.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 10);
             this.infoCG.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {

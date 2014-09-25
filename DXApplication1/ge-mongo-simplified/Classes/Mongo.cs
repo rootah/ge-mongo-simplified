@@ -21,9 +21,9 @@ namespace ge_mongo_simplified.Classes
             return groupList;
         }
 
-        public static Student getStudentInfo()
+        public static Student getStudentInfo(string id)
         {
-            var q = Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.stdID));
+            var q = Query.EQ("_id", ObjectId.Parse(id));
             var std = stdCollection.FindOneAs<Student>(q);
             return std;
         }

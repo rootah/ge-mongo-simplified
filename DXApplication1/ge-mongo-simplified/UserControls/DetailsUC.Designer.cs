@@ -30,21 +30,21 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.detailsTC = new DevExpress.XtraTab.XtraTabControl();
+            this.studentTab = new DevExpress.XtraTab.XtraTabPage();
+            this.studentDetailUC1 = new ge_mongo_simplified.UserControls.StudentDetailUC();
             this.groupTab = new DevExpress.XtraTab.XtraTabPage();
             this.groupTotalDetailsUC1 = new ge_mongo_simplified.UserControls.GroupTotalDetailsUC();
             this.groupDetailsUC2 = new ge_mongo_simplified.UserControls.GroupDetailsUC();
-            this.studentTab = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.detailsLabel = new DevExpress.XtraLayout.SimpleLabelItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.itemLabel = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.studentDetailUC1 = new ge_mongo_simplified.UserControls.StudentDetailUC();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detailsTC)).BeginInit();
             this.detailsTC.SuspendLayout();
-            this.groupTab.SuspendLayout();
             this.studentTab.SuspendLayout();
+            this.groupTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -65,9 +65,12 @@
             // 
             // detailsTC
             // 
+            this.detailsTC.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.detailsTC.Location = new System.Drawing.Point(2, 38);
+            this.detailsTC.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.detailsTC.LookAndFeel.UseDefaultLookAndFeel = false;
             this.detailsTC.Name = "detailsTC";
-            this.detailsTC.SelectedTabPage = this.studentTab;
+            this.detailsTC.SelectedTabPage = this.groupTab;
             this.detailsTC.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             this.detailsTC.Size = new System.Drawing.Size(238, 307);
             this.detailsTC.TabIndex = 4;
@@ -75,37 +78,44 @@
             this.groupTab,
             this.studentTab});
             // 
+            // studentTab
+            // 
+            this.studentTab.Controls.Add(this.studentDetailUC1);
+            this.studentTab.Name = "studentTab";
+            this.studentTab.Size = new System.Drawing.Size(238, 307);
+            this.studentTab.Text = "std";
+            // 
+            // studentDetailUC1
+            // 
+            this.studentDetailUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentDetailUC1.Location = new System.Drawing.Point(0, 0);
+            this.studentDetailUC1.Name = "studentDetailUC1";
+            this.studentDetailUC1.Size = new System.Drawing.Size(238, 307);
+            this.studentDetailUC1.TabIndex = 0;
+            // 
             // groupTab
             // 
             this.groupTab.Controls.Add(this.groupTotalDetailsUC1);
             this.groupTab.Controls.Add(this.groupDetailsUC2);
             this.groupTab.Name = "groupTab";
-            this.groupTab.Size = new System.Drawing.Size(236, 305);
+            this.groupTab.Size = new System.Drawing.Size(238, 307);
             this.groupTab.Text = "grp";
             // 
             // groupTotalDetailsUC1
             // 
-            this.groupTotalDetailsUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupTotalDetailsUC1.Location = new System.Drawing.Point(0, 163);
+            this.groupTotalDetailsUC1.Location = new System.Drawing.Point(68, 163);
             this.groupTotalDetailsUC1.Name = "groupTotalDetailsUC1";
-            this.groupTotalDetailsUC1.Size = new System.Drawing.Size(236, 142);
+            this.groupTotalDetailsUC1.Size = new System.Drawing.Size(170, 144);
             this.groupTotalDetailsUC1.TabIndex = 1;
             this.groupTotalDetailsUC1.Visible = false;
             // 
             // groupDetailsUC2
             // 
-            this.groupDetailsUC2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupDetailsUC2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupDetailsUC2.Location = new System.Drawing.Point(0, 0);
             this.groupDetailsUC2.Name = "groupDetailsUC2";
-            this.groupDetailsUC2.Size = new System.Drawing.Size(236, 163);
+            this.groupDetailsUC2.Size = new System.Drawing.Size(238, 307);
             this.groupDetailsUC2.TabIndex = 0;
-            // 
-            // studentTab
-            // 
-            this.studentTab.Controls.Add(this.studentDetailUC1);
-            this.studentTab.Name = "studentTab";
-            this.studentTab.Size = new System.Drawing.Size(236, 305);
-            this.studentTab.Text = "std";
             // 
             // layoutControlGroup1
             // 
@@ -170,14 +180,6 @@
             this.itemLabel.Text = "...";
             this.itemLabel.TextSize = new System.Drawing.Size(47, 13);
             // 
-            // studentDetailUC1
-            // 
-            this.studentDetailUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.studentDetailUC1.Location = new System.Drawing.Point(0, 0);
-            this.studentDetailUC1.Name = "studentDetailUC1";
-            this.studentDetailUC1.Size = new System.Drawing.Size(236, 305);
-            this.studentDetailUC1.TabIndex = 0;
-            // 
             // DetailsUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,8 +191,8 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.detailsTC)).EndInit();
             this.detailsTC.ResumeLayout(false);
-            this.groupTab.ResumeLayout(false);
             this.studentTab.ResumeLayout(false);
+            this.groupTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -203,14 +205,14 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraTab.XtraTabPage groupTab;
-        private DevExpress.XtraTab.XtraTabPage studentTab;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         public DevExpress.XtraTab.XtraTabControl detailsTC;
         public GroupDetailsUC groupDetailsUC2;
         public GroupTotalDetailsUC groupTotalDetailsUC1;
         public DevExpress.XtraLayout.SimpleLabelItem itemLabel;
         private DevExpress.XtraLayout.SimpleLabelItem detailsLabel;
-        private StudentDetailUC studentDetailUC1;
+        public DevExpress.XtraTab.XtraTabPage groupTab;
+        private DevExpress.XtraTab.XtraTabPage studentTab;
+        public StudentDetailUC studentDetailUC1;
     }
 }

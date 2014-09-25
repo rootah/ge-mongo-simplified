@@ -66,6 +66,8 @@ namespace ge_mongo_simplified.UserControls
 
             collection.Insert(newStd);
             lastActionWrite();
+            Properties.Settings.Default.stdLastID = id.ToString();
+            Properties.Settings.Default.Save();
             if (topLevelControl != null) topLevelControl.Close();
         }
         private void lastActionWrite()
@@ -180,7 +182,7 @@ namespace ge_mongo_simplified.UserControls
 
         public void studentEditFormFill()
         {
-            var std = Mongo.getStudentInfo();
+            var std = Mongo.getStudentInfo(Properties.Settings.Default.stdID);
             fnameTE.Text = std.fname;
             lnameTE.Text = std.lname;
             if (std.underage)

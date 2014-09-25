@@ -41,6 +41,7 @@ namespace ge_mongo_simplified.Forms
         private void StudentsForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
             _mainForm.stdGridFill();
+            _mainForm.stdFocusBack();
         }
     }
 }

@@ -459,7 +459,7 @@
             this.studentsdetailSplit.Panel2.Controls.Add(this.detailsUC2);
             this.studentsdetailSplit.Panel2.Text = "Panel2";
             this.studentsdetailSplit.Size = new System.Drawing.Size(950, 266);
-            this.studentsdetailSplit.SplitterPosition = 265;
+            this.studentsdetailSplit.SplitterPosition = 297;
             this.studentsdetailSplit.TabIndex = 0;
             this.studentsdetailSplit.Text = "splitContainerControl2";
             // 
@@ -468,7 +468,7 @@
             this.studentsGridUC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.studentsGridUC1.Location = new System.Drawing.Point(0, 0);
             this.studentsGridUC1.Name = "studentsGridUC1";
-            this.studentsGridUC1.Size = new System.Drawing.Size(673, 266);
+            this.studentsGridUC1.Size = new System.Drawing.Size(641, 266);
             this.studentsGridUC1.TabIndex = 0;
             // 
             // detailsUC2
@@ -476,7 +476,7 @@
             this.detailsUC2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.detailsUC2.Location = new System.Drawing.Point(0, 0);
             this.detailsUC2.Name = "detailsUC2";
-            this.detailsUC2.Size = new System.Drawing.Size(265, 266);
+            this.detailsUC2.Size = new System.Drawing.Size(297, 266);
             this.detailsUC2.TabIndex = 0;
             // 
             // paymentsTab

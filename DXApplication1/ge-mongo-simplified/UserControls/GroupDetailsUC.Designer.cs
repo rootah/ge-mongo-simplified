@@ -36,25 +36,31 @@
             this.levelLabel = new DevExpress.XtraEditors.LabelControl();
             this.groupnoLabel = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.groupnoCI = new DevExpress.XtraLayout.LayoutControlItem();
-            this.levelCI = new DevExpress.XtraLayout.LayoutControlItem();
-            this.timeCI = new DevExpress.XtraLayout.LayoutControlItem();
-            this.durationCI = new DevExpress.XtraLayout.LayoutControlItem();
-            this.daysCI = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.groupTCG = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.generalInfoCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.idCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.durationCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.timeCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.daysCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.levelCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.groupnoCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.addCG = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupnoCI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.levelCI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeCI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.durationCI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.daysCI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupTCG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generalInfoCG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.durationCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daysCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupnoCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addCG)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -69,6 +75,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(606, 155, 452, 351);
+            this.layoutControl1.OptionsFocus.AllowFocusTabbedGroups = false;
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(372, 327);
             this.layoutControl1.TabIndex = 0;
@@ -76,54 +83,54 @@
             // 
             // idLabel
             // 
-            this.idLabel.Location = new System.Drawing.Point(64, 108);
+            this.idLabel.Location = new System.Drawing.Point(88, 300);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(12, 13);
+            this.idLabel.Size = new System.Drawing.Size(270, 13);
             this.idLabel.StyleController = this.layoutControl1;
             this.idLabel.TabIndex = 9;
             this.idLabel.Text = "...";
             // 
             // durationLabel
             // 
-            this.durationLabel.Location = new System.Drawing.Point(64, 80);
+            this.durationLabel.Location = new System.Drawing.Point(88, 107);
             this.durationLabel.Name = "durationLabel";
-            this.durationLabel.Size = new System.Drawing.Size(12, 13);
+            this.durationLabel.Size = new System.Drawing.Size(270, 13);
             this.durationLabel.StyleController = this.layoutControl1;
             this.durationLabel.TabIndex = 8;
             this.durationLabel.Text = "...";
             // 
             // daysLabel
             // 
-            this.daysLabel.Location = new System.Drawing.Point(64, 46);
+            this.daysLabel.Location = new System.Drawing.Point(88, 73);
             this.daysLabel.Name = "daysLabel";
-            this.daysLabel.Size = new System.Drawing.Size(12, 13);
+            this.daysLabel.Size = new System.Drawing.Size(270, 13);
             this.daysLabel.StyleController = this.layoutControl1;
             this.daysLabel.TabIndex = 7;
             this.daysLabel.Text = "...";
             // 
             // timeLabel
             // 
-            this.timeLabel.Location = new System.Drawing.Point(64, 63);
+            this.timeLabel.Location = new System.Drawing.Point(88, 90);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(12, 13);
+            this.timeLabel.Size = new System.Drawing.Size(270, 13);
             this.timeLabel.StyleController = this.layoutControl1;
             this.timeLabel.TabIndex = 6;
             this.timeLabel.Text = "...";
             // 
             // levelLabel
             // 
-            this.levelLabel.Location = new System.Drawing.Point(64, 29);
+            this.levelLabel.Location = new System.Drawing.Point(88, 56);
             this.levelLabel.Name = "levelLabel";
-            this.levelLabel.Size = new System.Drawing.Size(12, 13);
+            this.levelLabel.Size = new System.Drawing.Size(270, 13);
             this.levelLabel.StyleController = this.layoutControl1;
             this.levelLabel.TabIndex = 5;
             this.levelLabel.Text = "...";
             // 
             // groupnoLabel
             // 
-            this.groupnoLabel.Location = new System.Drawing.Point(64, 12);
+            this.groupnoLabel.Location = new System.Drawing.Point(88, 39);
             this.groupnoLabel.Name = "groupnoLabel";
-            this.groupnoLabel.Size = new System.Drawing.Size(12, 13);
+            this.groupnoLabel.Size = new System.Drawing.Size(270, 13);
             this.groupnoLabel.StyleController = this.layoutControl1;
             this.groupnoLabel.TabIndex = 4;
             this.groupnoLabel.Text = "...";
@@ -133,17 +140,10 @@
             this.layoutControlGroup1.AppearanceItemCaption.ForeColor = System.Drawing.SystemColors.GrayText;
             this.layoutControlGroup1.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlGroup1.CustomizationFormText = "Root";
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.False;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.emptySpaceItem1,
-            this.groupnoCI,
-            this.levelCI,
-            this.timeCI,
-            this.durationCI,
-            this.daysCI,
-            this.simpleSeparator1,
-            this.idCI});
+            this.groupTCG});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 9;
@@ -151,46 +151,57 @@
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // emptySpaceItem1
+            // groupTCG
             // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 113);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(352, 194);
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.groupTCG.CustomizationFormText = "groupTCG";
+            this.groupTCG.Location = new System.Drawing.Point(0, 0);
+            this.groupTCG.Name = "groupTCG";
+            this.groupTCG.SelectedTabPage = this.addCG;
+            this.groupTCG.SelectedTabPageIndex = 1;
+            this.groupTCG.Size = new System.Drawing.Size(372, 327);
+            this.groupTCG.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.generalInfoCG,
+            this.addCG});
+            this.groupTCG.Text = "groupTCG";
             // 
-            // groupnoCI
+            // generalInfoCG
             // 
-            this.groupnoCI.Control = this.groupnoLabel;
-            this.groupnoCI.CustomizationFormText = "Group #";
-            this.groupnoCI.Location = new System.Drawing.Point(0, 0);
-            this.groupnoCI.Name = "groupnoCI";
-            this.groupnoCI.Size = new System.Drawing.Size(352, 17);
-            this.groupnoCI.Text = "Group #";
-            this.groupnoCI.TextSize = new System.Drawing.Size(43, 13);
-            this.groupnoCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            this.generalInfoCG.CustomizationFormText = "General Info";
+            this.generalInfoCG.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.idCI,
+            this.simpleSeparator1,
+            this.durationCI,
+            this.timeCI,
+            this.daysCI,
+            this.levelCI,
+            this.groupnoCI,
+            this.emptySpaceItem1});
+            this.generalInfoCG.Location = new System.Drawing.Point(0, 0);
+            this.generalInfoCG.Name = "generalInfoCG";
+            this.generalInfoCG.Size = new System.Drawing.Size(348, 278);
+            this.generalInfoCG.Text = "General Info";
             // 
-            // levelCI
+            // idCI
             // 
-            this.levelCI.Control = this.levelLabel;
-            this.levelCI.CustomizationFormText = "Level";
-            this.levelCI.Location = new System.Drawing.Point(0, 17);
-            this.levelCI.Name = "levelCI";
-            this.levelCI.Size = new System.Drawing.Size(352, 17);
-            this.levelCI.Text = "Level";
-            this.levelCI.TextSize = new System.Drawing.Size(43, 13);
+            this.idCI.Control = this.idLabel;
+            this.idCI.CustomizationFormText = "Group ID";
+            this.idCI.Location = new System.Drawing.Point(0, 261);
+            this.idCI.Name = "idCI";
+            this.idCI.Size = new System.Drawing.Size(348, 17);
+            this.idCI.Text = "Group ID";
+            this.idCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.idCI.TextSize = new System.Drawing.Size(65, 13);
+            this.idCI.TextToControlDistance = 9;
             // 
-            // timeCI
+            // simpleSeparator1
             // 
-            this.timeCI.Control = this.timeLabel;
-            this.timeCI.CustomizationFormText = "Time";
-            this.timeCI.Location = new System.Drawing.Point(0, 51);
-            this.timeCI.Name = "timeCI";
-            this.timeCI.Size = new System.Drawing.Size(352, 17);
-            this.timeCI.Text = "Time";
-            this.timeCI.TextSize = new System.Drawing.Size(43, 13);
+            this.simpleSeparator1.AllowHotTrack = false;
+            this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 250);
+            this.simpleSeparator1.Name = "simpleSeparator1";
+            this.simpleSeparator1.Size = new System.Drawing.Size(348, 11);
+            this.simpleSeparator1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 5);
+            this.simpleSeparator1.Text = "simpleSeparator1";
             // 
             // durationCI
             // 
@@ -198,9 +209,23 @@
             this.durationCI.CustomizationFormText = "Duration";
             this.durationCI.Location = new System.Drawing.Point(0, 68);
             this.durationCI.Name = "durationCI";
-            this.durationCI.Size = new System.Drawing.Size(352, 17);
+            this.durationCI.Size = new System.Drawing.Size(348, 17);
             this.durationCI.Text = "Duration";
-            this.durationCI.TextSize = new System.Drawing.Size(43, 13);
+            this.durationCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.durationCI.TextSize = new System.Drawing.Size(65, 13);
+            this.durationCI.TextToControlDistance = 9;
+            // 
+            // timeCI
+            // 
+            this.timeCI.Control = this.timeLabel;
+            this.timeCI.CustomizationFormText = "Time";
+            this.timeCI.Location = new System.Drawing.Point(0, 51);
+            this.timeCI.Name = "timeCI";
+            this.timeCI.Size = new System.Drawing.Size(348, 17);
+            this.timeCI.Text = "Time";
+            this.timeCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.timeCI.TextSize = new System.Drawing.Size(65, 13);
+            this.timeCI.TextToControlDistance = 9;
             // 
             // daysCI
             // 
@@ -208,29 +233,55 @@
             this.daysCI.CustomizationFormText = "Days";
             this.daysCI.Location = new System.Drawing.Point(0, 34);
             this.daysCI.Name = "daysCI";
-            this.daysCI.Size = new System.Drawing.Size(352, 17);
+            this.daysCI.Size = new System.Drawing.Size(348, 17);
             this.daysCI.Text = "Days";
-            this.daysCI.TextSize = new System.Drawing.Size(43, 13);
+            this.daysCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.daysCI.TextSize = new System.Drawing.Size(65, 13);
+            this.daysCI.TextToControlDistance = 9;
             // 
-            // simpleSeparator1
+            // levelCI
             // 
-            this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
-            this.simpleSeparator1.Location = new System.Drawing.Point(0, 85);
-            this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(352, 11);
-            this.simpleSeparator1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 5);
-            this.simpleSeparator1.Text = "simpleSeparator1";
+            this.levelCI.Control = this.levelLabel;
+            this.levelCI.CustomizationFormText = "Level";
+            this.levelCI.Location = new System.Drawing.Point(0, 17);
+            this.levelCI.Name = "levelCI";
+            this.levelCI.Size = new System.Drawing.Size(348, 17);
+            this.levelCI.Text = "Level";
+            this.levelCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.levelCI.TextSize = new System.Drawing.Size(65, 13);
+            this.levelCI.TextToControlDistance = 9;
             // 
-            // idCI
+            // groupnoCI
             // 
-            this.idCI.Control = this.idLabel;
-            this.idCI.CustomizationFormText = "Group ID";
-            this.idCI.Location = new System.Drawing.Point(0, 96);
-            this.idCI.Name = "idCI";
-            this.idCI.Size = new System.Drawing.Size(352, 17);
-            this.idCI.Text = "Group ID";
-            this.idCI.TextSize = new System.Drawing.Size(43, 13);
+            this.groupnoCI.Control = this.groupnoLabel;
+            this.groupnoCI.CustomizationFormText = "Group #";
+            this.groupnoCI.Location = new System.Drawing.Point(0, 0);
+            this.groupnoCI.Name = "groupnoCI";
+            this.groupnoCI.Size = new System.Drawing.Size(348, 17);
+            this.groupnoCI.Text = "Group #";
+            this.groupnoCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.groupnoCI.TextSize = new System.Drawing.Size(65, 13);
+            this.groupnoCI.TextToControlDistance = 9;
+            this.groupnoCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 85);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(348, 165);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // addCG
+            // 
+            this.addCG.CustomizationFormText = "Additional";
+            this.addCG.Location = new System.Drawing.Point(0, 0);
+            this.addCG.Name = "addCG";
+            this.addCG.Size = new System.Drawing.Size(348, 278);
+            this.addCG.Text = "Additional";
+            this.addCG.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // GroupDetailsUC
             // 
@@ -242,14 +293,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupnoCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.levelCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.durationCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.daysCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupTCG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generalInfoCG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.durationCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daysCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupnoCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addCG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,13 +318,16 @@
         private DevExpress.XtraEditors.LabelControl durationLabel;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        public DevExpress.XtraLayout.LayoutControlItem groupnoCI;
-        public DevExpress.XtraLayout.LayoutControlItem levelCI;
-        public DevExpress.XtraLayout.LayoutControlItem timeCI;
-        public DevExpress.XtraLayout.LayoutControlItem daysCI;
-        public DevExpress.XtraLayout.LayoutControlItem durationCI;
         private DevExpress.XtraEditors.LabelControl idLabel;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
+        public DevExpress.XtraLayout.LayoutControlItem groupnoCI;
+        public DevExpress.XtraLayout.LayoutControlGroup generalInfoCG;
         public DevExpress.XtraLayout.LayoutControlItem idCI;
+        public DevExpress.XtraLayout.LayoutControlItem durationCI;
+        public DevExpress.XtraLayout.LayoutControlItem timeCI;
+        public DevExpress.XtraLayout.LayoutControlItem daysCI;
+        public DevExpress.XtraLayout.LayoutControlItem levelCI;
+        private DevExpress.XtraLayout.LayoutControlGroup addCG;
+        public DevExpress.XtraLayout.TabbedControlGroup groupTCG;
     }
 }

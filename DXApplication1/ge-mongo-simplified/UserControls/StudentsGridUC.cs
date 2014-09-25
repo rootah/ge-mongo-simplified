@@ -1,4 +1,5 @@
-﻿using ge_mongo_simplified.Forms;
+﻿using ge_mongo_simplified.Classes;
+using ge_mongo_simplified.Forms;
 
 namespace ge_mongo_simplified.UserControls
 {
@@ -33,8 +34,9 @@ namespace ge_mongo_simplified.UserControls
                     parent.actButtonsEnable();
                     parent.studentDetailShow();
                     parent.statusBarLabel = Properties.Settings.Default.stdFullname + @" : " +
-                                            Properties.Settings.Default.groupID;
-                }        
+                                            Properties.Settings.Default.stdID;
+                    parent.studentDetailShow();
+                } 
             }
             else if (parent != null)
             {

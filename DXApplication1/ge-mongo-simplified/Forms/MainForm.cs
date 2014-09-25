@@ -7,7 +7,10 @@ using DevExpress.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraLayout.Utils;
 using DevExpress.XtraTreeList.Nodes;
+using DevExpress.XtraGrid.Views.Base;
 using ge_mongo_simplified.Classes;
 using ge_mongo_simplified.UserControls;
 using MongoDB.Bson;
@@ -38,12 +41,14 @@ namespace ge_mongo_simplified.Forms
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            if (xtraTabControl != null) xtraTabControl.ShowTabHeader = DefaultBoolean.False;
+        {if (xtraTabControl != null) xtraTabControl.ShowTabHeader = DefaultBoolean.False;
             groupsCheckButton_DownChanged(null, null);
             detailsCheckButton_DownChanged(null, null);
             stdGridFill();
-            groupGridFill();}
+            groupGridFill();
+            groupstudentsdetailsSplit_Panel1_Enter(null, null);
+            detailsUC2.groupDetailsUC2.groupTCG.SelectedTabPageIndex = 0;
+        }
 
         private void groupstudentsdetailsSplit_Panel1_Enter(object sender, EventArgs e)
         {
@@ -178,11 +183,34 @@ namespace ge_mongo_simplified.Forms
             Properties.Settings.Default.stdID =
                 studentsGridUC1.studentsGridView.GetRowCellValue(studentsGridUC1.studentsGridView.FocusedRowHandle,
                     "_id").ToString();
+            Properties.Settings.Default.stdLastID = studentsGridUC1.studentsGridView.GetRowCellValue(studentsGridUC1.studentsGridView.FocusedRowHandle,
+                    "_id").ToString();
             Properties.Settings.Default.stdFullname = studentsGridUC1.studentsGridView.GetRowCellValue(studentsGridUC1.studentsGridView.FocusedRowHandle,
                     "fullname").ToString();
             Properties.Settings.Default.Save();
             var newStudent = new StudentsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Student edit"};
             newStudent.ShowDialog();
+        }
+        internal void stdFocusBack()
+        {
+            //var view = studentsGridUC1.studentsGridView;
+            //for (int i = 0; i < view.RowCount; i++)
+            //{
+            //    if (view.GetRowCellValue(i, "_id")
+            //            .Equals(ObjectId.Parse(id)))
+            //        view.FocusedRowHandle = i;
+            //}
+
+            var id = Properties.Settings.Default.stdLastID;
+            var view = (ColumnView)studentsGridUC1.studentsGridView;
+            var column = view.Columns.ColumnByFieldName("_id");
+
+            if (column == null) return;
+            var rowhandle = view.LocateByValue(view.FocusedRowHandle + 1, column, ObjectId.Parse(id));
+            if (rowhandle != GridControl.InvalidRowHandle)
+            {
+                view.FocusedRowHandle = rowhandle;
+            }
         }
 
         #endregion
@@ -274,7 +302,65 @@ namespace ge_mongo_simplified.Forms
 
         public void studentDetailShow()
         {
-            detailsUC2.itemLabel.Text = Properties.Settings.Default.stdFullname;
+            var std = Mongo.getStudentInfo(Properties.Settings.Default.stdID);
+            if (std != null)
+            {
+                detailsUC2.itemLabel.Text = Properties.Settings.Default.stdFullname;
+                if (std.mphone != String.Empty)
+                {
+                    detailsUC2.studentDetailUC1.mphoneCI.Control.Text = std.mphone;
+                    detailsUC2.studentDetailUC1.mphoneCI.Visibility = LayoutVisibility.Always;
+                }
+                else detailsUC2.studentDetailUC1.mphoneCI.Visibility = LayoutVisibility.Never;
+
+                if (std.hphone != String.Empty)
+                {
+                    detailsUC2.studentDetailUC1.hphoneCI.Control.Text = std.hphone;
+                    detailsUC2.studentDetailUC1.hphoneCI.Visibility = LayoutVisibility.Always;
+                }
+                else detailsUC2.studentDetailUC1.hphoneCI.Visibility = LayoutVisibility.Never;
+
+                if (std.addphone != String.Empty)
+                {
+                    detailsUC2.studentDetailUC1.addphoneCI.Control.Text = std.addphone;
+                    detailsUC2.studentDetailUC1.addphoneCI.Visibility = LayoutVisibility.Always;
+                }
+                else detailsUC2.studentDetailUC1.addphoneCI.Visibility = LayoutVisibility.Never;
+
+                if (std.email != String.Empty)
+                {
+                    detailsUC2.studentDetailUC1.emailCI.Control.Text = std.email;
+                    detailsUC2.studentDetailUC1.emailCI.Visibility = LayoutVisibility.Always;
+                }
+                else detailsUC2.studentDetailUC1.emailCI.Visibility = LayoutVisibility.Never;
+
+                if (std.skype != String.Empty)
+                {
+                    detailsUC2.studentDetailUC1.skypeCI.Control.Text = std.skype;
+                    detailsUC2.studentDetailUC1.skypeCI.Visibility = LayoutVisibility.Always;
+                }
+                else detailsUC2.studentDetailUC1.skypeCI.Visibility = LayoutVisibility.Never;
+
+                if (std.vk != String.Empty)
+                {
+                    detailsUC2.studentDetailUC1.vkCI.Control.Text = std.vk;
+                    detailsUC2.studentDetailUC1.vkCI.Visibility = LayoutVisibility.Always;
+                }
+                else detailsUC2.studentDetailUC1.vkCI.Visibility = LayoutVisibility.Never;
+
+                if (std.watsapp != String.Empty)
+                {
+                    detailsUC2.studentDetailUC1.wappCI.Control.Text = std.watsapp;
+                    detailsUC2.studentDetailUC1.wappCI.Visibility = LayoutVisibility.Always;
+                }
+                else detailsUC2.studentDetailUC1.wappCI.Visibility = LayoutVisibility.Never;
+
+                if (std.watsapp != String.Empty || std.vk != String.Empty || std.skype != String.Empty ||
+                    std.email != String.Empty)
+                    detailsUC2.studentDetailUC1.simpleSeparator1.Visibility = LayoutVisibility.Always;
+                else detailsUC2.studentDetailUC1.simpleSeparator1.Visibility = LayoutVisibility.Never;
+
+                detailsUC2.studentDetailUC1.idCI.Control.Text = std._id.ToString();}
         }
         #endregion
     }

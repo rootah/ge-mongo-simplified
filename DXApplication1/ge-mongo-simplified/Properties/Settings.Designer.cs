@@ -94,5 +94,17 @@ namespace ge_mongo_simplified.Properties {
                 this["stdFullname"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string stdLastID {
+            get {
+                return ((string)(this["stdLastID"]));
+            }
+            set {
+                this["stdLastID"] = value;
+            }
+        }
     }
 }
