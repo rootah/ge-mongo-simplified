@@ -105,6 +105,7 @@
             this.studentsGridView.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
             this.studentsGridView.OptionsView.ShowIndicator = false;
             this.studentsGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.studentsGridView_FocusedRowChanged);
+            this.studentsGridView.DoubleClick += new System.EventHandler(this.studentsGridView_DoubleClick);
             // 
             // barManager1
             // 

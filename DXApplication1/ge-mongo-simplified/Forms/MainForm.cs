@@ -55,7 +55,7 @@ namespace ge_mongo_simplified.Forms
             detailsUC2.detailsTC.SelectedTabPageIndex = 0;
             groupDetailShow();
         }
-        private void studentsdetailSplit_Panel1_Enter(object sender, EventArgs e)
+        public void studentsdetailSplit_Panel1_Enter(object sender, EventArgs e)
         {
             detailsUC2.detailsTC.SelectedTabPageIndex = 1;
             studentDetailShow();
@@ -125,7 +125,7 @@ namespace ge_mongo_simplified.Forms
             }
             else if (ActiveControl == studentsGridUC1)
             {
-                studentEdit();
+                stdEdit();
             }
         }
         private void delButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -136,7 +136,7 @@ namespace ge_mongo_simplified.Forms
             }
             else if (ActiveControl == studentsGridUC1)
             {
-                studentEdit();
+                stdDel();
             }
         }
         #endregion
@@ -156,6 +156,17 @@ namespace ge_mongo_simplified.Forms
         #endregion
 
         #region students.events
+
+        private void stdDel()
+        {
+            DialogResult myResult = XtraMessageBox.Show(@"Student " + Properties.Settings.Default.stdFullname + @" will be deleted. Is it OK?", @"Delete Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (myResult == DialogResult.OK)
+            {
+                var query = Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.stdID));
+                stdCollection.Remove(query);
+                stdGridFill();
+            }
+        }
         public void stdGridFill()
         {
             studentsGridUC1.studentsGrid.Visible = false;
@@ -177,7 +188,7 @@ namespace ge_mongo_simplified.Forms
             studentsGridUC1.studentLabel.Width = studentsGridUC1.studentsGridView.Columns["fullname"].VisibleWidth + 2;
             studentsGridUC1.mainLabel.Width = studentsGridUC1.studentsGridView.Columns["mphone"].VisibleWidth - 11;
         }
-        public void studentEdit()
+        public void stdEdit()
         {
             Properties.Settings.Default.formType = "edit";
             Properties.Settings.Default.stdID =

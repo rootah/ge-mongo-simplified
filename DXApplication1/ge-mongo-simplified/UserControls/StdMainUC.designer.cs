@@ -67,6 +67,14 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.okButtonControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.infoCG = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.additionalCG = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.groupnoControl = new DevExpress.XtraLayout.LayoutControlItem();
+            this.sourceControl = new DevExpress.XtraLayout.LayoutControlItem();
+            this.startCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.endCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.reasonCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
             this.contactsCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.mainphoneControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.homephoneControl = new DevExpress.XtraLayout.LayoutControlItem();
@@ -78,14 +86,6 @@
             this.wappControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.addContactCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.additionalCG = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.groupnoControl = new DevExpress.XtraLayout.LayoutControlItem();
-            this.sourceControl = new DevExpress.XtraLayout.LayoutControlItem();
-            this.startCI = new DevExpress.XtraLayout.LayoutControlItem();
-            this.endCI = new DevExpress.XtraLayout.LayoutControlItem();
-            this.reasonCI = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
-            this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
             this.paymentsCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.costControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.discountControl = new DevExpress.XtraLayout.LayoutControlItem();
@@ -103,7 +103,6 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.cancelButtonControl = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reasonTE.Properties)).BeginInit();
@@ -132,6 +131,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okButtonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoCG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalCG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupnoControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourceControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactsCG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainphoneControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homephoneControl)).BeginInit();
@@ -143,14 +150,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.wappControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addContactCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.additionalCG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupnoControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sourceControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.startCI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.endCI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsCG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.costControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discountControl)).BeginInit();
@@ -168,7 +167,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancelButtonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -207,13 +205,13 @@
             this.layoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.layoutControl1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignMode.CustomSize;
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(290, 427);
+            this.layoutControl1.Size = new System.Drawing.Size(290, 410);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // reasonTE
             // 
-            this.reasonTE.Location = new System.Drawing.Point(104, 292);
+            this.reasonTE.Location = new System.Drawing.Point(104, 281);
             this.reasonTE.MenuManager = this.barManager1;
             this.reasonTE.Name = "reasonTE";
             this.reasonTE.Size = new System.Drawing.Size(174, 20);
@@ -247,7 +245,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 427);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 410);
             this.barDockControlBottom.Size = new System.Drawing.Size(290, 0);
             // 
             // barDockControlLeft
@@ -255,14 +253,14 @@
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 427);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 410);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(290, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 427);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 410);
             // 
             // hphoneCI
             // 
@@ -302,6 +300,7 @@
             // wappCI
             // 
             this.wappCI.Caption = "Whatsapp";
+            this.wappCI.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
             this.wappCI.Id = 6;
             this.wappCI.Name = "wappCI";
             this.wappCI.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.wappCI_CheckedChanged);
@@ -309,7 +308,7 @@
             // endDE
             // 
             this.endDE.EditValue = null;
-            this.endDE.Location = new System.Drawing.Point(104, 268);
+            this.endDE.Location = new System.Drawing.Point(104, 257);
             this.endDE.MenuManager = this.barManager1;
             this.endDE.Name = "endDE";
             this.endDE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -323,7 +322,7 @@
             // startDE
             // 
             this.startDE.EditValue = null;
-            this.startDE.Location = new System.Drawing.Point(104, 244);
+            this.startDE.Location = new System.Drawing.Point(104, 233);
             this.startDE.MenuManager = this.barManager1;
             this.startDE.Name = "startDE";
             this.startDE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -339,7 +338,7 @@
             this.dropDownButton1.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
             this.dropDownButton1.DropDownControl = this.contactAddDD;
             this.dropDownButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.dropDownButton1.Location = new System.Drawing.Point(195, 348);
+            this.dropDownButton1.Location = new System.Drawing.Point(195, 337);
             this.dropDownButton1.Name = "dropDownButton1";
             this.dropDownButton1.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.dropDownButton1.Size = new System.Drawing.Size(83, 22);
@@ -358,10 +357,11 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.wappCI)});
             this.contactAddDD.Manager = this.barManager1;
             this.contactAddDD.Name = "contactAddDD";
+            this.contactAddDD.BeforePopup += new System.ComponentModel.CancelEventHandler(this.contactAddDD_BeforePopup);
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(215, 394);
+            this.cancelButton.Location = new System.Drawing.Point(215, 383);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(73, 22);
             this.cancelButton.StyleController = this.layoutControl1;
@@ -373,7 +373,7 @@
             // 
             this.discountCE.AutoSizeInLayoutControl = true;
             this.discountCE.EnterMoveNextControl = true;
-            this.discountCE.Location = new System.Drawing.Point(12, 178);
+            this.discountCE.Location = new System.Drawing.Point(12, 167);
             this.discountCE.Name = "discountCE";
             this.discountCE.Properties.Caption = "";
             this.discountCE.Size = new System.Drawing.Size(21, 19);
@@ -384,7 +384,7 @@
             // groupnoCB
             // 
             this.groupnoCB.EnterMoveNextControl = true;
-            this.groupnoCB.Location = new System.Drawing.Point(104, 154);
+            this.groupnoCB.Location = new System.Drawing.Point(104, 143);
             this.groupnoCB.Name = "groupnoCB";
             this.groupnoCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -396,7 +396,7 @@
             // 
             this.discountTE.Enabled = false;
             this.discountTE.EnterMoveNextControl = true;
-            this.discountTE.Location = new System.Drawing.Point(96, 178);
+            this.discountTE.Location = new System.Drawing.Point(96, 167);
             this.discountTE.Name = "discountTE";
             this.discountTE.Size = new System.Drawing.Size(182, 20);
             this.discountTE.StyleController = this.layoutControl1;
@@ -405,7 +405,7 @@
             // costTE
             // 
             this.costTE.EnterMoveNextControl = true;
-            this.costTE.Location = new System.Drawing.Point(95, 154);
+            this.costTE.Location = new System.Drawing.Point(95, 143);
             this.costTE.Name = "costTE";
             this.costTE.Size = new System.Drawing.Size(183, 20);
             this.costTE.StyleController = this.layoutControl1;
@@ -414,7 +414,7 @@
             // sourceCB
             // 
             this.sourceCB.EnterMoveNextControl = true;
-            this.sourceCB.Location = new System.Drawing.Point(104, 199);
+            this.sourceCB.Location = new System.Drawing.Point(104, 188);
             this.sourceCB.Name = "sourceCB";
             this.sourceCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -429,7 +429,7 @@
             // vkTE
             // 
             this.vkTE.EnterMoveNextControl = true;
-            this.vkTE.Location = new System.Drawing.Point(97, 295);
+            this.vkTE.Location = new System.Drawing.Point(97, 284);
             this.vkTE.Name = "vkTE";
             this.vkTE.Size = new System.Drawing.Size(181, 20);
             this.vkTE.StyleController = this.layoutControl1;
@@ -438,7 +438,7 @@
             // skypeTE
             // 
             this.skypeTE.EnterMoveNextControl = true;
-            this.skypeTE.Location = new System.Drawing.Point(97, 271);
+            this.skypeTE.Location = new System.Drawing.Point(97, 260);
             this.skypeTE.Name = "skypeTE";
             this.skypeTE.Size = new System.Drawing.Size(181, 20);
             this.skypeTE.StyleController = this.layoutControl1;
@@ -448,7 +448,7 @@
             // 
             this.emailTE.EditValue = "";
             this.emailTE.EnterMoveNextControl = true;
-            this.emailTE.Location = new System.Drawing.Point(97, 247);
+            this.emailTE.Location = new System.Drawing.Point(97, 236);
             this.emailTE.Name = "emailTE";
             this.emailTE.Properties.Mask.EditMask = "[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
             this.emailTE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
@@ -460,7 +460,7 @@
             // 
             this.addphoneTE.EditValue = "";
             this.addphoneTE.EnterMoveNextControl = true;
-            this.addphoneTE.Location = new System.Drawing.Point(97, 202);
+            this.addphoneTE.Location = new System.Drawing.Point(97, 191);
             this.addphoneTE.Name = "addphoneTE";
             this.addphoneTE.Properties.Mask.EditMask = "(\\7\\d?\\d?) \\d\\d\\d-\\d\\d-\\d\\d";
             this.addphoneTE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
@@ -471,7 +471,7 @@
             // homephoneTE
             // 
             this.homephoneTE.EnterMoveNextControl = true;
-            this.homephoneTE.Location = new System.Drawing.Point(97, 178);
+            this.homephoneTE.Location = new System.Drawing.Point(97, 167);
             this.homephoneTE.Name = "homephoneTE";
             this.homephoneTE.Properties.Mask.EditMask = "(\\7\\2\\7) \\d\\d\\d-\\d\\d-\\d\\d";
             this.homephoneTE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
@@ -482,7 +482,7 @@
             // mainphoneTE
             // 
             this.mainphoneTE.EnterMoveNextControl = true;
-            this.mainphoneTE.Location = new System.Drawing.Point(97, 154);
+            this.mainphoneTE.Location = new System.Drawing.Point(97, 143);
             this.mainphoneTE.Name = "mainphoneTE";
             this.mainphoneTE.Properties.Mask.EditMask = "(\\7\\d?\\d?) \\d\\d\\d-\\d\\d-\\d\\d";
             this.mainphoneTE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
@@ -532,7 +532,7 @@
             // 
             // okButton
             // 
-            this.okButton.Location = new System.Drawing.Point(127, 394);
+            this.okButton.Location = new System.Drawing.Point(127, 383);
             this.okButton.Name = "okButton";
             this.okButton.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.okButton.Size = new System.Drawing.Size(75, 22);
@@ -544,7 +544,7 @@
             // wappTE
             // 
             this.wappTE.EnterMoveNextControl = true;
-            this.wappTE.Location = new System.Drawing.Point(97, 319);
+            this.wappTE.Location = new System.Drawing.Point(97, 308);
             this.wappTE.Name = "wappTE";
             this.wappTE.Properties.AllowFocused = false;
             this.wappTE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -572,11 +572,10 @@
             this.layoutControlItem4,
             this.emptySpaceItem1,
             this.emptySpaceItem3,
-            this.cancelButtonControl,
-            this.simpleSeparator4});
+            this.cancelButtonControl});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(290, 427);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(290, 410);
             this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -584,9 +583,9 @@
             // 
             this.okButtonControl.Control = this.okButton;
             this.okButtonControl.CustomizationFormText = "okButtonControl";
-            this.okButtonControl.Location = new System.Drawing.Point(125, 392);
+            this.okButtonControl.Location = new System.Drawing.Point(125, 381);
             this.okButtonControl.Name = "okButtonControl";
-            this.okButtonControl.Size = new System.Drawing.Size(79, 35);
+            this.okButtonControl.Size = new System.Drawing.Size(79, 29);
             this.okButtonControl.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.okButtonControl.Text = "okButtonControl";
             this.okButtonControl.TextSize = new System.Drawing.Size(0, 0);
@@ -596,18 +595,106 @@
             // infoCG
             // 
             this.infoCG.CustomizationFormText = "infoCG";
-            this.infoCG.Location = new System.Drawing.Point(0, 117);
+            this.infoCG.Location = new System.Drawing.Point(0, 96);
             this.infoCG.Name = "infoCG";
             this.infoCG.SelectedTabPage = this.contactsCG;
             this.infoCG.SelectedTabPageIndex = 0;
-            this.infoCG.Size = new System.Drawing.Size(290, 275);
-            this.infoCG.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 10);
+            this.infoCG.Size = new System.Drawing.Size(290, 285);
+            this.infoCG.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
             this.infoCG.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.contactsCG,
             this.additionalCG,
             this.paymentsCG});
             this.infoCG.Text = "infoCG";
             this.infoCG.SelectedPageChanged += new DevExpress.XtraLayout.LayoutTabPageChangedEventHandler(this.tabbedControlGroup1_SelectedPageChanged);
+            // 
+            // additionalCG
+            // 
+            this.additionalCG.CustomizationFormText = "Additional Info";
+            this.additionalCG.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.groupnoControl,
+            this.sourceControl,
+            this.startCI,
+            this.endCI,
+            this.reasonCI,
+            this.simpleSeparator2,
+            this.simpleSeparator3});
+            this.additionalCG.Location = new System.Drawing.Point(0, 0);
+            this.additionalCG.Name = "additionalCG";
+            this.additionalCG.Size = new System.Drawing.Size(270, 220);
+            this.additionalCG.Text = "Organizational";
+            // 
+            // groupnoControl
+            // 
+            this.groupnoControl.Control = this.groupnoCB;
+            this.groupnoControl.CustomizationFormText = "Group no.";
+            this.groupnoControl.Location = new System.Drawing.Point(0, 0);
+            this.groupnoControl.Name = "groupnoControl";
+            this.groupnoControl.Size = new System.Drawing.Size(270, 24);
+            this.groupnoControl.Text = "Group no.";
+            this.groupnoControl.TextSize = new System.Drawing.Size(89, 20);
+            // 
+            // sourceControl
+            // 
+            this.sourceControl.Control = this.sourceCB;
+            this.sourceControl.CustomizationFormText = "(!) Source";
+            this.sourceControl.Location = new System.Drawing.Point(0, 45);
+            this.sourceControl.Name = "sourceControl";
+            this.sourceControl.Size = new System.Drawing.Size(270, 24);
+            this.sourceControl.Text = "[ ! ] Source";
+            this.sourceControl.TextSize = new System.Drawing.Size(89, 20);
+            // 
+            // startCI
+            // 
+            this.startCI.Control = this.startDE;
+            this.startCI.CustomizationFormText = "Start date";
+            this.startCI.Location = new System.Drawing.Point(0, 90);
+            this.startCI.Name = "startCI";
+            this.startCI.Size = new System.Drawing.Size(270, 24);
+            this.startCI.Text = "Start date";
+            this.startCI.TextSize = new System.Drawing.Size(89, 20);
+            // 
+            // endCI
+            // 
+            this.endCI.Control = this.endDE;
+            this.endCI.CustomizationFormText = "End date";
+            this.endCI.Location = new System.Drawing.Point(0, 114);
+            this.endCI.Name = "endCI";
+            this.endCI.Size = new System.Drawing.Size(270, 24);
+            this.endCI.Text = "End date";
+            this.endCI.TextSize = new System.Drawing.Size(89, 20);
+            this.endCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // reasonCI
+            // 
+            this.reasonCI.Control = this.reasonTE;
+            this.reasonCI.CustomizationFormText = "Reason";
+            this.reasonCI.Location = new System.Drawing.Point(0, 138);
+            this.reasonCI.Name = "reasonCI";
+            this.reasonCI.Size = new System.Drawing.Size(270, 82);
+            this.reasonCI.Text = "Reason";
+            this.reasonCI.TextSize = new System.Drawing.Size(89, 20);
+            this.reasonCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // simpleSeparator2
+            // 
+            this.simpleSeparator2.AllowHotTrack = false;
+            this.simpleSeparator2.CustomizationFormText = "simpleSeparator2";
+            this.simpleSeparator2.Location = new System.Drawing.Point(0, 24);
+            this.simpleSeparator2.Name = "simpleSeparator2";
+            this.simpleSeparator2.Size = new System.Drawing.Size(270, 21);
+            this.simpleSeparator2.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
+            this.simpleSeparator2.Text = "simpleSeparator2";
+            // 
+            // simpleSeparator3
+            // 
+            this.simpleSeparator3.AllowHotTrack = false;
+            this.simpleSeparator3.CustomizationFormText = "simpleSeparator3";
+            this.simpleSeparator3.Location = new System.Drawing.Point(0, 69);
+            this.simpleSeparator3.Name = "simpleSeparator3";
+            this.simpleSeparator3.Size = new System.Drawing.Size(270, 21);
+            this.simpleSeparator3.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
+            this.simpleSeparator3.Text = "simpleSeparator3";
             // 
             // contactsCG
             // 
@@ -762,94 +849,6 @@
             this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // additionalCG
-            // 
-            this.additionalCG.CustomizationFormText = "Additional Info";
-            this.additionalCG.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.groupnoControl,
-            this.sourceControl,
-            this.startCI,
-            this.endCI,
-            this.reasonCI,
-            this.simpleSeparator2,
-            this.simpleSeparator3});
-            this.additionalCG.Location = new System.Drawing.Point(0, 0);
-            this.additionalCG.Name = "additionalCG";
-            this.additionalCG.Size = new System.Drawing.Size(270, 220);
-            this.additionalCG.Text = "Organizational";
-            // 
-            // groupnoControl
-            // 
-            this.groupnoControl.Control = this.groupnoCB;
-            this.groupnoControl.CustomizationFormText = "Group no.";
-            this.groupnoControl.Location = new System.Drawing.Point(0, 0);
-            this.groupnoControl.Name = "groupnoControl";
-            this.groupnoControl.Size = new System.Drawing.Size(270, 24);
-            this.groupnoControl.Text = "Group no.";
-            this.groupnoControl.TextSize = new System.Drawing.Size(89, 20);
-            // 
-            // sourceControl
-            // 
-            this.sourceControl.Control = this.sourceCB;
-            this.sourceControl.CustomizationFormText = "(!) Source";
-            this.sourceControl.Location = new System.Drawing.Point(0, 45);
-            this.sourceControl.Name = "sourceControl";
-            this.sourceControl.Size = new System.Drawing.Size(270, 24);
-            this.sourceControl.Text = "[ ! ] Source";
-            this.sourceControl.TextSize = new System.Drawing.Size(89, 20);
-            // 
-            // startCI
-            // 
-            this.startCI.Control = this.startDE;
-            this.startCI.CustomizationFormText = "Start date";
-            this.startCI.Location = new System.Drawing.Point(0, 90);
-            this.startCI.Name = "startCI";
-            this.startCI.Size = new System.Drawing.Size(270, 24);
-            this.startCI.Text = "Start date";
-            this.startCI.TextSize = new System.Drawing.Size(89, 20);
-            // 
-            // endCI
-            // 
-            this.endCI.Control = this.endDE;
-            this.endCI.CustomizationFormText = "End date";
-            this.endCI.Location = new System.Drawing.Point(0, 114);
-            this.endCI.Name = "endCI";
-            this.endCI.Size = new System.Drawing.Size(270, 24);
-            this.endCI.Text = "End date";
-            this.endCI.TextSize = new System.Drawing.Size(89, 20);
-            this.endCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // reasonCI
-            // 
-            this.reasonCI.Control = this.reasonTE;
-            this.reasonCI.CustomizationFormText = "Reason";
-            this.reasonCI.Location = new System.Drawing.Point(0, 138);
-            this.reasonCI.Name = "reasonCI";
-            this.reasonCI.Size = new System.Drawing.Size(270, 82);
-            this.reasonCI.Text = "Reason";
-            this.reasonCI.TextSize = new System.Drawing.Size(89, 20);
-            this.reasonCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // simpleSeparator2
-            // 
-            this.simpleSeparator2.AllowHotTrack = false;
-            this.simpleSeparator2.CustomizationFormText = "simpleSeparator2";
-            this.simpleSeparator2.Location = new System.Drawing.Point(0, 24);
-            this.simpleSeparator2.Name = "simpleSeparator2";
-            this.simpleSeparator2.Size = new System.Drawing.Size(270, 21);
-            this.simpleSeparator2.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
-            this.simpleSeparator2.Text = "simpleSeparator2";
-            // 
-            // simpleSeparator3
-            // 
-            this.simpleSeparator3.AllowHotTrack = false;
-            this.simpleSeparator3.CustomizationFormText = "simpleSeparator3";
-            this.simpleSeparator3.Location = new System.Drawing.Point(0, 69);
-            this.simpleSeparator3.Name = "simpleSeparator3";
-            this.simpleSeparator3.Size = new System.Drawing.Size(270, 21);
-            this.simpleSeparator3.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
-            this.simpleSeparator3.Text = "simpleSeparator3";
             // 
             // paymentsCG
             // 
@@ -1031,9 +1030,9 @@
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 392);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 381);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(125, 35);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(125, 29);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -1053,27 +1052,17 @@
             // 
             this.cancelButtonControl.Control = this.cancelButton;
             this.cancelButtonControl.CustomizationFormText = "cancelButtonControl";
-            this.cancelButtonControl.Location = new System.Drawing.Point(204, 392);
+            this.cancelButtonControl.Location = new System.Drawing.Point(204, 381);
             this.cancelButtonControl.MaxSize = new System.Drawing.Size(86, 26);
             this.cancelButtonControl.MinSize = new System.Drawing.Size(86, 26);
             this.cancelButtonControl.Name = "cancelButtonControl";
-            this.cancelButtonControl.Size = new System.Drawing.Size(86, 35);
+            this.cancelButtonControl.Size = new System.Drawing.Size(86, 29);
             this.cancelButtonControl.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.cancelButtonControl.Spacing = new DevExpress.XtraLayout.Utils.Padding(9, 0, 0, 0);
             this.cancelButtonControl.Text = "cancelButtonControl";
             this.cancelButtonControl.TextSize = new System.Drawing.Size(0, 0);
             this.cancelButtonControl.TextToControlDistance = 0;
             this.cancelButtonControl.TextVisible = false;
-            // 
-            // simpleSeparator4
-            // 
-            this.simpleSeparator4.AllowHotTrack = false;
-            this.simpleSeparator4.CustomizationFormText = "simpleSeparator4";
-            this.simpleSeparator4.Location = new System.Drawing.Point(0, 96);
-            this.simpleSeparator4.Name = "simpleSeparator4";
-            this.simpleSeparator4.Size = new System.Drawing.Size(290, 21);
-            this.simpleSeparator4.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
-            this.simpleSeparator4.Text = "simpleSeparator4";
             // 
             // StdMainUC
             // 
@@ -1085,7 +1074,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "StdMainUC";
-            this.Size = new System.Drawing.Size(290, 427);
+            this.Size = new System.Drawing.Size(290, 410);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reasonTE.Properties)).EndInit();
@@ -1114,6 +1103,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okButtonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoCG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalCG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupnoControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourceControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactsCG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainphoneControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homephoneControl)).EndInit();
@@ -1125,14 +1122,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.wappControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addContactCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.additionalCG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupnoControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sourceControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.startCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.endCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsCG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.costControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discountControl)).EndInit();
@@ -1150,7 +1139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancelButtonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1196,7 +1184,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup paymentsCG;
         private DevExpress.XtraLayout.LayoutControlItem costControl;
         private DevExpress.XtraLayout.LayoutControlItem discountControl;
-        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator4;
         private DevExpress.XtraLayout.LayoutControlItem groupnoControl;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator5;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
@@ -1212,7 +1199,6 @@
         private DevExpress.XtraEditors.DropDownButton dropDownButton1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.LayoutControlItem addContactCI;
-        private DevExpress.XtraBars.PopupMenu contactAddDD;
         private DevExpress.XtraBars.BarCheckItem addphoneCI;
         private DevExpress.XtraBars.BarCheckItem skypeCI;
         private DevExpress.XtraBars.BarCheckItem emailCI;
@@ -1232,5 +1218,6 @@
         private DevExpress.XtraLayout.LayoutControlItem reasonCI;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator3;
+        private DevExpress.XtraBars.PopupMenu contactAddDD;
     }
 }

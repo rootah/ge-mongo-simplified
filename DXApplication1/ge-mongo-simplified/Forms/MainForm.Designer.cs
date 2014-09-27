@@ -218,6 +218,7 @@
             // addDropButton
             // 
             this.addDropButton.ActAsDropDown = true;
+            this.addDropButton.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             this.addDropButton.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             this.addDropButton.Caption = "Add";
             this.addDropButton.DropDownControl = this.newPopup;

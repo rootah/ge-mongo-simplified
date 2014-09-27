@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using DevExpress.Utils.Win;
 using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Popup;
 using DevExpress.XtraLayout.Utils;
 using ge_mongo_simplified.Classes;
-using ge_mongo_simplified.Forms;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using MongoDB.Driver.Builders;
+using Query = MongoDB.Driver.Builders.Query;
 
 namespace ge_mongo_simplified.UserControls
 {
@@ -31,12 +28,60 @@ namespace ge_mongo_simplified.UserControls
             if (fnameTE.Text == string.Empty || lnameTE.Text == string.Empty)
             {
                 XtraMessageBox.Show(@"Check names!" + Environment.NewLine + " ");
+                infoCG.SelectedTabPageIndex = 0;
                 fnameTE.Focus();
+                return;
             }
-            else writeResult();
+            if (mainphoneTE.Text == string.Empty)
+            {
+                XtraMessageBox.Show(@"Check main phone!" + Environment.NewLine + " ");
+                infoCG.SelectedTabPageIndex = 0;
+                mainphoneTE.Focus();
+                return;
+            }
+            if (groupnoCB.Text == string.Empty)
+            {
+                XtraMessageBox.Show(@"Check group num!" + Environment.NewLine + " ");
+                infoCG.SelectedTabPageIndex = 1;
+                groupnoCB.Focus();
+                return;
+            }
+            if (Properties.Settings.Default.formType == "edit")
+                stdUpdate();
+            else stdWrite();
         }
 
-        private void writeResult()
+        private void stdUpdate()
+        {
+            var topLevelControl = (Form)TopLevelControl;
+            database.GetCollection<Student>("devstds").Update(
+                Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.stdID)),
+                MongoDB.Driver.Builders.Update
+                    .Set("fname", fnameTE.Text)
+                    .Set("lname", lnameTE.Text)
+                    .Set("fullname", fnameTE.Text + @" " + lnameTE.Text)
+                    .Set("underage", underageCE.Checked)
+                    .Set("pname", pnameTE.Text)
+                    .Set("source", sourceCB.Text)
+                    .Set("mphone", mainphoneTE.Text)
+                    .Set("hphone", homephoneTE.Text)
+                    .Set("addphone", addphoneTE.Text)
+                    .Set("email", emailTE.Text)
+                    .Set("skype", skypeTE.Text)
+                    .Set("vk", vkTE.Text)
+                    .Set("watsapp", wappTE.Text)
+                    .Set("cost", costTE.Text)
+                    .Set("discountcheck", discountCE.Checked)
+                    .Set("discountval", discountTE.Text)
+                    .Set("groupno", groupnoCB.Text)
+                    .Set("start", startDE.DateTime.ToShortDateString())
+                    .Set("end", endDE.DateTime.ToShortDateString())
+                    .Set("endreason", reasonTE.Text)
+                    );
+            lastActionWrite(fnameTE.Text, lnameTE.Text, "edited");
+            if (topLevelControl != null) topLevelControl.Close();
+        }
+        private void stdWrite()
         {
             var topLevelControl = (Form)TopLevelControl;
             var id = ObjectId.GenerateNewId(); 
@@ -65,23 +110,21 @@ namespace ge_mongo_simplified.UserControls
                 endreason = reasonTE.Text};
 
             collection.Insert(newStd);
-            lastActionWrite();
+            lastActionWrite(fnameTE.Text, lnameTE.Text, "added");
             Properties.Settings.Default.stdLastID = id.ToString();
             Properties.Settings.Default.Save();
             if (topLevelControl != null) topLevelControl.Close();
         }
-        private void lastActionWrite()
+        private void lastActionWrite(string fname, string lname, string action)
         {
-            //var topLevelControl = (Form)TopLevelControl;
-            Properties.Settings.Default.lastAction = "Student [" + fnameTE.Text + @" " + lnameTE.Text + "] added";
-            //if (topLevelControl != null) topLevelControl.Text = @"Student [" + fnameTE.Text + @" " + lnameTE.Text + @"]";
+
+            Properties.Settings.Default.lastAction = "Student " + fname + " " + lname + @" " + action;
+            Properties.Settings.Default.Save();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             formCheck();
-            //var topForm = (Form) TopLevelControl;
-            //if (topForm != null) topForm.Close();
         }
 
         private void checkEdit1_CheckedChanged(object sender, EventArgs e)
@@ -121,14 +164,14 @@ namespace ge_mongo_simplified.UserControls
         private void addphoneCI_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             addphoneControl.Visibility = addphoneCI.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-            addphoneTE.Text = string.Empty;
+            //addphoneTE.Text = string.Empty;
             parentResize();
         }
 
         private void skypeCI_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             skypeControl.Visibility = skypeCI.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-            skypeTE.Text = string.Empty;
+            //skypeTE.Text = string.Empty;
             separatorVisibility();
             parentResize();
         }
@@ -136,7 +179,7 @@ namespace ge_mongo_simplified.UserControls
         private void emailCI_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             emailControl.Visibility = emailCI.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-            emailTE.Text = string.Empty;
+            //emailTE.Text = string.Empty;
             separatorVisibility();
             parentResize();
         }
@@ -144,7 +187,7 @@ namespace ge_mongo_simplified.UserControls
         private void wappCI_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             wappControl.Visibility = wappCI.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-            wappTE.Text = string.Empty;
+            //wappTE.Text = string.Empty;
             separatorVisibility();
             parentResize();
         }
@@ -152,7 +195,7 @@ namespace ge_mongo_simplified.UserControls
         private void vkCI_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             vkControl.Visibility = vkCI.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-            vkTE.Text = string.Empty;
+            //vkTE.Text = string.Empty;
             separatorVisibility();
             parentResize();
         }
@@ -167,18 +210,8 @@ namespace ge_mongo_simplified.UserControls
         private void hphoneCI_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             homephoneControl.Visibility = hphoneCI.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-            homephoneTE.Text = string.Empty;
+            //homephoneTE.Text = string.Empty;
             parentResize();}
-
-        private void wappTE_Enter(object sender, EventArgs e)
-        {
-            wappTE.Text = String.Empty;
-            wappTE.Properties.Items.Clear();
-            if (mainphoneTE.Text != String.Empty)
-                wappTE.Properties.Items.Add(mainphoneTE.Text);
-            if (addphoneTE.Text != String.Empty)
-                wappTE.Properties.Items.Add(addphoneTE.Text);
-        }
 
         public void studentEditFormFill()
         {
@@ -257,6 +290,29 @@ namespace ge_mongo_simplified.UserControls
             }
             
             parentResize();
+        }
+
+        public void contextRecheck()
+        {
+            hphoneCI.Checked = homephoneControl.Visible;
+            addphoneCI.Checked = addphoneControl.Visible;
+            emailCI.Checked = emailControl.Visible;
+            skypeCI.Checked = skypeControl.Visible;
+            vkCI.Checked = vkControl.Visible;
+            wappCI.Checked = wappControl.Visible;}
+
+        private void contactAddDD_BeforePopup(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            contextRecheck();
+        }
+        private void wappTE_Enter(object sender, EventArgs e)
+        {
+            //wappTE.Text = String.Empty;
+            wappTE.Properties.Items.Clear();
+            if (mainphoneTE.Text != String.Empty)
+                wappTE.Properties.Items.Add(mainphoneTE.Text);
+            if (addphoneTE.Text != String.Empty)
+                wappTE.Properties.Items.Add(addphoneTE.Text);
         }
     }
 }

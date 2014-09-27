@@ -42,6 +42,7 @@ namespace ge_mongo_simplified.Forms
         {
             _mainForm.stdGridFill();
             _mainForm.stdFocusBack();
+            _mainForm.studentsdetailSplit_Panel1_Enter(null, null);
         }
     }
 }

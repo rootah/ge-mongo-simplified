@@ -44,5 +44,12 @@ namespace ge_mongo_simplified.UserControls
                 //parent.showTotalDetail();
             }
         }
+
+        private void studentsGridView_DoubleClick(object sender, System.EventArgs e)
+        {
+            var parent = (MainForm)ParentForm;
+            if (parent != null)
+                parent.stdEdit();
+        }
     }
 }
