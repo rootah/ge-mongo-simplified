@@ -37,7 +37,6 @@ namespace ge_mongo_simplified.Forms
                 stdMainUC1.groupnoCB.Properties.Items.Add(groups[i].num);
             }
         }
-
         private void StudentsForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
             _mainForm.stdGridFill();
