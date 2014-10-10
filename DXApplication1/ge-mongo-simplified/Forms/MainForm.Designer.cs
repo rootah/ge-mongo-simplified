@@ -165,9 +165,9 @@
             // 
             // printBackTabControl
             // 
-            this.printBackTabControl.Location = new System.Drawing.Point(138, 63);
+            this.printBackTabControl.Location = new System.Drawing.Point(133, 63);
             this.printBackTabControl.Name = "printBackTabControl";
-            this.printBackTabControl.Size = new System.Drawing.Size(536, -2);
+            this.printBackTabControl.Size = new System.Drawing.Size(541, -2);
             this.printBackTabControl.TabIndex = 1;
             // 
             // settingsBackTabControl
@@ -583,6 +583,8 @@
             this.backstageSettingsUI.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.dbSettingsUCDocument,
             this.oddSettingsUCDocument});
+            this.backstageSettingsUI.UseLoadingIndicator = DevExpress.Utils.DefaultBoolean.False;
+            this.backstageSettingsUI.UseSplashScreen = DevExpress.Utils.DefaultBoolean.False;
             this.backstageSettingsUI.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.backstageSettingsUI_QueryControl_1);
             // 
             // tabbedGroup1

@@ -276,17 +276,20 @@ namespace ge_mongo_simplified.Forms
         #region details.events
         public void groupDetailShow()
         {
-            var q = Query.EQ("_id", ObjectId.Parse(Properties.Settings.Default.groupID));
-            var resdoc = groupCollection.FindOneAs<Group>(q);
+            var id = Properties.Settings.Default.groupID;
+            if (id != ""){
+                var q = Query.EQ("_id", ObjectId.Parse(id));
+                var resdoc = groupCollection.FindOneAs<Group>(q);
 
-            if (resdoc != null)
-            {
-                detailsUC2.groupDetailsUC2.groupnoCI.Control.Text = resdoc.num;
-                detailsUC2.groupDetailsUC2.levelCI.Control.Text = resdoc.lvl;
-                detailsUC2.groupDetailsUC2.daysCI.Control.Text = resdoc.days.ToString().Replace(@"[", "").Replace(@"]", "");
-                detailsUC2.groupDetailsUC2.timeCI.Control.Text = resdoc.time;
-                detailsUC2.groupDetailsUC2.durationCI.Control.Text = resdoc.duration;
-                detailsUC2.groupDetailsUC2.idCI.Control.Text = resdoc._id.ToString();
+                if (resdoc != null)
+                {
+                    detailsUC2.groupDetailsUC2.groupnoCI.Control.Text = resdoc.num;
+                    detailsUC2.groupDetailsUC2.levelCI.Control.Text = resdoc.lvl;
+                    detailsUC2.groupDetailsUC2.daysCI.Control.Text = resdoc.days.ToString().Replace(@"[", "").Replace(@"]", "");
+                    detailsUC2.groupDetailsUC2.timeCI.Control.Text = resdoc.time;
+                    detailsUC2.groupDetailsUC2.durationCI.Control.Text = resdoc.duration;
+                    detailsUC2.groupDetailsUC2.idCI.Control.Text = resdoc._id.ToString();
+                }
             }
         }
         public void showTotalDetail()

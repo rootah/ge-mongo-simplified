@@ -215,7 +215,9 @@ namespace ge_mongo_simplified.UserControls
 
         public void studentEditFormFill()
         {
-            var std = Mongo.getStudentInfo(Properties.Settings.Default.stdID);
+            var id = Properties.Settings.Default.stdID;
+            
+            var std = Mongo.getStudentInfo(id);
             fnameTE.Text = std.fname;
             lnameTE.Text = std.lname;
             if (std.underage)
