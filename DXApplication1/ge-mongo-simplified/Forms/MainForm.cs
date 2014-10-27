@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.Utils;
@@ -41,7 +40,10 @@ namespace ge_mongo_simplified.Forms
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {if (xtraTabControl != null) xtraTabControl.ShowTabHeader = DefaultBoolean.False;
+        {
+            if (xtraTabControl != null) xtraTabControl.ShowTabHeader = DefaultBoolean.False;
+            //printBackTab.Visible = false;
+            //settingsBackTab.Visible = false;
             groupsCheckButton_DownChanged(null, null);
             detailsCheckButton_DownChanged(null, null);
             stdGridFill();
@@ -53,7 +55,8 @@ namespace ge_mongo_simplified.Forms
         private void groupstudentsdetailsSplit_Panel1_Enter(object sender, EventArgs e)
         {
             detailsUC2.detailsTC.SelectedTabPageIndex = 0;
-            groupDetailShow();
+            groupGrid2UC2.groupTL_FocusedNodeChanged(null, null);
+            //groupDetailShow();
         }
         public void studentsdetailSplit_Panel1_Enter(object sender, EventArgs e)
         {
@@ -79,30 +82,14 @@ namespace ge_mongo_simplified.Forms
         }
         private void groupsCheckButton_DownChanged(object sender, ItemClickEventArgs e)
         {
-            if (groupsCheckButton.Down)
-            {
-                groupstudentsdetailsSplit.PanelVisibility = SplitPanelVisibility.Both;
-                //groupsCheckButton.Appearance.ForeColor = Color.White;
-            }
-            else
-            {
-                groupstudentsdetailsSplit.PanelVisibility = SplitPanelVisibility.Panel2;
-                //groupsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
-            }
+            groupstudentsdetailsSplit.PanelVisibility = groupsCheckButton.Down ? SplitPanelVisibility.Both : SplitPanelVisibility.Panel2;
         }
+
         private void detailsCheckButton_DownChanged(object sender, ItemClickEventArgs e)
         {
-            if (detailsCheckButton.Down)
-            {
-                studentsdetailSplit.PanelVisibility = SplitPanelVisibility.Both;
-                //detailsCheckButton.Appearance.ForeColor = Color.White;
-            }
-            else
-            {
-                studentsdetailSplit.PanelVisibility = SplitPanelVisibility.Panel1;
-                //detailsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
-            }
+            studentsdetailSplit.PanelVisibility = detailsCheckButton.Down ? SplitPanelVisibility.Both : SplitPanelVisibility.Panel1;
         }
+
         private void newStudentButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             var newStudent = new StudentsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Student [new]" };
@@ -283,7 +270,8 @@ namespace ge_mongo_simplified.Forms
 
                 if (resdoc != null)
                 {
-                    detailsUC2.groupDetailsUC2.groupnoCI.Control.Text = resdoc.num;
+                    detailsUC2.itemLabel.Text = resdoc.num;
+                    //detailsUC2.groupDetailsUC2.groupnoCI.Control.Text = resdoc.num;
                     detailsUC2.groupDetailsUC2.levelCI.Control.Text = resdoc.lvl;
                     detailsUC2.groupDetailsUC2.daysCI.Control.Text = resdoc.days.ToString().Replace(@"[", "").Replace(@"]", "");
                     detailsUC2.groupDetailsUC2.timeCI.Control.Text = resdoc.time;
@@ -377,5 +365,11 @@ namespace ge_mongo_simplified.Forms
                 detailsUC2.studentDetailUC1.idCI.Control.Text = std._id.ToString();}
         }
         #endregion
+
+        private void backstageManageUI_QueryControl(object sender, DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
+        {
+            if (e.Document == manageUCDocument)
+                e.Control = new ManageUC(this);
+        }
     }
 }

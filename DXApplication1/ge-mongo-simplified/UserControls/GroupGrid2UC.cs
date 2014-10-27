@@ -41,7 +41,7 @@ namespace ge_mongo_simplified.UserControls
             }
         }
 
-        private void groupTL_DoubleClick(object sender, System.EventArgs e)
+        private void groupTL_DoubleClick(object sender, EventArgs e)
         {
             var parent = (MainForm)ParentForm;
             var nodeVal = groupTL.FocusedNode.GetValue(colNum).ToString();
@@ -54,12 +54,13 @@ namespace ge_mongo_simplified.UserControls
             var nodeVal = groupTL.FocusedNode.GetValue(colNum).ToString();
             if (!nodeVal.Contains("All ["))
             {
-                if (e.Menu is TreeListNodeMenu)
+                var menu = e.Menu as TreeListNodeMenu;
+                if (menu != null)
                 {
-                    groupTL.FocusedNode = ((TreeListNodeMenu) e.Menu).Node;
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Edit", bbEdit_ItemClick));
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Add group", bbAddChild_ItemClick));
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Delete", bbDelete_ItemClick));
+                    groupTL.FocusedNode = menu.Node;
+                    menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Edit", bbEdit_ItemClick));
+                    menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Add group", bbAddChild_ItemClick));
+                    menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Delete", bbDelete_ItemClick));
                 }
             }
         }

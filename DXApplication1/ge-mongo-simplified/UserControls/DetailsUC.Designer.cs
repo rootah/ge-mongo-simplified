@@ -30,11 +30,11 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.detailsTC = new DevExpress.XtraTab.XtraTabControl();
-            this.studentTab = new DevExpress.XtraTab.XtraTabPage();
-            this.studentDetailUC1 = new ge_mongo_simplified.UserControls.StudentDetailUC();
             this.groupTab = new DevExpress.XtraTab.XtraTabPage();
             this.groupTotalDetailsUC1 = new ge_mongo_simplified.UserControls.GroupTotalDetailsUC();
             this.groupDetailsUC2 = new ge_mongo_simplified.UserControls.GroupDetailsUC();
+            this.studentTab = new DevExpress.XtraTab.XtraTabPage();
+            this.studentDetailUC1 = new ge_mongo_simplified.UserControls.StudentDetailUC();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.detailsLabel = new DevExpress.XtraLayout.SimpleLabelItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -43,8 +43,8 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detailsTC)).BeginInit();
             this.detailsTC.SuspendLayout();
-            this.studentTab.SuspendLayout();
             this.groupTab.SuspendLayout();
+            this.studentTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -78,21 +78,6 @@
             this.groupTab,
             this.studentTab});
             // 
-            // studentTab
-            // 
-            this.studentTab.Controls.Add(this.studentDetailUC1);
-            this.studentTab.Name = "studentTab";
-            this.studentTab.Size = new System.Drawing.Size(238, 307);
-            this.studentTab.Text = "std";
-            // 
-            // studentDetailUC1
-            // 
-            this.studentDetailUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.studentDetailUC1.Location = new System.Drawing.Point(0, 0);
-            this.studentDetailUC1.Name = "studentDetailUC1";
-            this.studentDetailUC1.Size = new System.Drawing.Size(238, 307);
-            this.studentDetailUC1.TabIndex = 0;
-            // 
             // groupTab
             // 
             this.groupTab.Controls.Add(this.groupTotalDetailsUC1);
@@ -116,6 +101,21 @@
             this.groupDetailsUC2.Name = "groupDetailsUC2";
             this.groupDetailsUC2.Size = new System.Drawing.Size(238, 307);
             this.groupDetailsUC2.TabIndex = 0;
+            // 
+            // studentTab
+            // 
+            this.studentTab.Controls.Add(this.studentDetailUC1);
+            this.studentTab.Name = "studentTab";
+            this.studentTab.Size = new System.Drawing.Size(238, 307);
+            this.studentTab.Text = "std";
+            // 
+            // studentDetailUC1
+            // 
+            this.studentDetailUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentDetailUC1.Location = new System.Drawing.Point(0, 0);
+            this.studentDetailUC1.Name = "studentDetailUC1";
+            this.studentDetailUC1.Size = new System.Drawing.Size(238, 307);
+            this.studentDetailUC1.TabIndex = 0;
             // 
             // layoutControlGroup1
             // 
@@ -191,8 +191,8 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.detailsTC)).EndInit();
             this.detailsTC.ResumeLayout(false);
-            this.studentTab.ResumeLayout(false);
             this.groupTab.ResumeLayout(false);
+            this.studentTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();

@@ -559,7 +559,6 @@
             this.logMemo.Size = new System.Drawing.Size(367, 357);
             this.logMemo.StyleController = this.logsLayout;
             this.logMemo.TabIndex = 4;
-            this.logMemo.UseOptimizedRendering = true;
             // 
             // logControlGroup
             // 

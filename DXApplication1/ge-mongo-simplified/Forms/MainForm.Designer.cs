@@ -33,8 +33,10 @@
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageView = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.printBackTabControl = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
+            this.manageBackTabControl = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.settingsBackTabControl = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.printBackTab = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
+            this.manageBackTab = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.settingsBackTab = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
             this.exitBackButt = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
@@ -76,12 +78,16 @@
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             this.defaultLook = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.backstageDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.backstageSettingsDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.backstageSettingsUI = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
             this.tabbedGroup1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup(this.components);
             this.dbSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             this.oddSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
+            this.backstageManageUI = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
+            this.tabbedGroup2 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup(this.components);
+            this.manageUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             this.actionPG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.backstageManageDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.backstageView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newPopup)).BeginInit();
@@ -100,11 +106,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).BeginInit();
             this.splitContainerControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backstageDM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backstageSettingsDM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageSettingsUI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbSettingsUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oddSettingsUCDocument)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backstageManageUI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manageUCDocument)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backstageManageDM)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -149,32 +159,41 @@
             this.backstageView.AllowGlyphSkinning = true;
             this.backstageView.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Yellow;
             this.backstageView.Controls.Add(this.printBackTabControl);
+            this.backstageView.Controls.Add(this.manageBackTabControl);
             this.backstageView.Controls.Add(this.settingsBackTabControl);
             this.backstageView.Items.Add(this.printBackTab);
+            this.backstageView.Items.Add(this.manageBackTab);
             this.backstageView.Items.Add(this.settingsBackTab);
             this.backstageView.Items.Add(this.backstageViewItemSeparator1);
             this.backstageView.Items.Add(this.exitBackButt);
-            this.backstageView.Location = new System.Drawing.Point(391, 72);
+            this.backstageView.Location = new System.Drawing.Point(255, 72);
             this.backstageView.Name = "backstageView";
             this.backstageView.Ribbon = this.ribbonControl;
-            this.backstageView.SelectedTab = this.settingsBackTab;
+            this.backstageView.SelectedTab = this.manageBackTab;
             this.backstageView.SelectedTabIndex = 1;
-            this.backstageView.Size = new System.Drawing.Size(675, 62);
+            this.backstageView.Size = new System.Drawing.Size(811, 279);
             this.backstageView.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013;
             this.backstageView.TabIndex = 1;
             // 
             // printBackTabControl
             // 
-            this.printBackTabControl.Location = new System.Drawing.Point(133, 63);
+            this.printBackTabControl.Location = new System.Drawing.Point(138, 63);
             this.printBackTabControl.Name = "printBackTabControl";
-            this.printBackTabControl.Size = new System.Drawing.Size(541, -2);
+            this.printBackTabControl.Size = new System.Drawing.Size(672, 215);
             this.printBackTabControl.TabIndex = 1;
+            // 
+            // manageBackTabControl
+            // 
+            this.manageBackTabControl.Location = new System.Drawing.Point(138, 63);
+            this.manageBackTabControl.Name = "manageBackTabControl";
+            this.manageBackTabControl.Size = new System.Drawing.Size(672, 215);
+            this.manageBackTabControl.TabIndex = 3;
             // 
             // settingsBackTabControl
             // 
             this.settingsBackTabControl.Location = new System.Drawing.Point(138, 63);
             this.settingsBackTabControl.Name = "settingsBackTabControl";
-            this.settingsBackTabControl.Size = new System.Drawing.Size(536, 0);
+            this.settingsBackTabControl.Size = new System.Drawing.Size(672, 215);
             this.settingsBackTabControl.TabIndex = 2;
             // 
             // printBackTab
@@ -190,6 +209,18 @@
             this.printBackTab.Name = "printBackTab";
             this.printBackTab.Selected = false;
             // 
+            // manageBackTab
+            // 
+            this.manageBackTab.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.manageBackTab.AppearanceSelected.ForeColor = System.Drawing.Color.White;
+            this.manageBackTab.AppearanceSelected.Options.UseForeColor = true;
+            this.manageBackTab.Caption = "Manage";
+            this.manageBackTab.CaptionHorizontalAlignment = DevExpress.Utils.Drawing.ItemHorizontalAlignment.Right;
+            this.manageBackTab.ContentControl = this.manageBackTabControl;
+            this.manageBackTab.Glyph = ((System.Drawing.Image)(resources.GetObject("manageBackTab.Glyph")));
+            this.manageBackTab.Name = "manageBackTab";
+            this.manageBackTab.Selected = true;
+            // 
             // settingsBackTab
             // 
             this.settingsBackTab.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
@@ -200,7 +231,7 @@
             this.settingsBackTab.ContentControl = this.settingsBackTabControl;
             this.settingsBackTab.Glyph = ((System.Drawing.Image)(resources.GetObject("settingsBackTab.Glyph")));
             this.settingsBackTab.Name = "settingsBackTab";
-            this.settingsBackTab.Selected = true;
+            this.settingsBackTab.Selected = false;
             // 
             // backstageViewItemSeparator1
             // 
@@ -226,6 +257,7 @@
             this.addDropButton.Id = 1;
             this.addDropButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("addDropButton.LargeGlyph")));
             this.addDropButton.Name = "addDropButton";
+            this.addDropButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             // 
             // newPopup
             // 
@@ -567,14 +599,15 @@
             // 
             this.defaultLook.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             // 
-            // backstageDM
+            // backstageSettingsDM
             // 
-            this.backstageDM.ContainerControl = this.settingsBackTabControl;
-            this.backstageDM.MenuManager = this.ribbonControl;
-            this.backstageDM.ShowThumbnailsInTaskBar = DevExpress.Utils.DefaultBoolean.False;
-            this.backstageDM.View = this.backstageSettingsUI;
-            this.backstageDM.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
-            this.backstageSettingsUI});
+            this.backstageSettingsDM.ContainerControl = this.settingsBackTabControl;
+            this.backstageSettingsDM.MenuManager = this.ribbonControl;
+            this.backstageSettingsDM.ShowThumbnailsInTaskBar = DevExpress.Utils.DefaultBoolean.False;
+            this.backstageSettingsDM.View = this.backstageSettingsUI;
+            this.backstageSettingsDM.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.backstageSettingsUI,
+            this.backstageManageUI});
             // 
             // backstageSettingsUI
             // 
@@ -583,6 +616,7 @@
             this.backstageSettingsUI.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.dbSettingsUCDocument,
             this.oddSettingsUCDocument});
+            this.backstageSettingsUI.TabbedGroupProperties.HeaderOffset = -1;
             this.backstageSettingsUI.UseLoadingIndicator = DevExpress.Utils.DefaultBoolean.False;
             this.backstageSettingsUI.UseSplashScreen = DevExpress.Utils.DefaultBoolean.False;
             this.backstageSettingsUI.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.backstageSettingsUI_QueryControl_1);
@@ -606,12 +640,42 @@
             this.oddSettingsUCDocument.ControlName = "OddSettingsUC";
             this.oddSettingsUCDocument.ControlTypeName = "ge_mongo_simplified.UserControls.OddSettingsUC";
             // 
+            // backstageManageUI
+            // 
+            this.backstageManageUI.ContentContainers.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.IContentContainer[] {
+            this.tabbedGroup2});
+            this.backstageManageUI.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
+            this.manageUCDocument});
+            this.backstageManageUI.TabbedGroupProperties.HeaderOffset = -1;
+            this.backstageManageUI.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.backstageManageUI_QueryControl);
+            // 
+            // tabbedGroup2
+            // 
+            this.tabbedGroup2.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document[] {
+            this.manageUCDocument});
+            this.tabbedGroup2.Name = "tabbedGroup2";
+            // 
+            // manageUCDocument
+            // 
+            this.manageUCDocument.Caption = "Backup / Restore";
+            this.manageUCDocument.ControlName = "ManageUC";
+            this.manageUCDocument.ControlTypeName = "ge_mongo_simplified.UserControls.ManageUC";
+            // 
             // actionPG
             // 
             this.actionPG.Name = "actionPG";
             this.actionPG.ShowCaptionButton = false;
             this.actionPG.Text = "action";
             this.actionPG.Visible = false;
+            // 
+            // backstageManageDM
+            // 
+            this.backstageManageDM.ContainerControl = this.manageBackTabControl;
+            this.backstageManageDM.MenuManager = this.ribbonControl;
+            this.backstageManageDM.ShowThumbnailsInTaskBar = DevExpress.Utils.DefaultBoolean.False;
+            this.backstageManageDM.View = this.backstageManageUI;
+            this.backstageManageDM.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.backstageManageUI});
             // 
             // MainForm
             // 
@@ -646,11 +710,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).EndInit();
             this.splitContainerControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backstageDM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backstageSettingsDM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageSettingsUI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbSettingsUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oddSettingsUCDocument)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backstageManageUI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manageUCDocument)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backstageManageDM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -684,7 +752,6 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewButtonItem exitBackButt;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl printBackTabControl;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl settingsBackTabControl;
-        private DevExpress.XtraBars.Ribbon.BackstageViewTabItem printBackTab;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem settingsBackTab;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLook;
         private DevExpress.XtraBars.Ribbon.RibbonPage journalRibbonPage;
@@ -694,7 +761,7 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraSpreadsheet.SpreadsheetControl spreadsheetControl1;
-        private DevExpress.XtraBars.Docking2010.DocumentManager backstageDM;
+        private DevExpress.XtraBars.Docking2010.DocumentManager backstageSettingsDM;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView backstageSettingsUI;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup tabbedGroup1;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document dbSettingsUCDocument;
@@ -711,6 +778,13 @@
         private UserControls.DetailsUC detailsUC2;
         private UserControls.StudentsGridUC studentsGridUC1;
         private UserControls.GroupGrid2UC groupGrid2UC2;
+        private DevExpress.XtraBars.Ribbon.BackstageViewClientControl manageBackTabControl;
+        private DevExpress.XtraBars.Ribbon.BackstageViewTabItem manageBackTab;
+        public DevExpress.XtraBars.Ribbon.BackstageViewTabItem printBackTab;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView backstageManageUI;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup tabbedGroup2;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document manageUCDocument;
+        private DevExpress.XtraBars.Docking2010.DocumentManager backstageManageDM;
     }
 }
 

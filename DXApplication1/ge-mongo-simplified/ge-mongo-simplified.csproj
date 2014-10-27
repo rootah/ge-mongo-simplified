@@ -57,8 +57,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Group.cs" />
@@ -126,6 +128,12 @@
     <Compile Include="UserControls\GroupTotalDetailsUC.Designer.cs">
       <DependentUpon>GroupTotalDetailsUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ManageUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManageUC.Designer.cs">
+      <DependentUpon>ManageUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\OddSettingsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GroupTotalDetailsUC.resx">
       <DependentUpon>GroupTotalDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\manageUC.resx">
+      <DependentUpon>ManageUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OddSettingsUC.resx">
       <DependentUpon>OddSettingsUC.cs</DependentUpon>
