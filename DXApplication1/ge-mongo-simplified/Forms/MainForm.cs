@@ -82,12 +82,12 @@ namespace ge_mongo_simplified.Forms
             if (groupsCheckButton.Down)
             {
                 groupstudentsdetailsSplit.PanelVisibility = SplitPanelVisibility.Both;
-                groupsCheckButton.Appearance.ForeColor = Color.White;
+                //groupsCheckButton.Appearance.ForeColor = Color.White;
             }
             else
             {
                 groupstudentsdetailsSplit.PanelVisibility = SplitPanelVisibility.Panel2;
-                groupsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
+                //groupsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
             }
         }
         private void detailsCheckButton_DownChanged(object sender, ItemClickEventArgs e)
@@ -95,12 +95,12 @@ namespace ge_mongo_simplified.Forms
             if (detailsCheckButton.Down)
             {
                 studentsdetailSplit.PanelVisibility = SplitPanelVisibility.Both;
-                detailsCheckButton.Appearance.ForeColor = Color.White;
+                //detailsCheckButton.Appearance.ForeColor = Color.White;
             }
             else
             {
                 studentsdetailSplit.PanelVisibility = SplitPanelVisibility.Panel1;
-                detailsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
+                //detailsCheckButton.Appearance.ForeColor = SystemColors.ControlText;
             }
         }
         private void newStudentButton_ItemClick(object sender, ItemClickEventArgs e)
