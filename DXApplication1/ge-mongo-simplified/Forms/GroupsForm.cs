@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
 namespace ge_mongo_simplified.Forms
@@ -17,10 +16,10 @@ namespace ge_mongo_simplified.Forms
         {
             ClientSize = new Size(ClientSize.Width, groupGeneralInfoUc1.layoutControl1.Root.MinSize.Height);
             if (Properties.Settings.Default.formType == "edit")
-                groupGeneralInfoUc2.groupEditFormFill();
+                groupGeneralInfoUc1.groupEditFormFill();
         }
 
-        private void GroupsForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void GroupsForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
             _main.groupGridFill();
             _main.groupFocusBack(Properties.Settings.Default.groupID);

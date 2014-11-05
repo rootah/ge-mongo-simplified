@@ -1,4 +1,6 @@
-﻿namespace ge_mongo_simplified.Forms
+﻿using ge_mongo_simplified.UserControls;
+
+namespace ge_mongo_simplified.Forms
 {
     partial class GroupsForm
     {
@@ -28,53 +30,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupGeneralInfoUc2 = new ge_mongo_simplified.UserControls.GroupGeneralInfoUc();
-            this.groupGeneralInfoUc1 = new ge_mongo_simplified.UserControls.GroupGeneralInfoUc();
-            this.SuspendLayout();
-            // 
-            // groupGeneralInfoUc2
-            // 
-            this.groupGeneralInfoUc2.AutoSize = true;
-            this.groupGeneralInfoUc2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupGeneralInfoUc2.Location = new System.Drawing.Point(0, 0);
-            this.groupGeneralInfoUc2.Name = "groupGeneralInfoUc2";
-            this.groupGeneralInfoUc2.Size = new System.Drawing.Size(244, 182);
-            this.groupGeneralInfoUc2.TabIndex = 1;
-            // 
-            // groupGeneralInfoUc1
-            // 
-            this.groupGeneralInfoUc1.AutoSize = true;
-            this.groupGeneralInfoUc1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupGeneralInfoUc1.Location = new System.Drawing.Point(0, 0);
-            this.groupGeneralInfoUc1.Name = "groupGeneralInfoUc1";
-            this.groupGeneralInfoUc1.Size = new System.Drawing.Size(400, 189);
-            this.groupGeneralInfoUc1.TabIndex = 0;
+            //this.stdMainUC1 = new ge_mongo_simplified.UserControls.StdMainUC();
+            this.groupGeneralInfoUc1 = new GroupGeneralInfoUc();
+            SuspendLayout();
             // 
             // GroupsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(244, 182);
-            this.Controls.Add(this.groupGeneralInfoUc2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.IsMdiContainer = true;
-            this.LookAndFeel.SkinName = "Visual Studio 2013 Light";
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(260, 207);
-            this.Name = "GroupsForm";
-            this.ShowIcon = false;
-            this.Text = "Group [...]";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GroupsForm_FormClosed);
-            this.Load += new System.EventHandler(this.GroupsForm_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(680, 311);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            IsMdiContainer = true;
+            LookAndFeel.SkinName = "Visual Studio 2013 Light";
+            MaximizeBox = false;
+            MinimizeBox = false;
+            MinimumSize = new System.Drawing.Size(260, 207);
+            Name = "GroupsForm";
+            ShowIcon = false;
+            Text = "Group [...]";
+            FormClosed += new System.Windows.Forms.FormClosedEventHandler(GroupsForm_FormClosed);
+            Load += new System.EventHandler(GroupsForm_Load);
+            ResumeLayout(false);
 
         }
 
         #endregion
 
         private UserControls.GroupGeneralInfoUc groupGeneralInfoUc1;
-        private UserControls.GroupGeneralInfoUc groupGeneralInfoUc2;
+        //private UserControls.GroupGeneralInfoUc groupGeneralInfoUc2;
     }
 }

@@ -99,7 +99,8 @@ namespace ge_mongo_simplified.Forms
         }
         public void newGroupButton_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var newGroup = new GroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [new]" };
+            var newGroup = new NewGroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [new]" };
+            //var newGroup = new GroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [new]" };
             Properties.Settings.Default.formType = "new";
             Properties.Settings.Default.Save();
             newGroup.ShowDialog();

@@ -78,6 +78,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NewGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewGroupsForm.Designer.cs">
+      <DependentUpon>NewGroupsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\StudentsForm.cs">
@@ -104,17 +110,23 @@
     <Compile Include="UserControls\GroupGrid2UC.Designer.cs">
       <DependentUpon>GroupGrid2UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupMainUC.cs">
+    <Compile Include="UserControls\GroupGeneralInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupMainUC.Designer.cs">
-      <DependentUpon>GroupMainUC.cs</DependentUpon>
+    <Compile Include="UserControls\GroupGeneralInfoUC.Designer.cs">
+      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DBSettingsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\DBSettingsUC.Designer.cs">
       <DependentUpon>DBSettingsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupPaymentsInfoUC.cs">
+      <SubType>usercontrol</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupPaymentsInfoUC.Designer.cs">
+      <DependentUpon>GroupPaymentsInfoUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\GroupsGridUC.cs">
       <SubType>UserControl</SubType>
@@ -164,6 +176,9 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewGroupsForm.resx">
+      <DependentUpon>NewGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -187,11 +202,14 @@
     <EmbeddedResource Include="UserControls\GroupGrid2UC.resx">
       <DependentUpon>GroupGrid2UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupMainUC.resx">
-      <DependentUpon>GroupMainUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\GroupGeneralInfoUC.resx">
+      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DBSettingsUC.resx">
       <DependentUpon>DBSettingsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GroupPaymentsInfoUC.resx">
+      <DependentUpon>GroupPaymentsInfoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GroupsGridUC.resx">
       <DependentUpon>GroupsGridUC.cs</DependentUpon>

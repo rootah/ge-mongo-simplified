@@ -135,7 +135,7 @@
             this.testbutton});
             this.ribbonControl.ItemsVertAlign = DevExpress.Utils.VertAlignment.Top;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 17;
+            this.ribbonControl.MaxItemId = 18;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -166,34 +166,34 @@
             this.backstageView.Items.Add(this.settingsBackTab);
             this.backstageView.Items.Add(this.backstageViewItemSeparator1);
             this.backstageView.Items.Add(this.exitBackButt);
-            this.backstageView.Location = new System.Drawing.Point(255, 72);
+            this.backstageView.Location = new System.Drawing.Point(557, 72);
             this.backstageView.Name = "backstageView";
             this.backstageView.Ribbon = this.ribbonControl;
             this.backstageView.SelectedTab = this.manageBackTab;
             this.backstageView.SelectedTabIndex = 1;
-            this.backstageView.Size = new System.Drawing.Size(811, 279);
+            this.backstageView.Size = new System.Drawing.Size(509, 259);
             this.backstageView.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013;
             this.backstageView.TabIndex = 1;
             // 
             // printBackTabControl
             // 
-            this.printBackTabControl.Location = new System.Drawing.Point(138, 63);
+            this.printBackTabControl.Location = new System.Drawing.Point(133, 63);
             this.printBackTabControl.Name = "printBackTabControl";
-            this.printBackTabControl.Size = new System.Drawing.Size(672, 215);
+            this.printBackTabControl.Size = new System.Drawing.Size(375, 195);
             this.printBackTabControl.TabIndex = 1;
             // 
             // manageBackTabControl
             // 
-            this.manageBackTabControl.Location = new System.Drawing.Point(138, 63);
+            this.manageBackTabControl.Location = new System.Drawing.Point(133, 63);
             this.manageBackTabControl.Name = "manageBackTabControl";
-            this.manageBackTabControl.Size = new System.Drawing.Size(672, 215);
+            this.manageBackTabControl.Size = new System.Drawing.Size(375, 195);
             this.manageBackTabControl.TabIndex = 3;
             // 
             // settingsBackTabControl
             // 
-            this.settingsBackTabControl.Location = new System.Drawing.Point(138, 63);
+            this.settingsBackTabControl.Location = new System.Drawing.Point(133, 63);
             this.settingsBackTabControl.Name = "settingsBackTabControl";
-            this.settingsBackTabControl.Size = new System.Drawing.Size(672, 215);
+            this.settingsBackTabControl.Size = new System.Drawing.Size(375, 195);
             this.settingsBackTabControl.TabIndex = 2;
             // 
             // printBackTab
@@ -217,7 +217,6 @@
             this.manageBackTab.Caption = "Manage";
             this.manageBackTab.CaptionHorizontalAlignment = DevExpress.Utils.Drawing.ItemHorizontalAlignment.Right;
             this.manageBackTab.ContentControl = this.manageBackTabControl;
-            this.manageBackTab.Glyph = ((System.Drawing.Image)(resources.GetObject("manageBackTab.Glyph")));
             this.manageBackTab.Name = "manageBackTab";
             this.manageBackTab.Selected = true;
             // 
@@ -229,7 +228,6 @@
             this.settingsBackTab.Caption = "Settings";
             this.settingsBackTab.CaptionHorizontalAlignment = DevExpress.Utils.Drawing.ItemHorizontalAlignment.Right;
             this.settingsBackTab.ContentControl = this.settingsBackTabControl;
-            this.settingsBackTab.Glyph = ((System.Drawing.Image)(resources.GetObject("settingsBackTab.Glyph")));
             this.settingsBackTab.Name = "settingsBackTab";
             this.settingsBackTab.Selected = false;
             // 
@@ -249,15 +247,14 @@
             // addDropButton
             // 
             this.addDropButton.ActAsDropDown = true;
-            this.addDropButton.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
+            this.addDropButton.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.addDropButton.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             this.addDropButton.Caption = "Add";
             this.addDropButton.DropDownControl = this.newPopup;
-            this.addDropButton.Glyph = ((System.Drawing.Image)(resources.GetObject("addDropButton.Glyph")));
             this.addDropButton.Id = 1;
             this.addDropButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("addDropButton.LargeGlyph")));
             this.addDropButton.Name = "addDropButton";
-            this.addDropButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.addDropButton.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)));
             // 
             // newPopup
             // 
@@ -289,24 +286,20 @@
             // 
             this.editButton.Caption = "edit";
             this.editButton.Enabled = false;
-            this.editButton.Glyph = ((System.Drawing.Image)(resources.GetObject("editButton.Glyph")));
             this.editButton.Id = 2;
-            this.editButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("editButton.LargeGlyph")));
             this.editButton.Name = "editButton";
             this.editButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
-            this.editButton.SmallWithTextWidth = 65;
+            this.editButton.SmallWithTextWidth = 50;
             this.editButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.editButton_ItemClick);
             // 
             // delButton
             // 
             this.delButton.Caption = "delete";
             this.delButton.Enabled = false;
-            this.delButton.Glyph = ((System.Drawing.Image)(resources.GetObject("delButton.Glyph")));
             this.delButton.Id = 3;
-            this.delButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("delButton.LargeGlyph")));
             this.delButton.Name = "delButton";
             this.delButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
-            this.delButton.SmallWithTextWidth = 65;
+            this.delButton.SmallWithTextWidth = 50;
             this.delButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.delButton_ItemClick);
             // 
             // groupsCheckButton
@@ -320,7 +313,7 @@
             this.groupsCheckButton.ItemAppearance.Pressed.Options.UseForeColor = true;
             this.groupsCheckButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("groupsCheckButton.LargeGlyph")));
             this.groupsCheckButton.Name = "groupsCheckButton";
-            this.groupsCheckButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.groupsCheckButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
             this.groupsCheckButton.SmallWithTextWidth = 65;
             this.groupsCheckButton.DownChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.groupsCheckButton_DownChanged);
             // 
@@ -336,7 +329,7 @@
             this.detailsCheckButton.ItemAppearance.Pressed.Options.UseForeColor = true;
             this.detailsCheckButton.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("detailsCheckButton.LargeGlyph")));
             this.detailsCheckButton.Name = "detailsCheckButton";
-            this.detailsCheckButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.detailsCheckButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
             this.detailsCheckButton.SmallWithTextWidth = 65;
             this.detailsCheckButton.DownChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.detailsCheckButton_DownChanged);
             // 
