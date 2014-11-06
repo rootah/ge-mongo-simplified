@@ -50,6 +50,7 @@
             this.detailsCheckButton = new DevExpress.XtraBars.BarButtonItem();
             this.statusLabel = new DevExpress.XtraBars.BarStaticItem();
             this.testbutton = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.studentsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.filePG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -132,10 +133,11 @@
             this.newGroupButton,
             this.newStudentButton,
             this.statusLabel,
-            this.testbutton});
+            this.testbutton,
+            this.barButtonItem1});
             this.ribbonControl.ItemsVertAlign = DevExpress.Utils.VertAlignment.Top;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 18;
+            this.ribbonControl.MaxItemId = 19;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -345,6 +347,14 @@
             this.testbutton.Caption = "test.button";
             this.testbutton.Id = 13;
             this.testbutton.Name = "testbutton";
+            this.testbutton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.testbutton_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "test.button.2";
+            this.barButtonItem1.Id = 18;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // ribbonPageCategory1
             // 
@@ -382,6 +392,7 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.testbutton);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "act";
             // 
@@ -778,6 +789,7 @@
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup tabbedGroup2;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document manageUCDocument;
         private DevExpress.XtraBars.Docking2010.DocumentManager backstageManageDM;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }
 

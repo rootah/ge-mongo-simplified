@@ -1,9 +1,6 @@
 ﻿using System.Drawing;
-using System.Linq;
-using DevExpress.XtraBars.Docking2010.Views.NoDocuments;
 using DevExpress.XtraEditors;
 using ge_mongo_simplified.UserControls;
-using Document = DevExpress.XtraBars.Docking2010.Views.Tabbed.Document;
 
 namespace ge_mongo_simplified.Forms
 {
@@ -13,14 +10,6 @@ namespace ge_mongo_simplified.Forms
         {
             InitializeComponent();
         }
-
-        //private void windowsUIView1_QueryControl(object sender, DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
-        //{
-        //    if (e.Document == groupGeneralInfoUcDocument)
-        //        e.Control = new GroupGeneralInfoUc();
-        //    if (e.Document == groupPaymentsInfoUCDocument)
-        //        e.Control = new GroupPaymentsInfoUC(this);
-        //}
 
         private void NewGroupsForm_Load(object sender, System.EventArgs e)
         {

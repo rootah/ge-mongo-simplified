@@ -372,5 +372,16 @@ namespace ge_mongo_simplified.Forms
             if (e.Document == manageUCDocument)
                 e.Control = new ManageUC(this);
         }
+
+        private void testbutton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DocManagerForm dmform = new DocManagerForm();
+            dmform.ShowDialog();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }
