@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.underageCE = new DevExpress.XtraEditors.CheckEdit();
             this.pnameTE = new DevExpress.XtraEditors.TextEdit();
@@ -40,12 +39,12 @@
             this.pnameCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
-            this.contactsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.orgUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.paymentsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
+            this.contactsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
+            this.orgUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
+            this.paymentsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.underageCE.Properties)).BeginInit();
@@ -204,6 +203,9 @@
             this.contactsUCDocument,
             this.orgUCDocument,
             this.paymentsUCDocument});
+            this.tabbedView1.ShowDocumentSelectorMenuOnCtrlAltDownArrow = DevExpress.Utils.DefaultBoolean.False;
+            this.tabbedView1.UseDocumentSelector = DevExpress.Utils.DefaultBoolean.False;
+            this.tabbedView1.UseLoadingIndicator = DevExpress.Utils.DefaultBoolean.False;
             this.tabbedView1.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.tabbedView1_QueryControl);
             // 
             // documentGroup1

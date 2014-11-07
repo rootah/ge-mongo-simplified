@@ -28,25 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.newGroupFormDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.documentGroup = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
-            this.groupGeneralInfoUcDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.groupPaymentsInfoUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.newGroupFormDM)).BeginInit();
+            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
+            this.documentGroup = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
+            this.groupPaymentsInfoUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
+            this.groupGeneralInfoUcDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
+            this.newGroupFormDM = new DevExpress.XtraBars.Docking2010.DocumentManager();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupGeneralInfoUcDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupPaymentsInfoUCDocument)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupGeneralInfoUcDocument)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newGroupFormDM)).BeginInit();
             this.SuspendLayout();
-            // 
-            // newGroupFormDM
-            // 
-            this.newGroupFormDM.ContainerControl = this;
-            this.newGroupFormDM.View = this.tabbedView;
-            this.newGroupFormDM.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
-            this.tabbedView});
             // 
             // tabbedView
             // 
@@ -67,42 +59,51 @@
             this.groupGeneralInfoUcDocument,
             this.groupPaymentsInfoUCDocument});
             // 
-            // groupGeneralInfoUcDocument
-            // 
-            this.groupGeneralInfoUcDocument.Caption = "Info";
-            this.groupGeneralInfoUcDocument.ControlName = "GroupGeneralInfoUc";
-            this.groupGeneralInfoUcDocument.ControlTypeName = "ge_mongo_simplified.UserControls.GroupGeneralInfoUc";
-            // 
             // groupPaymentsInfoUCDocument
             // 
             this.groupPaymentsInfoUCDocument.Caption = "Payments";
             this.groupPaymentsInfoUCDocument.ControlName = "GroupPaymentsInfoUC";
             this.groupPaymentsInfoUCDocument.ControlTypeName = "ge_mongo_simplified.UserControls.GroupPaymentsInfoUC";
             // 
+            // groupGeneralInfoUcDocument
+            // 
+            this.groupGeneralInfoUcDocument.Caption = "Info";
+            this.groupGeneralInfoUcDocument.ControlName = "GroupGeneralInfoUc";
+            this.groupGeneralInfoUcDocument.ControlTypeName = "ge_mongo_simplified.UserControls.GroupGeneralInfoUc";
+            // 
+            // newGroupFormDM
+            // 
+            this.newGroupFormDM.ContainerControl = this;
+            this.newGroupFormDM.View = this.tabbedView;
+            this.newGroupFormDM.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.tabbedView});
+            // 
             // NewGroupsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 316);
+            this.ClientSize = new System.Drawing.Size(312, 307);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "NewGroupsForm";
             this.Text = "NewGroupsForm";
             this.Load += new System.EventHandler(this.NewGroupsForm_Load);
             this.Resize += new System.EventHandler(this.NewGroupsForm_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.newGroupFormDM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupGeneralInfoUcDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupPaymentsInfoUCDocument)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupGeneralInfoUcDocument)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newGroupFormDM)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup;
-        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document groupPaymentsInfoUCDocument;
         public DevExpress.XtraBars.Docking2010.Views.Tabbed.Document groupGeneralInfoUcDocument;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document groupPaymentsInfoUCDocument;
         public DevExpress.XtraBars.Docking2010.DocumentManager newGroupFormDM;
+
     }
 }

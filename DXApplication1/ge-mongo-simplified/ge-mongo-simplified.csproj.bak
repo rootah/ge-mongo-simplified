@@ -32,23 +32,28 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ge_mongo_simplified.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v14.1" />
-    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Spreadsheet.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v14.1" />
-    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v14.1" />
-    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraSpreadsheet.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MongoDB.Bson">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MongoDB\CSharpDriver 1.9.2\MongoDB.Bson.dll</HintPath>
+      <HintPath>..\..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MongoDB\CSharpDriver 1.9.2\MongoDB.Driver.dll</HintPath>
+      <HintPath>..\..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,6 +66,12 @@
     <Compile Include="Classes\Group.cs" />
     <Compile Include="Classes\Mongo.cs" />
     <Compile Include="Classes\Student.cs" />
+    <Compile Include="Forms\DocManagerForm.cs">
+      <SubType>form</SubType>
+    </Compile>
+    <Compile Include="Forms\DocManagerForm.Designer.cs">
+      <DependentUpon>DocManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GroupsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +84,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NewGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewGroupsForm.Designer.cs">
+      <DependentUpon>NewGroupsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\StudentsForm.cs">
@@ -81,71 +98,125 @@
     <Compile Include="Forms\StudentsForm.Designer.cs">
       <DependentUpon>StudentsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DetailsUC.cs">
+    <Compile Include="UserControls\MainRelated\DetailsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DetailsUC.Designer.cs">
+    <Compile Include="UserControls\MainRelated\DetailsUC.Designer.cs">
       <DependentUpon>DetailsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupDetailsUC.cs">
+    <Compile Include="UserControls\DocManagerTwoUC.cs">
+      <SubType>usercontrol</SubType>
+    </Compile>
+    <Compile Include="UserControls\DocManagerTwoUC.Designer.cs">
+      <DependentUpon>DocManagerTwoUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DocManagerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupDetailsUC.Designer.cs">
+    <Compile Include="UserControls\DocManagerUC.Designer.cs">
+      <DependentUpon>DocManagerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupRelated\GroupDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupRelated\GroupDetailsUC.Designer.cs">
       <DependentUpon>GroupDetailsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupGrid2UC.cs">
+    <Compile Include="UserControls\GroupRelated\GroupGrid2UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupGrid2UC.Designer.cs">
+    <Compile Include="UserControls\GroupRelated\GroupGrid2UC.Designer.cs">
       <DependentUpon>GroupGrid2UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupMainUC.cs">
+    <Compile Include="UserControls\GroupRelated\GroupGeneralInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupMainUC.Designer.cs">
-      <DependentUpon>GroupMainUC.cs</DependentUpon>
+    <Compile Include="UserControls\GroupRelated\GroupGeneralInfoUC.Designer.cs">
+      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DBSettingsUC.cs">
+    <Compile Include="UserControls\BackstageRelated\DBSettingsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DBSettingsUC.Designer.cs">
+    <Compile Include="UserControls\BackstageRelated\DBSettingsUC.Designer.cs">
       <DependentUpon>DBSettingsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupsGridUC.cs">
+    <Compile Include="UserControls\GroupRelated\GroupPaymentsInfoUC.cs">
+      <SubType>usercontrol</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupRelated\GroupPaymentsInfoUC.Designer.cs">
+      <DependentUpon>GroupPaymentsInfoUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupRelated\GroupsGridUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupsGridUC.Designer.cs">
+    <Compile Include="UserControls\GroupRelated\GroupsGridUC.Designer.cs">
       <DependentUpon>GroupsGridUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupTotalDetailsUC.cs">
+    <Compile Include="UserControls\GroupRelated\GroupTotalDetailsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupTotalDetailsUC.Designer.cs">
+    <Compile Include="UserControls\GroupRelated\GroupTotalDetailsUC.Designer.cs">
       <DependentUpon>GroupTotalDetailsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\OddSettingsUC.cs">
+    <Compile Include="UserControls\BackstageRelated\ManageUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\OddSettingsUC.Designer.cs">
+    <Compile Include="UserControls\BackstageRelated\ManageUC.Designer.cs">
+      <DependentUpon>ManageUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BackstageRelated\OddSettingsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BackstageRelated\OddSettingsUC.Designer.cs">
       <DependentUpon>OddSettingsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StdMainUC.cs">
+    <Compile Include="UserControls\StudentRelated\FormRelated\ContactsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\StdMainUC.designer.cs">
+    <Compile Include="UserControls\StudentRelated\FormRelated\ContactsUC.Designer.cs">
+      <DependentUpon>ContactsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StudentRelated\FormRelated\OrgUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudentRelated\FormRelated\OrgUC.Designer.cs">
+      <DependentUpon>OrgUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StudentRelated\FormRelated\PaymentsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudentRelated\FormRelated\PaymentsUC.Designer.cs">
+      <DependentUpon>PaymentsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StudentRelated\StdMainUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudentRelated\StdMainUC.designer.cs">
       <DependentUpon>StdMainUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StudentsGridUC.cs">
+    <Compile Include="UserControls\StudentRelated\StudentDetailUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\StudentsGridUC.Designer.cs">
+    <Compile Include="UserControls\StudentRelated\StudentDetailUC.Designer.cs">
+      <DependentUpon>StudentDetailUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StudentRelated\StudentsGridUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudentRelated\StudentsGridUC.Designer.cs">
       <DependentUpon>StudentsGridUC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\DocManagerForm.resx">
+      <DependentUpon>DocManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\GroupsForm.resx">
       <DependentUpon>GroupsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewGroupsForm.resx">
+      <DependentUpon>NewGroupsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -161,37 +232,62 @@
     <EmbeddedResource Include="Forms\StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DetailsUC.resx">
+    <EmbeddedResource Include="UserControls\MainRelated\DetailsUC.resx">
       <DependentUpon>DetailsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupDetailsUC.resx">
+    <EmbeddedResource Include="UserControls\DocManagerTwoUC.resx">
+      <DependentUpon>DocManagerTwoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DocManagerUC.resx">
+      <DependentUpon>DocManagerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GroupRelated\GroupDetailsUC.resx">
       <DependentUpon>GroupDetailsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupGrid2UC.resx">
+    <EmbeddedResource Include="UserControls\GroupRelated\GroupGrid2UC.resx">
       <DependentUpon>GroupGrid2UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupMainUC.resx">
-      <DependentUpon>GroupMainUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\GroupRelated\GroupGeneralInfoUC.resx">
+      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DBSettingsUC.resx">
+    <EmbeddedResource Include="UserControls\BackstageRelated\DBSettingsUC.resx">
       <DependentUpon>DBSettingsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupsGridUC.resx">
+    <EmbeddedResource Include="UserControls\GroupRelated\GroupPaymentsInfoUC.resx">
+      <DependentUpon>GroupPaymentsInfoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GroupRelated\GroupsGridUC.resx">
       <DependentUpon>GroupsGridUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupTotalDetailsUC.resx">
+    <EmbeddedResource Include="UserControls\GroupRelated\GroupTotalDetailsUC.resx">
       <DependentUpon>GroupTotalDetailsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\OddSettingsUC.resx">
+    <EmbeddedResource Include="UserControls\BackstageRelated\manageUC.resx">
+      <DependentUpon>ManageUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BackstageRelated\OddSettingsUC.resx">
       <DependentUpon>OddSettingsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StdMainUC.resx">
+    <EmbeddedResource Include="UserControls\StudentRelated\FormRelated\ContactsUC.resx">
+      <DependentUpon>ContactsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StudentRelated\FormRelated\OrgUC.resx">
+      <DependentUpon>OrgUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StudentRelated\FormRelated\PaymentsUC.resx">
+      <DependentUpon>PaymentsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StudentRelated\StdMainUC.resx">
       <DependentUpon>StdMainUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StudentsGridUC.resx">
+    <EmbeddedResource Include="UserControls\StudentRelated\StudentDetailUC.resx">
+      <DependentUpon>StudentDetailUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StudentRelated\StudentsGridUC.resx">
       <DependentUpon>StudentsGridUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -204,6 +300,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="UserControls\Misc\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
