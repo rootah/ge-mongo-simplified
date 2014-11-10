@@ -1,4 +1,6 @@
-﻿namespace ge_mongo_simplified.Forms
+﻿using ge_mongo_simplified.UserControls.StudentRelated;
+
+namespace ge_mongo_simplified.Forms
 {
     partial class StudentsForm
     {
@@ -28,7 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.stdMainUC1 = new ge_mongo_simplified.UserControls.StdMainUC();
+            this.stdMainUC1 = new StdMainUC();
             this.SuspendLayout();
             // 
             // stdMainUC1
@@ -57,7 +59,7 @@
 
         #endregion
 
-        private UserControls.StdMainUC stdMainUC1;
+        private StdMainUC stdMainUC1;
 
 
 

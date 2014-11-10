@@ -6,9 +6,9 @@ using DevExpress.XtraLayout.Utils;
 using ge_mongo_simplified.Classes;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using Query = MongoDB.Driver.Builders.Query;
+using MongoDB.Driver.Builders;
 
-namespace ge_mongo_simplified.UserControls
+namespace ge_mongo_simplified.UserControls.StudentRelated
 {
     public partial class StdMainUC : XtraUserControl
     {
@@ -216,10 +216,11 @@ namespace ge_mongo_simplified.UserControls
         public void studentEditFormFill()
         {
             var id = Properties.Settings.Default.stdID;
-            
             var std = Mongo.getStudentInfo(id);
+
             fnameTE.Text = std.fname;
             lnameTE.Text = std.lname;
+            
             if (std.underage)
                 underageCE.Checked = true;
             if (std.pname != String.Empty)

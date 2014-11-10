@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactsUC));
             this.contactsCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.cancelButt = new DevExpress.XtraEditors.SimpleButton();
-            this.okButt = new DevExpress.XtraEditors.SimpleButton();
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
-            this.contactAddDel = new DevExpress.XtraBars.PopupMenu();
+            this.contactAddDel = new DevExpress.XtraBars.PopupMenu(this.components);
             this.homephoneCCI = new DevExpress.XtraBars.BarCheckItem();
             this.addphoneCCI = new DevExpress.XtraBars.BarCheckItem();
             this.emailCCI = new DevExpress.XtraBars.BarCheckItem();
             this.skypeCCI = new DevExpress.XtraBars.BarCheckItem();
             this.vkCCI = new DevExpress.XtraBars.BarCheckItem();
             this.wappCCI = new DevExpress.XtraBars.BarCheckItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -62,13 +61,9 @@
             this.vkCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.wappCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.spacer = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.okButtCI = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.adddelCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.cancelButtCI = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.contactsCG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -90,13 +85,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.vkCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wappCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spacer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.okButtCI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adddelCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cancelButtCI)).BeginInit();
             this.SuspendLayout();
             // 
             // contactsCG
@@ -109,8 +100,6 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.cancelButt);
-            this.layoutControl1.Controls.Add(this.okButt);
             this.layoutControl1.Controls.Add(this.dropDownButton1);
             this.layoutControl1.Controls.Add(this.vkTE);
             this.layoutControl1.Controls.Add(this.skypeTE);
@@ -127,24 +116,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(260, 256);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // cancelButt
-            // 
-            this.cancelButt.Location = new System.Drawing.Point(177, 226);
-            this.cancelButt.Name = "cancelButt";
-            this.cancelButt.Size = new System.Drawing.Size(75, 22);
-            this.cancelButt.StyleController = this.layoutControl1;
-            this.cancelButt.TabIndex = 14;
-            this.cancelButt.Text = "Cancel";
-            // 
-            // okButt
-            // 
-            this.okButt.Location = new System.Drawing.Point(92, 226);
-            this.okButt.Name = "okButt";
-            this.okButt.Size = new System.Drawing.Size(75, 22);
-            this.okButt.StyleController = this.layoutControl1;
-            this.okButt.TabIndex = 13;
-            this.okButt.Text = "OK";
             // 
             // dropDownButton1
             // 
@@ -338,13 +309,9 @@
             this.vkCI,
             this.wappCI,
             this.spacer,
-            this.emptySpaceItem2,
-            this.okButtCI,
-            this.emptySpaceItem1,
             this.adddelCI,
             this.emptySpaceItem3,
-            this.emptySpaceItem4,
-            this.cancelButtCI});
+            this.emptySpaceItem4});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(6, 6, 6, 6);
@@ -442,52 +409,13 @@
             this.spacer.TextSize = new System.Drawing.Size(0, 0);
             this.spacer.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 206);
-            this.emptySpaceItem2.MinSize = new System.Drawing.Size(10, 6);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(248, 12);
-            this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem2.Text = "emptySpaceItem2";
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // okButtCI
-            // 
-            this.okButtCI.Control = this.okButt;
-            this.okButtCI.CustomizationFormText = "okButtCI";
-            this.okButtCI.Location = new System.Drawing.Point(84, 218);
-            this.okButtCI.MaxSize = new System.Drawing.Size(79, 26);
-            this.okButtCI.MinSize = new System.Drawing.Size(79, 26);
-            this.okButtCI.Name = "okButtCI";
-            this.okButtCI.Size = new System.Drawing.Size(79, 26);
-            this.okButtCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.okButtCI.Text = "okButtCI";
-            this.okButtCI.TextSize = new System.Drawing.Size(0, 0);
-            this.okButtCI.TextToControlDistance = 0;
-            this.okButtCI.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 218);
-            this.emptySpaceItem1.MinSize = new System.Drawing.Size(25, 24);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(84, 26);
-            this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // adddelCI
             // 
             this.adddelCI.Control = this.dropDownButton1;
             this.adddelCI.CustomizationFormText = "adddel";
             this.adddelCI.Location = new System.Drawing.Point(0, 180);
             this.adddelCI.Name = "adddelCI";
-            this.adddelCI.Size = new System.Drawing.Size(43, 26);
+            this.adddelCI.Size = new System.Drawing.Size(43, 64);
             this.adddelCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.adddelCI.Text = "adddelCI";
             this.adddelCI.TextSize = new System.Drawing.Size(0, 0);
@@ -513,25 +441,9 @@
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
             this.emptySpaceItem4.Location = new System.Drawing.Point(43, 180);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(205, 26);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(205, 64);
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // cancelButtCI
-            // 
-            this.cancelButtCI.Control = this.cancelButt;
-            this.cancelButtCI.CustomizationFormText = "cancelButtCI";
-            this.cancelButtCI.Location = new System.Drawing.Point(163, 218);
-            this.cancelButtCI.MaxSize = new System.Drawing.Size(85, 26);
-            this.cancelButtCI.MinSize = new System.Drawing.Size(85, 26);
-            this.cancelButtCI.Name = "cancelButtCI";
-            this.cancelButtCI.Size = new System.Drawing.Size(85, 26);
-            this.cancelButtCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.cancelButtCI.Spacing = new DevExpress.XtraLayout.Utils.Padding(6, 0, 0, 0);
-            this.cancelButtCI.Text = "cancel";
-            this.cancelButtCI.TextSize = new System.Drawing.Size(0, 0);
-            this.cancelButtCI.TextToControlDistance = 0;
-            this.cancelButtCI.TextVisible = false;
             // 
             // ContactsUC
             // 
@@ -565,13 +477,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.vkCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wappCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spacer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.okButtCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adddelCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cancelButtCI)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -595,7 +503,6 @@
         private DevExpress.XtraLayout.LayoutControlItem skypeCI;
         private DevExpress.XtraLayout.LayoutControlItem vkCI;
         private DevExpress.XtraLayout.LayoutControlItem wappCI;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.DropDownButton dropDownButton1;
         private DevExpress.XtraLayout.LayoutControlItem adddelCI;
         private DevExpress.XtraBars.PopupMenu contactAddDel;
@@ -611,12 +518,7 @@
         private DevExpress.XtraBars.BarCheckItem skypeCCI;
         private DevExpress.XtraBars.BarCheckItem vkCCI;
         private DevExpress.XtraBars.BarCheckItem wappCCI;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraEditors.SimpleButton okButt;
-        private DevExpress.XtraLayout.LayoutControlItem okButtCI;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
-        private DevExpress.XtraEditors.SimpleButton cancelButt;
-        private DevExpress.XtraLayout.LayoutControlItem cancelButtCI;
     }
 }

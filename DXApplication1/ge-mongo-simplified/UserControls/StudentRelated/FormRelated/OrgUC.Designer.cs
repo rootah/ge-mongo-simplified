@@ -5,7 +5,7 @@
         /// <summary> 
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private static System.ComponentModel.IContainer components = null;
 
         /// <summary> 
         /// Clean up any resources being used.
@@ -28,215 +28,233 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.comboBoxEdit4 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            this.orgLC = new DevExpress.XtraLayout.LayoutControl();
+            this.groupCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.sourceCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.reasonTE = new DevExpress.XtraEditors.TextEdit();
+            this.startDE = new DevExpress.XtraEditors.DateEdit();
+            this.endDE = new DevExpress.XtraEditors.DateEdit();
+            this.orgCG = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.sourceCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.startCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.endCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.reasonCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.groupCI = new DevExpress.XtraLayout.LayoutControlItem();
+            ((System.ComponentModel.ISupportInitialize)(this.orgLC)).BeginInit();
+            this.orgLC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourceCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reasonTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startDE.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startDE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endDE.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endDE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orgCG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourceCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupCI)).BeginInit();
             this.SuspendLayout();
             // 
-            // layoutControl1
+            // orgLC
             // 
-            this.layoutControl1.Controls.Add(this.comboBoxEdit4);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit3);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit2);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit1);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit5);
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(529, 170, 250, 350);
-            this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(260, 266);
-            this.layoutControl1.TabIndex = 0;
-            this.layoutControl1.Text = "layoutControl1";
+            this.orgLC.Controls.Add(this.groupCB);
+            this.orgLC.Controls.Add(this.sourceCB);
+            this.orgLC.Controls.Add(this.reasonTE);
+            this.orgLC.Controls.Add(this.startDE);
+            this.orgLC.Controls.Add(this.endDE);
+            this.orgLC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orgLC.Location = new System.Drawing.Point(0, 0);
+            this.orgLC.Name = "orgLC";
+            this.orgLC.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(529, 170, 390, 350);
+            this.orgLC.Root = this.orgCG;
+            this.orgLC.Size = new System.Drawing.Size(260, 266);
+            this.orgLC.TabIndex = 0;
+            this.orgLC.Text = "layoutControl1";
             // 
-            // comboBoxEdit4
+            // groupCB
             // 
-            this.comboBoxEdit4.Location = new System.Drawing.Point(92, 100);
-            this.comboBoxEdit4.Name = "comboBoxEdit4";
-            this.comboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.groupCB.Location = new System.Drawing.Point(91, 8);
+            this.groupCB.Name = "groupCB";
+            this.groupCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit4.Size = new System.Drawing.Size(160, 20);
-            this.comboBoxEdit4.StyleController = this.layoutControl1;
-            this.comboBoxEdit4.TabIndex = 7;
+            this.groupCB.Size = new System.Drawing.Size(161, 20);
+            this.groupCB.StyleController = this.orgLC;
+            this.groupCB.TabIndex = 9;
             // 
-            // comboBoxEdit3
+            // sourceCB
             // 
-            this.comboBoxEdit3.Location = new System.Drawing.Point(92, 76);
-            this.comboBoxEdit3.Name = "comboBoxEdit3";
-            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.sourceCB.Location = new System.Drawing.Point(91, 32);
+            this.sourceCB.Name = "sourceCB";
+            this.sourceCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit3.Size = new System.Drawing.Size(160, 20);
-            this.comboBoxEdit3.StyleController = this.layoutControl1;
-            this.comboBoxEdit3.TabIndex = 6;
+            this.sourceCB.Properties.Items.AddRange(new object[] {
+            "Outdoor",
+            "Ads",
+            "Recommendation"});
+            this.sourceCB.Size = new System.Drawing.Size(161, 20);
+            this.sourceCB.StyleController = this.orgLC;
+            this.sourceCB.TabIndex = 5;
             // 
-            // comboBoxEdit2
+            // reasonTE
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(92, 42);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.reasonTE.Location = new System.Drawing.Point(91, 124);
+            this.reasonTE.Name = "reasonTE";
+            this.reasonTE.Size = new System.Drawing.Size(161, 20);
+            this.reasonTE.StyleController = this.orgLC;
+            this.reasonTE.TabIndex = 8;
+            // 
+            // startDE
+            // 
+            this.startDE.EditValue = null;
+            this.startDE.Location = new System.Drawing.Point(91, 66);
+            this.startDE.Name = "startDE";
+            this.startDE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(160, 20);
-            this.comboBoxEdit2.StyleController = this.layoutControl1;
-            this.comboBoxEdit2.TabIndex = 5;
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(92, 8);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.startDE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(160, 20);
-            this.comboBoxEdit1.StyleController = this.layoutControl1;
-            this.comboBoxEdit1.TabIndex = 4;
+            this.startDE.Properties.Mask.EditMask = "";
+            this.startDE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.startDE.Size = new System.Drawing.Size(161, 20);
+            this.startDE.StyleController = this.orgLC;
+            this.startDE.TabIndex = 6;
             // 
-            // comboBoxEdit5
+            // endDE
             // 
-            this.comboBoxEdit5.Location = new System.Drawing.Point(92, 134);
-            this.comboBoxEdit5.Name = "comboBoxEdit5";
-            this.comboBoxEdit5.Size = new System.Drawing.Size(160, 20);
-            this.comboBoxEdit5.StyleController = this.layoutControl1;
-            this.comboBoxEdit5.TabIndex = 8;
+            this.endDE.EditValue = null;
+            this.endDE.Location = new System.Drawing.Point(91, 90);
+            this.endDE.Name = "endDE";
+            this.endDE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.endDE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.endDE.Properties.Mask.EditMask = "";
+            this.endDE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.endDE.Size = new System.Drawing.Size(161, 20);
+            this.endDE.StyleController = this.orgLC;
+            this.endDE.TabIndex = 7;
             // 
-            // layoutControlGroup1
+            // orgCG
             // 
-            this.layoutControlGroup1.CustomizationFormText = "Root";
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(6, 6, 6, 6);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(260, 266);
-            this.layoutControlGroup1.Text = "Root";
-            this.layoutControlGroup1.TextVisible = false;
+            this.orgCG.CustomizationFormText = "Root";
+            this.orgCG.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.orgCG.GroupBordersVisible = false;
+            this.orgCG.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.sourceCI,
+            this.startCI,
+            this.endCI,
+            this.reasonCI,
+            this.groupCI});
+            this.orgCG.Location = new System.Drawing.Point(0, 0);
+            this.orgCG.Name = "orgCG";
+            this.orgCG.Padding = new DevExpress.XtraLayout.Utils.Padding(6, 6, 6, 6);
+            this.orgCG.Size = new System.Drawing.Size(260, 266);
+            this.orgCG.Text = "orgCG";
+            this.orgCG.TextVisible = false;
             // 
-            // layoutControlItem1
+            // sourceCI
             // 
-            this.layoutControlItem1.Control = this.comboBoxEdit1;
-            this.layoutControlItem1.CustomizationFormText = "Group";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(248, 34);
-            this.layoutControlItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 10);
-            this.layoutControlItem1.Text = "Group";
-            this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(80, 13);
-            this.layoutControlItem1.TextToControlDistance = 4;
+            this.sourceCI.Control = this.sourceCB;
+            this.sourceCI.CustomizationFormText = "Source";
+            this.sourceCI.Location = new System.Drawing.Point(0, 24);
+            this.sourceCI.Name = "sourceCI";
+            this.sourceCI.Size = new System.Drawing.Size(248, 34);
+            this.sourceCI.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 10);
+            this.sourceCI.Text = "Source";
+            this.sourceCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.sourceCI.TextSize = new System.Drawing.Size(80, 13);
+            this.sourceCI.TextToControlDistance = 3;
             // 
-            // layoutControlItem2
+            // startCI
             // 
-            this.layoutControlItem2.Control = this.comboBoxEdit2;
-            this.layoutControlItem2.CustomizationFormText = "Source";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 34);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(248, 34);
-            this.layoutControlItem2.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 10);
-            this.layoutControlItem2.Text = "Source";
-            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(80, 13);
-            this.layoutControlItem2.TextToControlDistance = 4;
+            this.startCI.Control = this.startDE;
+            this.startCI.CustomizationFormText = "Start";
+            this.startCI.Location = new System.Drawing.Point(0, 58);
+            this.startCI.Name = "startCI";
+            this.startCI.Size = new System.Drawing.Size(248, 24);
+            this.startCI.Text = "Start";
+            this.startCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.startCI.TextSize = new System.Drawing.Size(80, 13);
+            this.startCI.TextToControlDistance = 3;
             // 
-            // layoutControlItem3
+            // endCI
             // 
-            this.layoutControlItem3.Control = this.comboBoxEdit3;
-            this.layoutControlItem3.CustomizationFormText = "Start";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 68);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(248, 24);
-            this.layoutControlItem3.Text = "Start";
-            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(80, 13);
-            this.layoutControlItem3.TextToControlDistance = 4;
+            this.endCI.Control = this.endDE;
+            this.endCI.CustomizationFormText = "End";
+            this.endCI.Location = new System.Drawing.Point(0, 82);
+            this.endCI.Name = "endCI";
+            this.endCI.Size = new System.Drawing.Size(248, 34);
+            this.endCI.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 10);
+            this.endCI.Text = "End";
+            this.endCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.endCI.TextSize = new System.Drawing.Size(80, 13);
+            this.endCI.TextToControlDistance = 3;
             // 
-            // layoutControlItem4
+            // reasonCI
             // 
-            this.layoutControlItem4.Control = this.comboBoxEdit4;
-            this.layoutControlItem4.CustomizationFormText = "End";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 92);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(248, 34);
-            this.layoutControlItem4.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 10);
-            this.layoutControlItem4.Text = "End";
-            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(80, 13);
-            this.layoutControlItem4.TextToControlDistance = 4;
+            this.reasonCI.Control = this.reasonTE;
+            this.reasonCI.CustomizationFormText = "Reason";
+            this.reasonCI.Location = new System.Drawing.Point(0, 116);
+            this.reasonCI.Name = "reasonCI";
+            this.reasonCI.Size = new System.Drawing.Size(248, 138);
+            this.reasonCI.Text = "Reason";
+            this.reasonCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.reasonCI.TextSize = new System.Drawing.Size(80, 13);
+            this.reasonCI.TextToControlDistance = 3;
             // 
-            // layoutControlItem5
+            // groupCI
             // 
-            this.layoutControlItem5.Control = this.comboBoxEdit5;
-            this.layoutControlItem5.CustomizationFormText = "Reason";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 126);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(248, 128);
-            this.layoutControlItem5.Text = "Reason";
-            this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(80, 13);
-            this.layoutControlItem5.TextToControlDistance = 4;
+            this.groupCI.Control = this.groupCB;
+            this.groupCI.CustomizationFormText = "Group";
+            this.groupCI.Location = new System.Drawing.Point(0, 0);
+            this.groupCI.Name = "groupCI";
+            this.groupCI.Size = new System.Drawing.Size(248, 24);
+            this.groupCI.Text = "Group";
+            this.groupCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.groupCI.TextSize = new System.Drawing.Size(80, 20);
+            this.groupCI.TextToControlDistance = 3;
             // 
             // OrgUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.layoutControl1);
+            this.Controls.Add(this.orgLC);
             this.Name = "OrgUC";
             this.Size = new System.Drawing.Size(260, 266);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orgLC)).EndInit();
+            this.orgLC.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourceCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reasonTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startDE.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startDE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endDE.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endDE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orgCG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourceCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupCI)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit4;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraEditors.TextEdit comboBoxEdit5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.ComboBoxEdit sourceCB;
+        private DevExpress.XtraEditors.TextEdit reasonTE;
+        private DevExpress.XtraLayout.LayoutControlItem sourceCI;
+        private DevExpress.XtraLayout.LayoutControlItem startCI;
+        private DevExpress.XtraLayout.LayoutControlItem endCI;
+        private DevExpress.XtraLayout.LayoutControlItem reasonCI;
+        public DevExpress.XtraLayout.LayoutControl orgLC;
+        private DevExpress.XtraEditors.DateEdit startDE;
+        private DevExpress.XtraEditors.DateEdit endDE;
+        public static DevExpress.XtraEditors.ComboBoxEdit groupnoCB;
+        private DevExpress.XtraLayout.LayoutControlGroup orgCG;
+        public DevExpress.XtraEditors.ComboBoxEdit groupCB;
+        private DevExpress.XtraLayout.LayoutControlItem groupCI;
     }
 }

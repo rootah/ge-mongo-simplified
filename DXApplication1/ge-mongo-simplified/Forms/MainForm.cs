@@ -375,7 +375,9 @@ namespace ge_mongo_simplified.Forms
 
         private void testbutton_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DocManagerForm dmform = new DocManagerForm();
+            DocManagerForm dmform = new DocManagerForm() { StartPosition = FormStartPosition.CenterParent, Text = @"Student [new]" };
+            Properties.Settings.Default.formType = "new";
+            Properties.Settings.Default.Save();
             dmform.ShowDialog();
         }
 

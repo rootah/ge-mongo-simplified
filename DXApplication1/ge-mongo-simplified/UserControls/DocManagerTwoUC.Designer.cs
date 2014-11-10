@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.components = new System.ComponentModel.Container();
+            this.topLC = new DevExpress.XtraLayout.LayoutControl();
             this.underageCE = new DevExpress.XtraEditors.CheckEdit();
             this.pnameTE = new DevExpress.XtraEditors.TextEdit();
             this.lnameTE = new DevExpress.XtraEditors.TextEdit();
@@ -39,14 +40,21 @@
             this.pnameCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
-            this.contactsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
-            this.orgUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
-            this.paymentsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
-            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            this.layoutControl1.SuspendLayout();
+            this.studentTabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.contactsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
+            this.orgUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
+            this.paymentsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
+            this.studentsDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.bottomLC = new DevExpress.XtraLayout.LayoutControl();
+            this.okButt = new DevExpress.XtraEditors.SimpleButton();
+            this.cancelButt = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.cancelCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.okCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.topLC)).BeginInit();
+            this.topLC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.underageCE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnameTE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnameTE.Properties)).BeginInit();
@@ -57,28 +65,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnameCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactsUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orgUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsUCDocument)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsDM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomLC)).BeginInit();
+            this.bottomLC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cancelCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.okCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             this.SuspendLayout();
             // 
-            // layoutControl1
+            // topLC
             // 
-            this.layoutControl1.Controls.Add(this.underageCE);
-            this.layoutControl1.Controls.Add(this.pnameTE);
-            this.layoutControl1.Controls.Add(this.lnameTE);
-            this.layoutControl1.Controls.Add(this.fnameTE);
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(606, 179, 250, 350);
-            this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(405, 115);
-            this.layoutControl1.TabIndex = 0;
-            this.layoutControl1.Text = "layoutControl1";
+            this.topLC.Controls.Add(this.underageCE);
+            this.topLC.Controls.Add(this.pnameTE);
+            this.topLC.Controls.Add(this.lnameTE);
+            this.topLC.Controls.Add(this.fnameTE);
+            this.topLC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topLC.Location = new System.Drawing.Point(0, 0);
+            this.topLC.Name = "topLC";
+            this.topLC.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(606, 179, 250, 350);
+            this.topLC.Root = this.layoutControlGroup1;
+            this.topLC.Size = new System.Drawing.Size(405, 115);
+            this.topLC.TabIndex = 0;
+            this.topLC.Text = "layoutControl1";
             // 
             // underageCE
             // 
@@ -87,8 +101,9 @@
             this.underageCE.Properties.AllowFocused = false;
             this.underageCE.Properties.Caption = "Underage";
             this.underageCE.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.underageCE.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.underageCE.Size = new System.Drawing.Size(72, 19);
-            this.underageCE.StyleController = this.layoutControl1;
+            this.underageCE.StyleController = this.topLC;
             this.underageCE.TabIndex = 2;
             this.underageCE.CheckedChanged += new System.EventHandler(this.underageCE_CheckedChanged);
             // 
@@ -97,7 +112,7 @@
             this.pnameTE.Location = new System.Drawing.Point(95, 82);
             this.pnameTE.Name = "pnameTE";
             this.pnameTE.Size = new System.Drawing.Size(299, 20);
-            this.pnameTE.StyleController = this.layoutControl1;
+            this.pnameTE.StyleController = this.topLC;
             this.pnameTE.TabIndex = 3;
             // 
             // lnameTE
@@ -105,7 +120,7 @@
             this.lnameTE.Location = new System.Drawing.Point(95, 35);
             this.lnameTE.Name = "lnameTE";
             this.lnameTE.Size = new System.Drawing.Size(299, 20);
-            this.lnameTE.StyleController = this.layoutControl1;
+            this.lnameTE.StyleController = this.topLC;
             this.lnameTE.TabIndex = 1;
             // 
             // fnameTE
@@ -113,7 +128,7 @@
             this.fnameTE.Location = new System.Drawing.Point(95, 11);
             this.fnameTE.Name = "fnameTE";
             this.fnameTE.Size = new System.Drawing.Size(299, 20);
-            this.fnameTE.StyleController = this.layoutControl1;
+            this.fnameTE.StyleController = this.topLC;
             this.fnameTE.TabIndex = 0;
             // 
             // layoutControlGroup1
@@ -193,27 +208,20 @@
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // tabbedView1
+            // studentTabbedView
             // 
-            this.tabbedView1.DocumentGroupProperties.ShowDocumentSelectorButton = false;
-            this.tabbedView1.DocumentGroups.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup[] {
+            this.studentTabbedView.DocumentGroupProperties.ShowDocumentSelectorButton = false;
+            this.studentTabbedView.DocumentGroups.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup[] {
             this.documentGroup1});
-            this.tabbedView1.DocumentProperties.AllowClose = false;
-            this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
+            this.studentTabbedView.DocumentProperties.AllowClose = false;
+            this.studentTabbedView.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.contactsUCDocument,
             this.orgUCDocument,
             this.paymentsUCDocument});
-            this.tabbedView1.ShowDocumentSelectorMenuOnCtrlAltDownArrow = DevExpress.Utils.DefaultBoolean.False;
-            this.tabbedView1.UseDocumentSelector = DevExpress.Utils.DefaultBoolean.False;
-            this.tabbedView1.UseLoadingIndicator = DevExpress.Utils.DefaultBoolean.False;
-            this.tabbedView1.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.tabbedView1_QueryControl);
-            // 
-            // documentGroup1
-            // 
-            this.documentGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
-            this.contactsUCDocument,
-            this.orgUCDocument,
-            this.paymentsUCDocument});
+            this.studentTabbedView.ShowDocumentSelectorMenuOnCtrlAltDownArrow = DevExpress.Utils.DefaultBoolean.False;
+            this.studentTabbedView.UseDocumentSelector = DevExpress.Utils.DefaultBoolean.False;
+            this.studentTabbedView.UseLoadingIndicator = DevExpress.Utils.DefaultBoolean.False;
+            this.studentTabbedView.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.tabbedView1_QueryControl);
             // 
             // contactsUCDocument
             // 
@@ -233,23 +241,124 @@
             this.paymentsUCDocument.ControlName = "PaymentsUC";
             this.paymentsUCDocument.ControlTypeName = "ge_mongo_simplified.UserControls.StudentRelated.FormRelated.PaymentsUC";
             // 
-            // documentManager1
+            // studentsDM
             // 
-            this.documentManager1.ContainerControl = this;
-            this.documentManager1.ShowThumbnailsInTaskBar = DevExpress.Utils.DefaultBoolean.False;
-            this.documentManager1.View = this.tabbedView1;
-            this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
-            this.tabbedView1});
+            this.studentsDM.ContainerControl = this;
+            this.studentsDM.DocumentActivationScope = DevExpress.XtraBars.Docking2010.Views.DocumentActivationScope.AllDocuments;
+            this.studentsDM.ShowThumbnailsInTaskBar = DevExpress.Utils.DefaultBoolean.False;
+            this.studentsDM.View = this.studentTabbedView;
+            this.studentsDM.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.studentTabbedView});
+            // 
+            // bottomLC
+            // 
+            this.bottomLC.Controls.Add(this.okButt);
+            this.bottomLC.Controls.Add(this.cancelButt);
+            this.bottomLC.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bottomLC.Location = new System.Drawing.Point(0, 353);
+            this.bottomLC.Name = "bottomLC";
+            this.bottomLC.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(452, 153, 426, 350);
+            this.bottomLC.Root = this.layoutControlGroup2;
+            this.bottomLC.Size = new System.Drawing.Size(405, 29);
+            this.bottomLC.TabIndex = 1;
+            this.bottomLC.Text = "layoutControl2";
+            // 
+            // okButt
+            // 
+            this.okButt.Location = new System.Drawing.Point(241, 5);
+            this.okButt.Name = "okButt";
+            this.okButt.Size = new System.Drawing.Size(76, 22);
+            this.okButt.StyleController = this.bottomLC;
+            this.okButt.TabIndex = 5;
+            this.okButt.Text = "OK";
+            // 
+            // cancelButt
+            // 
+            this.cancelButt.Location = new System.Drawing.Point(327, 5);
+            this.cancelButt.Name = "cancelButt";
+            this.cancelButt.Size = new System.Drawing.Size(76, 22);
+            this.cancelButt.StyleController = this.bottomLC;
+            this.cancelButt.TabIndex = 4;
+            this.cancelButt.Text = "Cancel";
+            this.cancelButt.Click += new System.EventHandler(this.cancelButt_Click);
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.CustomizationFormText = "layoutControlGroup2";
+            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.cancelCI,
+            this.okCI,
+            this.emptySpaceItem2});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "Root";
+            this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 3, 0);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(405, 29);
+            this.layoutControlGroup2.Text = "Root";
+            this.layoutControlGroup2.TextVisible = false;
+            // 
+            // cancelCI
+            // 
+            this.cancelCI.Control = this.cancelButt;
+            this.cancelCI.CustomizationFormText = "layoutControlItem1";
+            this.cancelCI.Location = new System.Drawing.Point(319, 0);
+            this.cancelCI.MaxSize = new System.Drawing.Size(86, 26);
+            this.cancelCI.MinSize = new System.Drawing.Size(86, 26);
+            this.cancelCI.Name = "cancelCI";
+            this.cancelCI.Size = new System.Drawing.Size(86, 26);
+            this.cancelCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.cancelCI.Spacing = new DevExpress.XtraLayout.Utils.Padding(6, 0, 0, 0);
+            this.cancelCI.Text = "cancelCI";
+            this.cancelCI.TextSize = new System.Drawing.Size(0, 0);
+            this.cancelCI.TextToControlDistance = 0;
+            this.cancelCI.TextVisible = false;
+            // 
+            // okCI
+            // 
+            this.okCI.Control = this.okButt;
+            this.okCI.CustomizationFormText = "layoutControlItem2";
+            this.okCI.Location = new System.Drawing.Point(239, 0);
+            this.okCI.MaxSize = new System.Drawing.Size(80, 26);
+            this.okCI.MinSize = new System.Drawing.Size(80, 26);
+            this.okCI.Name = "okCI";
+            this.okCI.Size = new System.Drawing.Size(80, 26);
+            this.okCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.okCI.Text = "okCI";
+            this.okCI.TextSize = new System.Drawing.Size(0, 0);
+            this.okCI.TextToControlDistance = 0;
+            this.okCI.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
+            this.emptySpaceItem2.MaxSize = new System.Drawing.Size(0, 26);
+            this.emptySpaceItem2.MinSize = new System.Drawing.Size(10, 26);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(239, 26);
+            this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem2.Text = "emptySpaceItem2";
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // documentGroup1
+            // 
+            this.documentGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
+            this.contactsUCDocument,
+            this.orgUCDocument,
+            this.paymentsUCDocument});
             // 
             // DocManagerTwoUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.layoutControl1);
+            this.Controls.Add(this.bottomLC);
+            this.Controls.Add(this.topLC);
             this.Name = "DocManagerTwoUC";
             this.Size = new System.Drawing.Size(405, 382);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.topLC)).EndInit();
+            this.topLC.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.underageCE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnameTE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnameTE.Properties)).EndInit();
@@ -260,12 +369,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnameCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactsUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orgUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsUCDocument)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsDM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomLC)).EndInit();
+            this.bottomLC.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cancelCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.okCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,13 +395,20 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         public DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
-        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document orgUCDocument;
-        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document paymentsUCDocument;
-        public DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
+        public DevExpress.XtraBars.Docking2010.DocumentManager studentsDM;
         public DevExpress.XtraBars.Docking2010.Views.Tabbed.Document contactsUCDocument;
-        public DevExpress.XtraLayout.LayoutControl layoutControl1;
+        public DevExpress.XtraLayout.LayoutControl topLC;
         public DevExpress.XtraEditors.CheckEdit underageCE;
-        public DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        public DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView studentTabbedView;
+        private DevExpress.XtraLayout.LayoutControl bottomLC;
+        private DevExpress.XtraEditors.SimpleButton cancelButt;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlItem cancelCI;
+        private DevExpress.XtraEditors.SimpleButton okButt;
+        private DevExpress.XtraLayout.LayoutControlItem okCI;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        public DevExpress.XtraBars.Docking2010.Views.Tabbed.Document orgUCDocument;
+        public DevExpress.XtraBars.Docking2010.Views.Tabbed.Document paymentsUCDocument;
+        public DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
     }
 }

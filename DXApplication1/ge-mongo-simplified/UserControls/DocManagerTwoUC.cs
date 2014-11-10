@@ -1,33 +1,51 @@
-﻿using System.Drawing;
-using System.Linq;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout.Utils;
+using ge_mongo_simplified.Classes;
 using ge_mongo_simplified.UserControls.StudentRelated.FormRelated;
 
 namespace ge_mongo_simplified.UserControls
 {
     public partial class DocManagerTwoUC : XtraUserControl
     {
+        readonly OrgUC _orgControl = new OrgUC(); 
         public DocManagerTwoUC()
         {
             InitializeComponent();
         }
 
         private void tabbedView1_QueryControl(object sender,
-            DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
+            QueryControlEventArgs e)
         {
             if (e.Document == contactsUCDocument)
                 e.Control = new ContactsUC();
             if (e.Document == orgUCDocument)
-                e.Control = new OrgUC();
+            {
+                e.Control = _orgControl;
+                groupListFill();
+            }
+                
             if (e.Document == paymentsUCDocument)
                 e.Control = new PaymentsUC();
         }
 
-        private void underageCE_CheckedChanged(object sender, System.EventArgs e)
+        private void groupListFill()
         {
-            layoutControl1.BeginUpdate();
+            var groups = Mongo.groupList();
+            _orgControl.groupCombo.Properties.Items.Clear();
+
+            for (var i = 0; i <= groups.Count - 1; i++)
+            {
+                _orgControl.groupCombo.Properties.Items.Add(groups[i].num);
+            }
+            
+        }
+        private void underageCE_CheckedChanged(object sender, EventArgs e)
+        {
+            topLC.BeginUpdate();
             if (underageCE.Checked)
             {
                 pnameCI.Visibility = LayoutVisibility.Always;
@@ -38,8 +56,8 @@ namespace ge_mongo_simplified.UserControls
                 pnameCI.Visibility = LayoutVisibility.Never;
                 formResize(-23);
             }
-            layoutControl1.Size = new Size(layoutControl1.Width, layoutControl1.Root.MinSize.Height);
-            layoutControl1.EndUpdate();
+            topLC.Size = new Size(topLC.Width, topLC.Root.MinSize.Height);
+            topLC.EndUpdate();
         }
 
         public void formResize(int delta)
@@ -49,6 +67,14 @@ namespace ge_mongo_simplified.UserControls
             {
                 parentForm.Height = parentForm.Height + delta;
             }
+        }
+
+        private void cancelButt_Click(object sender, EventArgs e)
+        {
+            var parentForm = (Form)TopLevelControl;
+            if (parentForm != null)
+            {
+                parentForm.Close();}
         }
     }
 }

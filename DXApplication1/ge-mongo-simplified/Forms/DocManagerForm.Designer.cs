@@ -36,21 +36,21 @@
             this.docManagerTwoUC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.docManagerTwoUC1.Location = new System.Drawing.Point(0, 0);
             this.docManagerTwoUC1.Name = "docManagerTwoUC1";
-            this.docManagerTwoUC1.Size = new System.Drawing.Size(301, 342);
+            this.docManagerTwoUC1.Size = new System.Drawing.Size(252, 342);
             this.docManagerTwoUC1.TabIndex = 0;
             // 
             // DocManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 342);
+            this.ClientSize = new System.Drawing.Size(252, 342);
             this.Controls.Add(this.docManagerTwoUC1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DocManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DocManagerForm";
             this.Load += new System.EventHandler(this.DocManagerForm_Load);
-            this.Resize += new System.EventHandler(this.DocManagerForm_Resize);
+            //this.Resize += new System.EventHandler(this.DocManagerForm_Resize);
             this.ResumeLayout(false);
 
         }

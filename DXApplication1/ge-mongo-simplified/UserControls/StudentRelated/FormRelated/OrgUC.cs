@@ -8,5 +8,10 @@ namespace ge_mongo_simplified.UserControls.StudentRelated.FormRelated
         {
             InitializeComponent();
         }
+
+        public ComboBoxEdit groupCombo
+        {
+            get { return groupCB; }
+        }
     }
 }

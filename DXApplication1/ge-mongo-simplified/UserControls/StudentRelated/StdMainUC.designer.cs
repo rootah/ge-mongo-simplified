@@ -1,4 +1,4 @@
-﻿namespace ge_mongo_simplified.UserControls
+﻿namespace ge_mongo_simplified.UserControls.StudentRelated
 {
     partial class StdMainUC
     {
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.reasonTE = new DevExpress.XtraEditors.TextEdit();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -44,7 +45,7 @@
             this.endDE = new DevExpress.XtraEditors.DateEdit();
             this.startDE = new DevExpress.XtraEditors.DateEdit();
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
-            this.contactAddDD = new DevExpress.XtraBars.PopupMenu();
+            this.contactAddDD = new DevExpress.XtraBars.PopupMenu(this.components);
             this.cancelButton = new DevExpress.XtraEditors.SimpleButton();
             this.discountCE = new DevExpress.XtraEditors.CheckEdit();
             this.groupnoCB = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -596,8 +597,8 @@
             this.infoCG.CustomizationFormText = "infoCG";
             this.infoCG.Location = new System.Drawing.Point(0, 96);
             this.infoCG.Name = "infoCG";
-            this.infoCG.SelectedTabPage = this.contactsCG;
-            this.infoCG.SelectedTabPageIndex = 0;
+            this.infoCG.SelectedTabPage = this.additionalCG;
+            this.infoCG.SelectedTabPageIndex = 1;
             this.infoCG.Size = new System.Drawing.Size(290, 285);
             this.infoCG.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 10, 10);
             this.infoCG.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
