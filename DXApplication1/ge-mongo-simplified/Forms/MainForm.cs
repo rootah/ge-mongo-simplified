@@ -383,7 +383,7 @@ namespace ge_mongo_simplified.Forms
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Properties.Settings.Default.sourceComboList.Clear();
         }
     }
 }

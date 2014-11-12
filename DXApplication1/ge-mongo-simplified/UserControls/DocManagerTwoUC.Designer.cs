@@ -41,6 +41,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.studentTabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.contactsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.orgUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.paymentsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
@@ -52,7 +53,6 @@
             this.cancelCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.okCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.topLC)).BeginInit();
             this.topLC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.underageCE.Properties)).BeginInit();
@@ -66,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTabbedView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactsUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orgUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsUCDocument)).BeginInit();
@@ -76,7 +77,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cancelCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             this.SuspendLayout();
             // 
             // topLC
@@ -223,6 +223,13 @@
             this.studentTabbedView.UseLoadingIndicator = DevExpress.Utils.DefaultBoolean.False;
             this.studentTabbedView.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.tabbedView1_QueryControl);
             // 
+            // documentGroup1
+            // 
+            this.documentGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
+            this.contactsUCDocument,
+            this.orgUCDocument,
+            this.paymentsUCDocument});
+            // 
             // contactsUCDocument
             // 
             this.contactsUCDocument.Caption = "Contacts";
@@ -342,13 +349,6 @@
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // documentGroup1
-            // 
-            this.documentGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
-            this.contactsUCDocument,
-            this.orgUCDocument,
-            this.paymentsUCDocument});
-            // 
             // DocManagerTwoUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +370,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTabbedView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactsUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orgUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsUCDocument)).EndInit();
@@ -380,7 +381,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cancelCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             this.ResumeLayout(false);
 
         }

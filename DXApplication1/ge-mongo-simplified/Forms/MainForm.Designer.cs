@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageView = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
@@ -41,7 +40,7 @@
             this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
             this.exitBackButt = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
             this.addDropButton = new DevExpress.XtraBars.BarButtonItem();
-            this.newPopup = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.newPopup = new DevExpress.XtraBars.PopupMenu();
             this.newGroupButton = new DevExpress.XtraBars.BarButtonItem();
             this.newStudentButton = new DevExpress.XtraBars.BarButtonItem();
             this.editButton = new DevExpress.XtraBars.BarButtonItem();
@@ -61,7 +60,7 @@
             this.journalRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.certRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.filterPopup = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.filterPopup = new DevExpress.XtraBars.PopupMenu();
             this.xtraTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.studentsTab = new DevExpress.XtraTab.XtraTabPage();
             this.groupstudentsdetailsSplit = new DevExpress.XtraEditors.SplitContainerControl();
@@ -78,17 +77,17 @@
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
-            this.defaultLook = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.backstageSettingsDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.backstageSettingsUI = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
-            this.tabbedGroup1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup(this.components);
-            this.dbSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.oddSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.backstageManageUI = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
-            this.tabbedGroup2 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup(this.components);
-            this.manageUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
+            this.defaultLook = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.backstageSettingsDM = new DevExpress.XtraBars.Docking2010.DocumentManager();
+            this.backstageSettingsUI = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView();
+            this.tabbedGroup1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup();
+            this.dbSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.oddSettingsUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.backstageManageUI = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView();
+            this.tabbedGroup2 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup();
+            this.manageUCDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
             this.actionPG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.backstageManageDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.backstageManageDM = new DevExpress.XtraBars.Docking2010.DocumentManager();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.backstageView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newPopup)).BeginInit();

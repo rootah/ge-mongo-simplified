@@ -1,11 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Drawing;
-using DevExpress.XtraBars.Docking2010;
-using DevExpress.XtraBars.Docking2010.Views.Tabbed;
+using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DevExpress.XtraLayout;
-using ge_mongo_simplified.Classes;
-using ge_mongo_simplified.UserControls.StudentRelated.FormRelated;
+using ge_mongo_simplified.Properties;
 
 namespace ge_mongo_simplified.Forms
 {
@@ -20,29 +18,21 @@ namespace ge_mongo_simplified.Forms
         {
             Width = 265;
             docManagerTwoUC1.studentTabbedView.Controller.Activate(docManagerTwoUC1.contactsUCDocument);
-            //formResize();
+            formResize();
         }
 
         private void formResize()
         {
             docManagerTwoUC1.topLC.Height = docManagerTwoUC1.topLC.Root.MinSize.Height;
             Size = docManagerTwoUC1.underageCE.Checked ? new Size(Size.Width, 438) : new Size(Size.Width, 415);
-            groupComboFill();
         }
 
-        public void groupComboFill()
+        private void DocManagerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-            
-            //var orgdoc = docManagerTwoUC1.orgUCDocument.Control;
-            //XtraMessageBox.Show(orgdoc.Name);
-            //if (orgdoc != null) XtraMessageBox.Show(orgdoc);
-            //docManagerTwoUC1.orgUCDocument.Control("groupnoCB").Properties.Items.Clear();
-            //var groups = Mongo.groupList();
-            //for (var i = 0; i <= groups.Count - 1; i++)
-            //{
-            //    OrgUC.groupnoCB.Properties.Items.Add(groups[i].num);
-            //}
+            var arrayList = new ArrayList(docManagerTwoUC1.orgControl.sourceCB.Properties.Items);
+            Settings.Default.sourceComboList.Clear();
+            Settings.Default.sourceComboList = arrayList;
+            Settings.Default.Save();
         }
     }
 }

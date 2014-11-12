@@ -243,7 +243,6 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.ComboBoxEdit sourceCB;
         private DevExpress.XtraEditors.TextEdit reasonTE;
         private DevExpress.XtraLayout.LayoutControlItem sourceCI;
         private DevExpress.XtraLayout.LayoutControlItem startCI;
@@ -256,5 +255,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup orgCG;
         public DevExpress.XtraEditors.ComboBoxEdit groupCB;
         private DevExpress.XtraLayout.LayoutControlItem groupCI;
+        public DevExpress.XtraEditors.ComboBoxEdit sourceCB;
     }
 }

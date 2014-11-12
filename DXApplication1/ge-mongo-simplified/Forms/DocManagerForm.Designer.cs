@@ -49,8 +49,8 @@
             this.Name = "DocManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DocManagerForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DocManagerForm_FormClosing);
             this.Load += new System.EventHandler(this.DocManagerForm_Load);
-            //this.Resize += new System.EventHandler(this.DocManagerForm_Resize);
             this.ResumeLayout(false);
 
         }

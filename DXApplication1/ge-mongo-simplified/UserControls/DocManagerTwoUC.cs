@@ -11,7 +11,7 @@ namespace ge_mongo_simplified.UserControls
 {
     public partial class DocManagerTwoUC : XtraUserControl
     {
-        readonly OrgUC _orgControl = new OrgUC(); 
+        public OrgUC orgControl = new OrgUC(); 
         public DocManagerTwoUC()
         {
             InitializeComponent();
@@ -24,8 +24,9 @@ namespace ge_mongo_simplified.UserControls
                 e.Control = new ContactsUC();
             if (e.Document == orgUCDocument)
             {
-                e.Control = _orgControl;
+                e.Control = orgControl;
                 groupListFill();
+                sourceListFill();
             }
                 
             if (e.Document == paymentsUCDocument)
@@ -35,14 +36,20 @@ namespace ge_mongo_simplified.UserControls
         private void groupListFill()
         {
             var groups = Mongo.groupList();
-            _orgControl.groupCombo.Properties.Items.Clear();
+            orgControl.groupCombo.Properties.Items.Clear();
 
             for (var i = 0; i <= groups.Count - 1; i++)
             {
-                _orgControl.groupCombo.Properties.Items.Add(groups[i].num);
+                orgControl.groupCombo.Properties.Items.Add(groups[i].num);
             }
-            
         }
+
+        private void sourceListFill()
+        {
+            if (Properties.Settings.Default.sourceComboList != null)
+                orgControl.sourceCB.Properties.Items.AddRange(Properties.Settings.Default.sourceComboList);
+        }
+
         private void underageCE_CheckedChanged(object sender, EventArgs e)
         {
             topLC.BeginUpdate();
