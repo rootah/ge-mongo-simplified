@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.orgLC = new DevExpress.XtraLayout.LayoutControl();
             this.groupCB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.sourceCB = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -40,6 +41,11 @@
             this.endCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.reasonCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupCI = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
+            this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.orgLC)).BeginInit();
             this.orgLC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupCB.Properties)).BeginInit();
@@ -55,6 +61,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.endCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupCI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).BeginInit();
+            this.flyoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).BeginInit();
+            this.flyoutPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // orgLC
@@ -64,6 +76,7 @@
             this.orgLC.Controls.Add(this.reasonTE);
             this.orgLC.Controls.Add(this.startDE);
             this.orgLC.Controls.Add(this.endDE);
+            this.orgLC.Controls.Add(this.flyoutPanel1);
             this.orgLC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orgLC.Location = new System.Drawing.Point(0, 0);
             this.orgLC.Name = "orgLC";
@@ -88,11 +101,13 @@
             this.sourceCB.Location = new System.Drawing.Point(91, 32);
             this.sourceCB.Name = "sourceCB";
             this.sourceCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.sourceCB.Properties.Items.AddRange(new object[] {
             "Outdoor",
             "Ads",
             "Recommendation"});
+            this.sourceCB.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.sourceCB_Properties_ButtonClick);
             this.sourceCB.Size = new System.Drawing.Size(161, 20);
             this.sourceCB.StyleController = this.orgLC;
             this.sourceCB.TabIndex = 5;
@@ -145,12 +160,13 @@
             this.startCI,
             this.endCI,
             this.reasonCI,
-            this.groupCI});
+            this.groupCI,
+            this.emptySpaceItem1});
             this.orgCG.Location = new System.Drawing.Point(0, 0);
-            this.orgCG.Name = "orgCG";
+            this.orgCG.Name = "Root";
             this.orgCG.Padding = new DevExpress.XtraLayout.Utils.Padding(6, 6, 6, 6);
             this.orgCG.Size = new System.Drawing.Size(260, 266);
-            this.orgCG.Text = "orgCG";
+            this.orgCG.Text = "Root";
             this.orgCG.TextVisible = false;
             // 
             // sourceCI
@@ -197,7 +213,7 @@
             this.reasonCI.CustomizationFormText = "Reason";
             this.reasonCI.Location = new System.Drawing.Point(0, 116);
             this.reasonCI.Name = "reasonCI";
-            this.reasonCI.Size = new System.Drawing.Size(248, 138);
+            this.reasonCI.Size = new System.Drawing.Size(248, 24);
             this.reasonCI.Text = "Reason";
             this.reasonCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.reasonCI.TextSize = new System.Drawing.Size(80, 13);
@@ -214,6 +230,59 @@
             this.groupCI.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.groupCI.TextSize = new System.Drawing.Size(80, 20);
             this.groupCI.TextToControlDistance = 3;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 140);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(248, 114);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // flyoutPanel1
+            // 
+            this.flyoutPanel1.Controls.Add(this.flyoutPanelControl1);
+            this.flyoutPanel1.Location = new System.Drawing.Point(8, 205);
+            this.flyoutPanel1.Name = "flyoutPanel1";
+            this.flyoutPanel1.Options.AnchorType = DevExpress.Utils.Win.PopupToolWindowAnchor.TopLeft;
+            this.flyoutPanel1.Options.AnimationType = DevExpress.Utils.Win.PopupToolWindowAnimation.Fade;
+            this.flyoutPanel1.Options.CloseOnOuterClick = true;
+            this.flyoutPanel1.Options.HorzIndent = 90;
+            this.flyoutPanel1.Options.VertIndent = 62;
+            this.flyoutPanel1.OptionsButtonPanel.ButtonPanelLocation = DevExpress.Utils.FlyoutPanelButtonPanelLocation.Bottom;
+            this.flyoutPanel1.OptionsButtonPanel.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.Utils.PeekFormButton()});
+            this.flyoutPanel1.OwnerControl = this;
+            this.flyoutPanel1.Size = new System.Drawing.Size(244, 53);
+            this.flyoutPanel1.TabIndex = 1;
+            // 
+            // flyoutPanelControl1
+            // 
+            this.flyoutPanelControl1.Controls.Add(this.simpleButton1);
+            this.flyoutPanelControl1.Controls.Add(this.textEdit1);
+            this.flyoutPanelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flyoutPanelControl1.FlyoutPanel = this.flyoutPanel1;
+            this.flyoutPanelControl1.Location = new System.Drawing.Point(0, 0);
+            this.flyoutPanelControl1.Name = "flyoutPanelControl1";
+            this.flyoutPanelControl1.Size = new System.Drawing.Size(244, 53);
+            this.flyoutPanelControl1.TabIndex = 0;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(5, 16);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(173, 20);
+            this.textEdit1.TabIndex = 0;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(184, 14);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(46, 23);
+            this.simpleButton1.TabIndex = 1;
+            this.simpleButton1.Text = "add";
             // 
             // OrgUC
             // 
@@ -237,6 +306,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.endCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupCI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).EndInit();
+            this.flyoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).EndInit();
+            this.flyoutPanelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,5 +331,10 @@
         public DevExpress.XtraEditors.ComboBoxEdit groupCB;
         private DevExpress.XtraLayout.LayoutControlItem groupCI;
         public DevExpress.XtraEditors.ComboBoxEdit sourceCB;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.Utils.FlyoutPanel flyoutPanel1;
+        private DevExpress.Utils.FlyoutPanelControl flyoutPanelControl1;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
