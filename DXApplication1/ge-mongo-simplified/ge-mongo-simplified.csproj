@@ -99,35 +99,35 @@
     <Compile Include="UserControls\MainRelated\DetailsUC.Designer.cs">
       <DependentUpon>DetailsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StdManagerUC.cs">
+    <Compile Include="UserControls\StudentRelated\FormRelated\StdManagerUC.cs">
       <SubType>usercontrol</SubType>
     </Compile>
-    <Compile Include="UserControls\StdManagerUC.Designer.cs">
+    <Compile Include="UserControls\StudentRelated\FormRelated\StdManagerUC.Designer.cs">
       <DependentUpon>StdManagerUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DocManagerUC.cs">
+    <Compile Include="UserControls\GroupRelated\FormRelated\GroupManagerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DocManagerUC.Designer.cs">
-      <DependentUpon>DocManagerUC.cs</DependentUpon>
+    <Compile Include="UserControls\GroupRelated\FormRelated\GroupManagerUC.Designer.cs">
+      <DependentUpon>GroupManagerUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupDetailsUC.cs">
+    <Compile Include="UserControls\GroupRelated\MainFormRelated\GroupDetailsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupDetailsUC.Designer.cs">
+    <Compile Include="UserControls\GroupRelated\MainFormRelated\GroupDetailsUC.Designer.cs">
       <DependentUpon>GroupDetailsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupGrid2UC.cs">
+    <Compile Include="UserControls\GroupRelated\MainFormRelated\GroupGrid2UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupGrid2UC.Designer.cs">
+    <Compile Include="UserControls\GroupRelated\MainFormRelated\GroupGrid2UC.Designer.cs">
       <DependentUpon>GroupGrid2UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupGeneralInfoUC.cs">
+    <Compile Include="UserControls\GroupRelated\FormRelated\GeneralUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupGeneralInfoUC.Designer.cs">
-      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
+    <Compile Include="UserControls\GroupRelated\FormRelated\GeneralUC.Designer.cs">
+      <DependentUpon>GeneralUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\BackstageRelated\DBSettingsUC.cs">
       <SubType>UserControl</SubType>
@@ -135,22 +135,22 @@
     <Compile Include="UserControls\BackstageRelated\DBSettingsUC.Designer.cs">
       <DependentUpon>DBSettingsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupPaymentsInfoUC.cs">
+    <Compile Include="UserControls\GroupRelated\FormRelated\PaymentsUC.cs">
       <SubType>usercontrol</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupPaymentsInfoUC.Designer.cs">
-      <DependentUpon>GroupPaymentsInfoUC.cs</DependentUpon>
+    <Compile Include="UserControls\GroupRelated\FormRelated\PaymentsUC.Designer.cs">
+      <DependentUpon>PaymentsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupsGridUC.cs">
+    <Compile Include="UserControls\GroupRelated\MainFormRelated\GroupsGridUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupsGridUC.Designer.cs">
+    <Compile Include="UserControls\GroupRelated\MainFormRelated\GroupsGridUC.Designer.cs">
       <DependentUpon>GroupsGridUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupTotalDetailsUC.cs">
+    <Compile Include="UserControls\GroupRelated\MainFormRelated\GroupTotalDetailsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GroupRelated\GroupTotalDetailsUC.Designer.cs">
+    <Compile Include="UserControls\GroupRelated\MainFormRelated\GroupTotalDetailsUC.Designer.cs">
       <DependentUpon>GroupTotalDetailsUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\BackstageRelated\ManageUC.cs">
@@ -189,16 +189,16 @@
     <Compile Include="UserControls\StudentRelated\StdMainUC.designer.cs">
       <DependentUpon>StdMainUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StudentRelated\StudentDetailUC.cs">
+    <Compile Include="UserControls\StudentRelated\MainFolderRelated\StudentDetailUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\StudentRelated\StudentDetailUC.Designer.cs">
+    <Compile Include="UserControls\StudentRelated\MainFolderRelated\StudentDetailUC.Designer.cs">
       <DependentUpon>StudentDetailUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StudentRelated\StudentsGridUC.cs">
+    <Compile Include="UserControls\StudentRelated\MainFolderRelated\StudentsGridUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\StudentRelated\StudentsGridUC.Designer.cs">
+    <Compile Include="UserControls\StudentRelated\MainFolderRelated\StudentsGridUC.Designer.cs">
       <DependentUpon>StudentsGridUC.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\StudentManagerForm.resx">
@@ -230,31 +230,31 @@
     <EmbeddedResource Include="UserControls\MainRelated\DetailsUC.resx">
       <DependentUpon>DetailsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StdManagerUC.resx">
+    <EmbeddedResource Include="UserControls\StudentRelated\FormRelated\StdManagerUC.resx">
       <DependentUpon>StdManagerUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DocManagerUC.resx">
-      <DependentUpon>DocManagerUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\GroupRelated\FormRelated\GroupManagerUC.resx">
+      <DependentUpon>GroupManagerUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupRelated\GroupDetailsUC.resx">
+    <EmbeddedResource Include="UserControls\GroupRelated\MainFormRelated\GroupDetailsUC.resx">
       <DependentUpon>GroupDetailsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupRelated\GroupGrid2UC.resx">
+    <EmbeddedResource Include="UserControls\GroupRelated\MainFormRelated\GroupGrid2UC.resx">
       <DependentUpon>GroupGrid2UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupRelated\GroupGeneralInfoUC.resx">
-      <DependentUpon>GroupGeneralInfoUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\GroupRelated\FormRelated\GeneralUC.resx">
+      <DependentUpon>GeneralUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BackstageRelated\DBSettingsUC.resx">
       <DependentUpon>DBSettingsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupRelated\GroupPaymentsInfoUC.resx">
-      <DependentUpon>GroupPaymentsInfoUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\GroupRelated\FormRelated\PaymentsUC.resx">
+      <DependentUpon>PaymentsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupRelated\GroupsGridUC.resx">
+    <EmbeddedResource Include="UserControls\GroupRelated\MainFormRelated\GroupsGridUC.resx">
       <DependentUpon>GroupsGridUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GroupRelated\GroupTotalDetailsUC.resx">
+    <EmbeddedResource Include="UserControls\GroupRelated\MainFormRelated\GroupTotalDetailsUC.resx">
       <DependentUpon>GroupTotalDetailsUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BackstageRelated\manageUC.resx">
@@ -275,10 +275,10 @@
     <EmbeddedResource Include="UserControls\StudentRelated\StdMainUC.resx">
       <DependentUpon>StdMainUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StudentRelated\StudentDetailUC.resx">
+    <EmbeddedResource Include="UserControls\StudentRelated\MainFolderRelated\StudentDetailUC.resx">
       <DependentUpon>StudentDetailUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StudentRelated\StudentsGridUC.resx">
+    <EmbeddedResource Include="UserControls\StudentRelated\MainFolderRelated\StudentsGridUC.resx">
       <DependentUpon>StudentsGridUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
