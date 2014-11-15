@@ -35,6 +35,10 @@
             this.reasonTE = new DevExpress.XtraEditors.TextEdit();
             this.startDE = new DevExpress.XtraEditors.DateEdit();
             this.endDE = new DevExpress.XtraEditors.DateEdit();
+            this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
+            this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.orgCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.sourceCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.startCI = new DevExpress.XtraLayout.LayoutControlItem();
@@ -42,10 +46,6 @@
             this.reasonCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
-            this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.orgLC)).BeginInit();
             this.orgLC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupCB.Properties)).BeginInit();
@@ -55,6 +55,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.startDE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.endDE.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.endDE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).BeginInit();
+            this.flyoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).BeginInit();
+            this.flyoutPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orgCG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sourceCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startCI)).BeginInit();
@@ -62,11 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).BeginInit();
-            this.flyoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).BeginInit();
-            this.flyoutPanelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // orgLC
@@ -95,6 +95,7 @@
             this.groupCB.Size = new System.Drawing.Size(161, 20);
             this.groupCB.StyleController = this.orgLC;
             this.groupCB.TabIndex = 9;
+            this.groupCB.SelectedIndexChanged += new System.EventHandler(this.groupCB_SelectedIndexChanged);
             // 
             // sourceCB
             // 
@@ -149,6 +150,49 @@
             this.endDE.Size = new System.Drawing.Size(161, 20);
             this.endDE.StyleController = this.orgLC;
             this.endDE.TabIndex = 7;
+            // 
+            // flyoutPanel1
+            // 
+            this.flyoutPanel1.Controls.Add(this.flyoutPanelControl1);
+            this.flyoutPanel1.Location = new System.Drawing.Point(8, 205);
+            this.flyoutPanel1.Name = "flyoutPanel1";
+            this.flyoutPanel1.Options.AnchorType = DevExpress.Utils.Win.PopupToolWindowAnchor.TopLeft;
+            this.flyoutPanel1.Options.AnimationType = DevExpress.Utils.Win.PopupToolWindowAnimation.Fade;
+            this.flyoutPanel1.Options.CloseOnOuterClick = true;
+            this.flyoutPanel1.Options.HorzIndent = 90;
+            this.flyoutPanel1.Options.VertIndent = 62;
+            this.flyoutPanel1.OptionsButtonPanel.ButtonPanelLocation = DevExpress.Utils.FlyoutPanelButtonPanelLocation.Bottom;
+            this.flyoutPanel1.OptionsButtonPanel.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.Utils.PeekFormButton()});
+            this.flyoutPanel1.OwnerControl = this;
+            this.flyoutPanel1.Size = new System.Drawing.Size(244, 53);
+            this.flyoutPanel1.TabIndex = 1;
+            // 
+            // flyoutPanelControl1
+            // 
+            this.flyoutPanelControl1.Controls.Add(this.simpleButton1);
+            this.flyoutPanelControl1.Controls.Add(this.textEdit1);
+            this.flyoutPanelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flyoutPanelControl1.FlyoutPanel = this.flyoutPanel1;
+            this.flyoutPanelControl1.Location = new System.Drawing.Point(0, 0);
+            this.flyoutPanelControl1.Name = "flyoutPanelControl1";
+            this.flyoutPanelControl1.Size = new System.Drawing.Size(244, 53);
+            this.flyoutPanelControl1.TabIndex = 0;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(184, 14);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(46, 23);
+            this.simpleButton1.TabIndex = 1;
+            this.simpleButton1.Text = "add";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(5, 16);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(173, 20);
+            this.textEdit1.TabIndex = 0;
             // 
             // orgCG
             // 
@@ -221,6 +265,8 @@
             // 
             // groupCI
             // 
+            this.groupCI.AppearanceItemCaption.ForeColor = System.Drawing.Color.OrangeRed;
+            this.groupCI.AppearanceItemCaption.Options.UseForeColor = true;
             this.groupCI.Control = this.groupCB;
             this.groupCI.CustomizationFormText = "Group";
             this.groupCI.Location = new System.Drawing.Point(0, 0);
@@ -241,49 +287,6 @@
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // flyoutPanel1
-            // 
-            this.flyoutPanel1.Controls.Add(this.flyoutPanelControl1);
-            this.flyoutPanel1.Location = new System.Drawing.Point(8, 205);
-            this.flyoutPanel1.Name = "flyoutPanel1";
-            this.flyoutPanel1.Options.AnchorType = DevExpress.Utils.Win.PopupToolWindowAnchor.TopLeft;
-            this.flyoutPanel1.Options.AnimationType = DevExpress.Utils.Win.PopupToolWindowAnimation.Fade;
-            this.flyoutPanel1.Options.CloseOnOuterClick = true;
-            this.flyoutPanel1.Options.HorzIndent = 90;
-            this.flyoutPanel1.Options.VertIndent = 62;
-            this.flyoutPanel1.OptionsButtonPanel.ButtonPanelLocation = DevExpress.Utils.FlyoutPanelButtonPanelLocation.Bottom;
-            this.flyoutPanel1.OptionsButtonPanel.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.Utils.PeekFormButton()});
-            this.flyoutPanel1.OwnerControl = this;
-            this.flyoutPanel1.Size = new System.Drawing.Size(244, 53);
-            this.flyoutPanel1.TabIndex = 1;
-            // 
-            // flyoutPanelControl1
-            // 
-            this.flyoutPanelControl1.Controls.Add(this.simpleButton1);
-            this.flyoutPanelControl1.Controls.Add(this.textEdit1);
-            this.flyoutPanelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flyoutPanelControl1.FlyoutPanel = this.flyoutPanel1;
-            this.flyoutPanelControl1.Location = new System.Drawing.Point(0, 0);
-            this.flyoutPanelControl1.Name = "flyoutPanelControl1";
-            this.flyoutPanelControl1.Size = new System.Drawing.Size(244, 53);
-            this.flyoutPanelControl1.TabIndex = 0;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(5, 16);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(173, 20);
-            this.textEdit1.TabIndex = 0;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(184, 14);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(46, 23);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "add";
-            // 
             // OrgUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +303,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.startDE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.endDE.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.endDE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).EndInit();
+            this.flyoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).EndInit();
+            this.flyoutPanelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orgCG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sourceCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startCI)).EndInit();
@@ -307,11 +315,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.reasonCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).EndInit();
-            this.flyoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).EndInit();
-            this.flyoutPanelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

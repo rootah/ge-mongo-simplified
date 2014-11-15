@@ -284,6 +284,7 @@
             this.mainphoneTE.Size = new System.Drawing.Size(161, 20);
             this.mainphoneTE.StyleController = this.layoutControl1;
             this.mainphoneTE.TabIndex = 4;
+            this.mainphoneTE.EditValueChanged += new System.EventHandler(this.mainphoneTE_EditValueChanged);
             // 
             // wappTE
             // 
@@ -321,6 +322,8 @@
             // 
             // mainphoneCI
             // 
+            this.mainphoneCI.AppearanceItemCaption.ForeColor = System.Drawing.Color.OrangeRed;
+            this.mainphoneCI.AppearanceItemCaption.Options.UseForeColor = true;
             this.mainphoneCI.Control = this.mainphoneTE;
             this.mainphoneCI.CustomizationFormText = "Main Phone No.";
             this.mainphoneCI.Location = new System.Drawing.Point(0, 0);
@@ -491,7 +494,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraEditors.TextEdit addphoneTE;
         private DevExpress.XtraEditors.TextEdit homephoneTE;
-        private DevExpress.XtraEditors.TextEdit mainphoneTE;
         private DevExpress.XtraLayout.LayoutControlItem mainphoneCI;
         private DevExpress.XtraLayout.LayoutControlItem homephoneCI;
         private DevExpress.XtraLayout.LayoutControlItem addphoneCI;
@@ -520,5 +522,6 @@
         private DevExpress.XtraBars.BarCheckItem wappCCI;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        public DevExpress.XtraEditors.TextEdit mainphoneTE;
     }
 }

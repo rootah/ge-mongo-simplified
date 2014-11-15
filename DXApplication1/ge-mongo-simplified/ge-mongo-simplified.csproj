@@ -36,9 +36,7 @@
     <StartupObject>ge_mongo_simplified.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v14.1" />
-    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Spreadsheet.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v14.1" />
     <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -46,7 +44,6 @@
     <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraSpreadsheet.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MongoDB.Bson">
@@ -57,20 +54,18 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Group.cs" />
     <Compile Include="Classes\Mongo.cs" />
     <Compile Include="Classes\Student.cs" />
-    <Compile Include="Forms\DocManagerForm.cs">
+    <Compile Include="Forms\StudentManagerForm.cs">
       <SubType>form</SubType>
     </Compile>
-    <Compile Include="Forms\DocManagerForm.Designer.cs">
-      <DependentUpon>DocManagerForm.cs</DependentUpon>
+    <Compile Include="Forms\StudentManagerForm.Designer.cs">
+      <DependentUpon>StudentManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\GroupsForm.cs">
       <SubType>Form</SubType>
@@ -104,11 +99,11 @@
     <Compile Include="UserControls\MainRelated\DetailsUC.Designer.cs">
       <DependentUpon>DetailsUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DocManagerTwoUC.cs">
+    <Compile Include="UserControls\StdManagerUC.cs">
       <SubType>usercontrol</SubType>
     </Compile>
-    <Compile Include="UserControls\DocManagerTwoUC.Designer.cs">
-      <DependentUpon>DocManagerTwoUC.cs</DependentUpon>
+    <Compile Include="UserControls\StdManagerUC.Designer.cs">
+      <DependentUpon>StdManagerUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DocManagerUC.cs">
       <SubType>UserControl</SubType>
@@ -206,8 +201,8 @@
     <Compile Include="UserControls\StudentRelated\StudentsGridUC.Designer.cs">
       <DependentUpon>StudentsGridUC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\DocManagerForm.resx">
-      <DependentUpon>DocManagerForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\StudentManagerForm.resx">
+      <DependentUpon>StudentManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GroupsForm.resx">
       <DependentUpon>GroupsForm.cs</DependentUpon>
@@ -235,8 +230,8 @@
     <EmbeddedResource Include="UserControls\MainRelated\DetailsUC.resx">
       <DependentUpon>DetailsUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DocManagerTwoUC.resx">
-      <DependentUpon>DocManagerTwoUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\StdManagerUC.resx">
+      <DependentUpon>StdManagerUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DocManagerUC.resx">
       <DependentUpon>DocManagerUC.cs</DependentUpon>

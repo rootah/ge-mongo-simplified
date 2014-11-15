@@ -1,14 +1,19 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout.Utils;
+using ge_mongo_simplified.Forms;
 
 namespace ge_mongo_simplified.UserControls.StudentRelated.FormRelated
 {
     public partial class ContactsUC : XtraUserControl
     {
-        public ContactsUC()
+        private readonly StdManagerUC _parentControl;
+        public ContactsUC(StdManagerUC parentControl)
         {
+            _parentControl = parentControl;
             InitializeComponent();
         }
 
@@ -65,6 +70,29 @@ namespace ge_mongo_simplified.UserControls.StudentRelated.FormRelated
             if (vkCI.Visible || wappCI.Visible || emailCI.Visible || skypeCI.Visible)
                 spacer.Visibility = LayoutVisibility.Always;
             else spacer.Visibility = LayoutVisibility.Never;
+        }
+
+
+        private void mainphoneTE_EditValueChanged(object sender, System.EventArgs e)
+        {
+            if ((string) mainphoneTE.EditValue != string.Empty)
+            {
+                mainphoneCI.AppearanceItemCaption.ForeColor = SystemColors.ControlText;
+                if (_parentControl != null)
+                {
+                    _parentControl.contactsUCDocument.Appearance.Header.ForeColor = SystemColors.ControlText;
+                    _parentControl.fieldsFillCheck();
+                }
+            }
+            else
+            {
+                mainphoneCI.AppearanceItemCaption.ForeColor = Color.OrangeRed;
+                if (_parentControl != null)
+                {
+                    _parentControl.contactsUCDocument.Appearance.Header.ForeColor = Color.OrangeRed;
+                    _parentControl.fieldsFillCheck();
+                }  
+            }
         }
     }
 }
