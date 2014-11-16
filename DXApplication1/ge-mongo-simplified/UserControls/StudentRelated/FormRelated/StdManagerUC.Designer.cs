@@ -1,4 +1,4 @@
-﻿namespace ge_mongo_simplified.UserControls
+﻿namespace ge_mongo_simplified.UserControls.StudentRelated.FormRelated
 {
     partial class StdManagerUC
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.topLC = new DevExpress.XtraLayout.LayoutControl();
             this.underageCE = new DevExpress.XtraEditors.CheckEdit();
             this.pnameTE = new DevExpress.XtraEditors.TextEdit();
@@ -40,19 +39,19 @@
             this.pnameCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.studentTabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
-            this.orgUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.paymentsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.studentsDM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.studentTabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
+            this.contactsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
+            this.orgUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
+            this.paymentsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
+            this.studentsDM = new DevExpress.XtraBars.Docking2010.DocumentManager();
             this.buttonsLC = new DevExpress.XtraLayout.LayoutControl();
             this.okButt = new DevExpress.XtraEditors.SimpleButton();
             this.cancelButt = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.buttonsCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.cancelCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.okCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.contactsUCDocument = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.topLC)).BeginInit();
             this.topLC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.underageCE.Properties)).BeginInit();
@@ -67,16 +66,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactsUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orgUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsUCDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonsLC)).BeginInit();
             this.buttonsLC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonsCG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancelCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactsUCDocument)).BeginInit();
             this.SuspendLayout();
             // 
             // topLC
@@ -236,6 +235,21 @@
             this.documentGroup1.Properties.CloseTabOnMiddleClick = DevExpress.XtraTabbedMdi.CloseTabOnMiddleClick.Never;
             this.documentGroup1.Properties.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
             // 
+            // contactsUCDocument
+            // 
+            this.contactsUCDocument.Appearance.Header.ForeColor = System.Drawing.Color.OrangeRed;
+            this.contactsUCDocument.Appearance.Header.Options.UseForeColor = true;
+            this.contactsUCDocument.Appearance.HeaderActive.ForeColor = System.Drawing.Color.White;
+            this.contactsUCDocument.Appearance.HeaderActive.Options.UseForeColor = true;
+            this.contactsUCDocument.Appearance.HeaderSelected.ForeColor = System.Drawing.Color.White;
+            this.contactsUCDocument.Appearance.HeaderSelected.Options.UseForeColor = true;
+            this.contactsUCDocument.Caption = "Contacts";
+            this.contactsUCDocument.ControlName = "ContactsUC";
+            this.contactsUCDocument.ControlTypeName = "ge_mongo_simplified.UserControls.StudentRelated.FormRelated.ContactsUC";
+            this.contactsUCDocument.FloatLocation = new System.Drawing.Point(51, 239);
+            this.contactsUCDocument.FloatSize = new System.Drawing.Size(399, 211);
+            this.contactsUCDocument.Tooltip = "Fill at least Main Phone No.";
+            // 
             // orgUCDocument
             // 
             this.orgUCDocument.Appearance.Header.ForeColor = System.Drawing.Color.OrangeRed;
@@ -272,7 +286,7 @@
             this.buttonsLC.Location = new System.Drawing.Point(0, 353);
             this.buttonsLC.Name = "buttonsLC";
             this.buttonsLC.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(452, 153, 426, 350);
-            this.buttonsLC.Root = this.layoutControlGroup2;
+            this.buttonsLC.Root = this.buttonsCG;
             this.buttonsLC.Size = new System.Drawing.Size(405, 29);
             this.buttonsLC.TabIndex = 1;
             this.buttonsLC.Text = "layoutControl2";
@@ -297,26 +311,26 @@
             this.cancelButt.Text = "Cancel";
             this.cancelButt.Click += new System.EventHandler(this.cancelButt_Click);
             // 
-            // layoutControlGroup2
+            // buttonsCG
             // 
-            this.layoutControlGroup2.CustomizationFormText = "layoutControlGroup2";
-            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup2.GroupBordersVisible = false;
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.buttonsCG.CustomizationFormText = "buttonsCG";
+            this.buttonsCG.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.buttonsCG.GroupBordersVisible = false;
+            this.buttonsCG.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.cancelCI,
             this.okCI,
             this.emptySpaceItem2});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup2.Name = "Root";
-            this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 3, 0);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(405, 29);
-            this.layoutControlGroup2.Text = "Root";
-            this.layoutControlGroup2.TextVisible = false;
+            this.buttonsCG.Location = new System.Drawing.Point(0, 0);
+            this.buttonsCG.Name = "buttonsCG";
+            this.buttonsCG.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 3, 0);
+            this.buttonsCG.Size = new System.Drawing.Size(405, 29);
+            this.buttonsCG.Text = "buttonsCG";
+            this.buttonsCG.TextVisible = false;
             // 
             // cancelCI
             // 
             this.cancelCI.Control = this.cancelButt;
-            this.cancelCI.CustomizationFormText = "layoutControlItem1";
+            this.cancelCI.CustomizationFormText = "cancelCI";
             this.cancelCI.Location = new System.Drawing.Point(319, 0);
             this.cancelCI.MaxSize = new System.Drawing.Size(86, 26);
             this.cancelCI.MinSize = new System.Drawing.Size(86, 26);
@@ -332,7 +346,7 @@
             // okCI
             // 
             this.okCI.Control = this.okButt;
-            this.okCI.CustomizationFormText = "layoutControlItem2";
+            this.okCI.CustomizationFormText = "okCI";
             this.okCI.Location = new System.Drawing.Point(239, 0);
             this.okCI.MaxSize = new System.Drawing.Size(80, 26);
             this.okCI.MinSize = new System.Drawing.Size(80, 26);
@@ -357,21 +371,6 @@
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // contactsUCDocument
-            // 
-            this.contactsUCDocument.Appearance.Header.ForeColor = System.Drawing.Color.OrangeRed;
-            this.contactsUCDocument.Appearance.Header.Options.UseForeColor = true;
-            this.contactsUCDocument.Appearance.HeaderActive.ForeColor = System.Drawing.Color.White;
-            this.contactsUCDocument.Appearance.HeaderActive.Options.UseForeColor = true;
-            this.contactsUCDocument.Appearance.HeaderSelected.ForeColor = System.Drawing.Color.White;
-            this.contactsUCDocument.Appearance.HeaderSelected.Options.UseForeColor = true;
-            this.contactsUCDocument.Caption = "Contacts";
-            this.contactsUCDocument.ControlName = "ContactsUC";
-            this.contactsUCDocument.ControlTypeName = "ge_mongo_simplified.UserControls.StudentRelated.FormRelated.ContactsUC";
-            this.contactsUCDocument.FloatLocation = new System.Drawing.Point(51, 239);
-            this.contactsUCDocument.FloatSize = new System.Drawing.Size(399, 211);
-            this.contactsUCDocument.Tooltip = "Fill at least Main Phone No.";
-            // 
             // StdManagerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,16 +393,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactsUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orgUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsUCDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonsLC)).EndInit();
             this.buttonsLC.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonsCG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancelCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactsUCDocument)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,7 +423,7 @@
         public DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView studentTabbedView;
         private DevExpress.XtraLayout.LayoutControl buttonsLC;
         private DevExpress.XtraEditors.SimpleButton cancelButt;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlGroup buttonsCG;
         private DevExpress.XtraLayout.LayoutControlItem cancelCI;
         private DevExpress.XtraEditors.SimpleButton okButt;
         private DevExpress.XtraLayout.LayoutControlItem okCI;

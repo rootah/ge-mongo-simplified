@@ -1,12 +1,14 @@
 ﻿using DevExpress.XtraEditors;
-using ge_mongo_simplified.Forms;
 
-namespace ge_mongo_simplified.UserControls
+namespace ge_mongo_simplified.UserControls.GroupRelated.FormRelated
 {
     public partial class GroupPaymentsInfoUC : XtraUserControl
     {
-        public GroupPaymentsInfoUC()
+        private readonly GroupManagerUc _groupManagerUc;
+
+        public GroupPaymentsInfoUC(GroupManagerUc groupManagerUc)
         {
+            _groupManagerUc = groupManagerUc;
             InitializeComponent();
         }
     }

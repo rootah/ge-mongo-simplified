@@ -5,9 +5,8 @@ using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout.Utils;
 using ge_mongo_simplified.Classes;
-using ge_mongo_simplified.UserControls.StudentRelated.FormRelated;
 
-namespace ge_mongo_simplified.UserControls
+namespace ge_mongo_simplified.UserControls.StudentRelated.FormRelated
 {
     public partial class StdManagerUC : XtraUserControl
     {

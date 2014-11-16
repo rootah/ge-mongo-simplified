@@ -18,7 +18,7 @@ namespace ge_mongo_simplified.Classes
         public BsonArray days { get; set; }
         public string time { get; set; }
         public string duration { get; set; }
-        public string status { get; set; }
+        //public string status { get; set; }
 
         //public string Kind { get; set; }
         public BsonDateTime startDate { get; set; }

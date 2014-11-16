@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactsUC));
             this.contactsCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
-            this.contactAddDel = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.contactAddDel = new DevExpress.XtraBars.PopupMenu();
             this.homephoneCCI = new DevExpress.XtraBars.BarCheckItem();
             this.addphoneCCI = new DevExpress.XtraBars.BarCheckItem();
             this.emailCCI = new DevExpress.XtraBars.BarCheckItem();
             this.skypeCCI = new DevExpress.XtraBars.BarCheckItem();
             this.vkCCI = new DevExpress.XtraBars.BarCheckItem();
             this.wappCCI = new DevExpress.XtraBars.BarCheckItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -125,7 +124,7 @@
             this.dropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("dropDownButton1.Image")));
             this.dropDownButton1.Location = new System.Drawing.Point(8, 188);
             this.dropDownButton1.Name = "dropDownButton1";
-            this.dropDownButton1.Size = new System.Drawing.Size(39, 22);
+            this.dropDownButton1.Size = new System.Drawing.Size(40, 22);
             this.dropDownButton1.StyleController = this.layoutControl1;
             this.dropDownButton1.TabIndex = 12;
             // 
@@ -418,7 +417,7 @@
             this.adddelCI.CustomizationFormText = "adddel";
             this.adddelCI.Location = new System.Drawing.Point(0, 180);
             this.adddelCI.Name = "adddelCI";
-            this.adddelCI.Size = new System.Drawing.Size(43, 64);
+            this.adddelCI.Size = new System.Drawing.Size(44, 64);
             this.adddelCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment;
             this.adddelCI.Text = "adddelCI";
             this.adddelCI.TextSize = new System.Drawing.Size(0, 0);
@@ -442,9 +441,9 @@
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(43, 180);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(44, 180);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(205, 64);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(204, 64);
             this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 

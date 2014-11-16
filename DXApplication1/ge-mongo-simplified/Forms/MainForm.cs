@@ -99,8 +99,8 @@ namespace ge_mongo_simplified.Forms
         }
         public void newGroupButton_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var newGroup = new NewGroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [new]" };
-            //var newGroup = new GroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [new]" };
+            //var newGroup = new NewGroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [new]" };
+            var newGroup = new GroupManagerForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [new]" };
             Properties.Settings.Default.formType = "new";
             Properties.Settings.Default.Save();
             newGroup.ShowDialog();
@@ -237,7 +237,7 @@ namespace ge_mongo_simplified.Forms
             Properties.Settings.Default.groupID = groupGrid2UC2.groupTL.FocusedNode.GetValue(groupGrid2UC2.groupTL.Columns.ColumnByName("colID")).ToString();
 
             Properties.Settings.Default.Save();
-            var newGroup = new GroupsForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [" + Properties.Settings.Default.groupNo + @"]" };
+            var newGroup = new GroupManagerForm(this) { StartPosition = FormStartPosition.CenterParent, Text = @"Group [" + Properties.Settings.Default.groupNo + @"]" };
             newGroup.ShowDialog();
         }
         public void groupFocusBack(string id)
